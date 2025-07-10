@@ -238,15 +238,17 @@ img {
     color: white;
 }
 
-.language-toggle .btn {
+.language-toggle .form-select {
     border-color: var(--primary-color);
     color: var(--primary-color);
-    transition: all 0.3s;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    height: auto;
+    cursor: pointer;
 }
 
-.language-toggle .btn:hover {
-    background: var(--primary-color);
-    color: white;
+.language-toggle .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
 }
 
 /* Mobile Menu */
@@ -328,6 +330,16 @@ img {
     border: none;
     cursor: pointer;
     color: white !important;
+}
+
+.btn-success {
+    background-color: var(--primary-color);
+    border-color: var(--primary-dark);
+}
+
+.btn-success:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
 }
 
 .hero-btn {
@@ -481,6 +493,7 @@ img {
     display: flex;
     width: 100%;
     min-height: 500px;
+    margin-top: 0;
 }
 
 /* Hero Section (75% width) */
@@ -580,31 +593,24 @@ img {
     transform: scale(1.1);
 }
 
-/* Notice and Leaders Section (25% width) */
-.notice-leaders-section {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    min-height: 500px;
-}
-
-/* Notice Section */
+/* Notice Section (25% width) */
 .notice-section {
-    flex: 1;
-    padding: 20px;
+    width: 25%;
+    padding: 0;
     background: #f8f9fa;
-    height: 50%;
+    height: 500px;
 }
 
 .notice-board {
     width: 100%;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    box-shadow: none;
     overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-left: 1px solid var(--border-color);
 }
 
 .notice-header {
@@ -672,84 +678,6 @@ img {
     text-align: center;
     padding: 10px;
     border-top: 1px solid var(--border-color);
-}
-
-/* Leaders Section */
-.leaders-section {
-    flex: 1;
-    padding: 20px;
-    background: #f8f9fa;
-    height: 50%;
-}
-
-.leaders-slider {
-    height: 100%;
-}
-
-.leader-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid var(--border-color);
-    height: 100%;
-    transition: transform 0.3s;
-}
-
-.leader-card:hover {
-    transform: translateY(-5px);
-}
-
-.leader-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 15px;
-    border: 5px solid var(--primary-light);
-}
-
-.leader-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.leader-content {
-    text-align: center;
-}
-
-.leader-name {
-    color: var(--primary-dark);
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-}
-
-.leader-position {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.leader-message {
-    position: relative;
-    padding: 15px;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    background: #f9f9f9;
-    border-radius: 5px;
-}
-
-.leader-message::before {
-    content: '"';
-    font-size: 2.5rem;
-    color: var(--primary-light);
-    position: absolute;
-    top: -10px;
-    left: 5px;
-    line-height: 1;
-    opacity: 0.3;
 }
 
 /* Quick Links and Leaders Container */
@@ -870,12 +798,14 @@ img {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 300px; /* Reduced height */
 }
 
 .about-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
     transition: transform 0.5s;
 }
 
@@ -1268,15 +1198,12 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(46, 125, 50, 0.9);
+    background: rgba(46, 125, 50, 0.8);
     color: white;
     padding: 15px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover .gallery-caption {
     transform: translateY(0);
+    transition: transform 0.3s ease;
+    opacity: 1;
 }
 
 .gallery-caption h5 {
@@ -1622,7 +1549,7 @@ img {
         flex-direction: column;
     }
 
-    .hero-area, .notice-leaders-section {
+    .hero-area, .notice-section {
         width: 100%;
     }
 
@@ -1630,12 +1557,8 @@ img {
         height: 400px;
     }
 
-    .notice-leaders-section {
-        flex-direction: row;
-    }
-
-    .notice-section, .leaders-section {
-        width: 50%;
+    .notice-section {
+        height: auto;
     }
 
     .quick-about-container {
@@ -1693,14 +1616,6 @@ img {
 
     .topbar-school-info-list li {
         margin: 0 10px;
-    }
-
-    .notice-leaders-section {
-        flex-direction: column;
-    }
-
-    .notice-section, .leaders-section {
-        width: 100%;
     }
 
     .counter-item {

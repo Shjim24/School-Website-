@@ -2,7 +2,7 @@
 $(document).ready(function() {
     // Preloader
     $(window).on('load', function() {
-        $('#preloader').fadeOut('slow', function() {
+        $('#preloader').delay(500).fadeOut('slow', function() {
             $(this).remove();
         });
     });
@@ -199,7 +199,13 @@ $(document).ready(function() {
     
     // Mobile Menu Toggle
     $('.mobile-menu-btn').click(function() {
-        $('.header-menu-list').slideToggle();
+        $('.navigation').toggleClass('active');
+        $('.mobile-menu-overlay').toggleClass('active');
+    });
+    
+    $('.mobile-menu-overlay').click(function() {
+        $('.navigation').removeClass('active');
+        $('.mobile-menu-overlay').removeClass('active');
     });
     
     // Smooth Scroll for Anchor Links
