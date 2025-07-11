@@ -33,8 +33,10 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         if ($(this).scrollTop() > offset) {
             $('.progress-wrap').addClass('active-progress');
+            $('.header-area').addClass('sticky');
         } else {
             $('.progress-wrap').removeClass('active-progress');
+            $('.header-area').removeClass('sticky');
         }
     });
     
@@ -221,12 +223,15 @@ $(document).ready(function() {
         );
     });
     
-    // Sticky Header
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 100) {
-            $('.header-area').addClass('sticky');
-        } else {
-            $('.header-area').removeClass('sticky');
+    // Force page reload when navigating back/forward
+    window.onpageshow = function(event) {
+        if (event.persisted) {
+            window.location.reload();
         }
+    };
+    
+    // Disable caching for better refresh functionality
+    $.ajaxSetup({
+        cache: false
     });
 });
