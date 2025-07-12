@@ -1,24 +1,31 @@
-// School Information Page Specific Scripts
+// Corner Message Page Specific Scripts
 $(document).ready(function() {
     // Make sure the navigation is updated for the current page
     $('.header-menu-list li a').removeClass('active');
     $('.header-menu-list li a[href="../about/about.html"]').parent().addClass('active');
-    $('.header-menu-list li a[href="school-information.html"]').addClass('active');
+    $('.header-menu-list li a[href="corner-message.html"]').addClass('active');
 
-    // Initialize Fancybox for gallery
-    $('[data-fancybox="gallery"]').fancybox({
-        buttons: [
-            "zoom",
-            "share",
-            "slideShow",
-            "fullScreen",
-            "download",
-            "thumbs",
-            "close"
-        ],
-        loop: true,
-        protect: true
-    });
+    // Animate message cards on scroll
+    function animateCards() {
+        $('.message-card').each(function() {
+            var cardTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+            
+            if (windowBottom > cardTop + 100) {
+                $(this).css({
+                    'opacity': '1',
+                    'transform': 'translateY(0)',
+                    'transition': 'all 0.6s ease-out'
+                });
+            }
+        });
+    }
+
+    // Initial check in case cards are already in view
+    animateCards();
+    
+    // Check on scroll
+    $(window).on('scroll', animateCards);
 
     // Mobile menu toggle
     $('.mobile-menu-btn').click(function() {
@@ -37,12 +44,23 @@ $(document).ready(function() {
         
         $('html, body').animate(
             {
-                scrollTop: $($(this).attr('href')).offset().top,
+                scrollTop: $($(this).attr('href')).offset().top - 80,
             },
             500,
             'linear'
         );
     });
+
+    // Make message cards clickable to expand/collapse content on mobile
+    if ($(window).width() < 768) {
+        $('.message-header').on('click', function() {
+            $(this).closest('.message-card').find('.message-content').slideToggle();
+        });
+        
+        // Initially hide content on mobile
+        $('.message-content').hide();
+        $('.message-header').css('cursor', 'pointer');
+    }
 
     // Notice ticker animation
     function animateNoticeTicker() {
