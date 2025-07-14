@@ -1,4 +1,3 @@
-/* style.css */
 :root {
     --primary-color: #2e7d32;
     --primary-light: #81c784;
@@ -169,24 +168,24 @@ img {
     list-style: none;
     padding: 0;
     margin: 0;
-    justify-content: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
 .header-menu-list li {
     position: relative;
-    margin: 0 5px;
+    margin: 0 3px;
 }
 
 .header-menu-list li a {
     color: var(--dark-text);
     font-weight: 500;
-    padding: 8px 12px;
+    padding: 8px 10px;
     transition: all 0.3s;
     display: block;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     white-space: nowrap;
 }
 
@@ -232,7 +231,7 @@ img {
     padding: 10px 15px;
     display: block;
     white-space: nowrap;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .header-menu-list li .sub-menu li a:hover {
@@ -247,6 +246,7 @@ img {
     padding: 5px 10px;
     height: auto;
     cursor: pointer;
+    min-width: 100px;
 }
 
 .language-toggle .form-select:focus {
@@ -256,6 +256,13 @@ img {
 /* Mobile Menu */
 .mobile-menu-btn {
     display: none;
+}
+
+@media (max-width: 1199.98px) {
+    .header-menu-list li a {
+        font-size: 0.8rem;
+        padding: 8px 8px;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -760,23 +767,25 @@ img {
 }
 
 .box-icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 0 auto 15px;
-}
-
-.box-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(46, 125, 50, 0.1);
+    border-radius: 50%;
+    color: var(--primary-color);
+    font-size: 1.5rem;
 }
 
 .quick-link-box h4 {
     color: var(--primary-dark);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     position: relative;
     padding-bottom: 10px;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 .quick-link-box h4::after {
@@ -814,6 +823,7 @@ img {
     transition: color 0.3s;
     display: block;
     padding: 5px 0;
+    font-size: 0.9rem;
 }
 
 .box-links li a:hover {
@@ -1315,50 +1325,105 @@ img {
     opacity: 0.3;
 }
 
-/* Gallery Section */
+/* Gallery Section (Redesigned) */
 .gallery-section {
-    padding: 40px 0;
-    background: white;
+    padding: 60px 0;
+    background: #f9f9f9;
 }
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
     margin-top: 30px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: 10px;
+    height: 280px;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-item a::after {
+    content: '\f06e'; /* FontAwesome eye icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    font-size: 40px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+.gallery-item a:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .gallery-item img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
-.gallery-caption {
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item .gallery-caption {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 0;
-    background: rgba(46, 125, 50, 0.8);
-    color: white;
-    padding: 15px;
-    transform: translateY(0);
-    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.gallery-item:hover .gallery-caption {
     opacity: 1;
 }
 
 .gallery-caption h5 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
 }
+
+.gallery-item:hover .gallery-caption h5 {
+    transform: translateY(0);
+}
+
 
 /* Student Counter Section */
 .counter-section {
@@ -1693,12 +1758,12 @@ img {
     }
     
     .header-menu-list li {
-        margin: 0 4px;
+        margin: 0 2px;
     }
     
     .header-menu-list li a {
-        padding: 8px 10px;
-        font-size: 0.9rem;
+        padding: 8px 8px;
+        font-size: 0.8rem;
     }
 }
 
@@ -1762,15 +1827,6 @@ img {
 
     h3 {
         font-size: 1.5rem;
-    }
-
-    .topbar-school-info-list {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .topbar-school-info-list li {
-        margin: 0 10px;
     }
 
     .counter-item {
