@@ -11,19 +11,20 @@
   --border-color: #e0e0e0;
 }
 
-/* About Hero Section */
+/* About Hero Section - MODIFIED */
 .about-hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../images/about-hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 0;
+  padding: 80px 0; /* MODIFIED: Standardized hero height */
   text-align: center;
   color: white;
   position: relative;
 }
 
+/* MODIFIED: Standardized hero title */
 .about-hero-title {
   font-size: 2.8rem;
   font-weight: 700;
@@ -32,15 +33,15 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* MODIFIED: Standardized breadcrumb style */
 .breadcrumb {
-  display: flex;
+  display: inline-flex; /* MODIFIED: To allow centering */
   justify-content: center;
   align-items: center;
   font-size: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 8px 20px;
   border-radius: 50px;
-  display: inline-flex;
 }
 
 .breadcrumb a {
