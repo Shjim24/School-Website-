@@ -23,15 +23,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
+    <!-- FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <!-- Icofont -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css">
 
     <!-- Google Fonts - Anek Bangla -->
     <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main CSS -->
+    <!-- Main CSS from index -->
     <link rel="stylesheet" href="../style.css">
-    <!-- About Page CSS -->
+    <!-- About Page Specific CSS -->
     <link rel="stylesheet" href="about.css">
 
     <!-- IE Support -->
@@ -58,7 +60,7 @@
         </svg>
     </div>
 
-    <!-- Topbar Area -->
+    <!-- Topbar Area from index.html -->
     <div class="topbar-area">
         <div class="container">
             <div class="row align-items-center">
@@ -70,17 +72,21 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <ul class="topbar-school-info-list">
-                        <li>EIIN: <span>121314</span></li>
-                        <li>Code: <span>123456</span></li>
-                        <li>Reg: <span>654321</span></li>
-                    </ul>
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="language-toggle me-3">
+                            <select class="form-select form-select-sm">
+                                <option value="bn">বাংলা</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Header Area -->
+    <!-- Header Area from index.html -->
     <header class="header-area">
         <div class="container">
             <div class="row align-items-center">
@@ -94,56 +100,110 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="col-lg-8 col-md-7 d-none d-md-block">
+                <div class="col-lg-10 col-md-9 d-none d-md-block">
                     <nav class="navigation">
                         <ul class="header-menu-list">
                             <li><a href="../index.html">মূলপাতা</a></li>
+                            
                             <li>
                                 <a href="about.html" class="active">পরিচিতি</a>
                                 <ul class="sub-menu">
-                                    <li><a href="about.html" class="active">প্রতিষ্ঠান পরিচিতি</a></li>
-                                    <li><a href="../about/school-information.html">বিদ্যালয়ের তথ্যাদি</a></li>
-                                    <li><a href="../about/corner-message.html">স্কুল পরিচালকদের বাণী</a></li>
+                                    <li><a href="about.html" class="active">প্রতিষ্ঠানের পরিচিতি</a></li>
+                                    <li><a href="school-information.html">বিদ্যালয়ের তথ্যাদি</a></li>
+                                    <li><a href="directors-messages.html">স্কুল পরিচালকদের বাণী</a></li>
+                                    <li><a href="land-schedule.html">ভূমির তপসিল</a></li>
+                                    <li><a href="land-ownership.html">ভূমি মালিকানা তথ্য</a></li>
                                 </ul>
                             </li>
+                            
                             <li>
-                                <a href="../manpower.html">জনবল</a>
+                                <a href="../administration.html">প্রশাসন</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../manpower/school-teachers.html">শিক্ষক/শিক্ষিকা</a></li>
-                                    <li><a href="../manpower/school-committee.html">স্কুল কমিটি সদস্যবৃন্দ</a></li>
+                                    <li><a href="../administration/management-committee.html">ব্যবস্থাপনা কমিটি</a></li>
+                                    <li><a href="../administration/mp-nationalization.html">এমপি ও জাতীয়করণ তথ্য</a></li>
+                                    <li><a href="../administration/approved-positions.html">অনুমোদিত পদ সংখ্যা</a></li>
                                 </ul>
                             </li>
+                            
+                            <li>
+                                <a href="../faculty-staff.html">শিক্ষক/কর্মচারী</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../faculty-staff/teachers-info.html">শিক্ষকদের তথ্য</a></li>
+                                    <li><a href="../faculty-staff/teacher-attendance.html">শিক্ষক উপস্থিতি</a></li>
+                                    <li><a href="../faculty-staff/staff-info.html">কর্মকর্তা/কর্মচারী তথ্য</a></li>
+                                    <li><a href="../faculty-staff/staff-attendance.html">কর্মচারী উপস্থিতি</a></li>
+                                </ul>
+                            </li>
+                            
                             <li>
                                 <a href="../students.html">শিক্ষার্থী</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../students/running-student-data.html">অধ্যয়নরত শিক্ষার্থীর সংখ্যা</a></li>
-                                    <li><a href="../students/student-list.html">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
+                                    <li><a href="../students/gender-data.html">লিঙ্গ ভিত্তিক তথ্য</a></li>
+                                    <li><a href="../students/current-students.html">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
+                                    <li><a href="../students/student-attendance.html">শিক্ষার্থী উপস্থিতি</a></li>
+                                    <li><a href="../students/merit-list.html">মেধা তালিকা</a></li>
+                                    <li><a href="../students/pass-fail-lists.html">পাস/ফেল তালিকা</a></li>
                                 </ul>
                             </li>
+                            
                             <li>
-                                <a href="../exam-result.html">পরীক্ষার ফলাফল</a>
+                                <a href="../admission.html">ভর্তি</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../exam-result/public-exam.html">পাবলিক পরীক্ষা</a></li>
-                                    <li><a href="../exam-result/school-internal-exam.html">বিদ্যালয়ের অভ্যন্তরীন পরীক্ষা</a></li>
+                                    <li><a href="../admission/application.html">ভর্তি আবেদন</a></li>
+                                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
+                                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
+                                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                                    <li><a href="../admission/download-form.html">অনলাইন ফরম ডাউনলোড</a></li>
                                 </ul>
                             </li>
+                            
+                            <li>
+                                <a href="../exams.html">পরীক্ষা</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a></li>
+                                    <li><a href="../exams/public-results.html">পাবলিক পরীক্ষার ফল</a></li>
+                                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
+                                    <li><a href="../exams/class-routine.html">ক্লাস রুটিন</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="../academic.html">একাডেমিক</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                                    <li><a href="../academic/book-list.html">বইয়ের তালিকা</a></li>
+                                    <li><a href="../academic/multimedia-classes.html">মাল্টিমিডিয়া ক্লাস</a></li>
+                                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                                    <li><a href="../academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="../facilities.html">সুবিধাদি</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../facilities/buildings.html">ভবন</a></li>
+                                    <li><a href="../facilities/computer-lab.html">কম্পিউটার ল্যাব</a></li>
+                                    <li><a href="../facilities/playground.html">খেলার মাঠ</a></li>
+                                    <li><a href="../facilities/transport.html">যানবহন</a></li>
+
+                                </ul>
+                            </li>
+                            
                             <li><a href="../gallery.html">গ্যালারী</a></li>
+                            
+                            <li>
+                                <a href="../notices.html">ফলাফল</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../notices/general.html"> ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a></li>
+                                    <li><a href="../notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a></li>
+                                    <li><a href="../notices/admission.html">সার্টিফিকেট সংক্রান্ত তথ্য</a></li>
+                                    <li><a href="../notices/fee.html"> ফলাফল ডাউনলোড</a></li>
+                                </ul>
+                            </li>
+                            
                             <li><a href="../contact.html">যোগাযোগ</a></li>
                         </ul>
                     </nav>
-                </div>
-
-                <!-- Language and Login Toggle -->
-                <div class="col-lg-2 col-md-2 d-none d-md-block text-end">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <div class="language-toggle me-2">
-                            <select class="form-select form-select-sm">
-                                <option value="bn">বাংলা</option>
-                                <option value="en">English</option>
-                            </select>
-                        </div>
-                        <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
-                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -176,10 +236,10 @@
     <!-- About School Section -->
     <section class="about-school-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
                     <div class="about-school-content">
-                        <h2 class="section-title">XYZ স্কুল এবং কলেজ সম্পর্কে</h2>
+                        <h2 class="section-title" style="text-align: left; display:block;">XYZ স্কুল এবং কলেজ সম্পর্কে</h2>
                         <p class="about-text">
                             XYZ স্কুল এবং কলেজ এর অতীত গৌরবোজ্জ্বল বর্তমান প্রশংসনীয়। ২০২৩ ইংরেজীর ২০ শে জানুয়ারী XYZ স্কুল এবং কলেজ এর স্থানীয় ম্যাজিষ্ট্রেট অফিসের তৎকালীন প্রধান কারণিক মি: XYZ কর্তৃক প্রতিষ্ঠিত। তখন এটা XYZ গভর্ণমেন্ট স্কুল নামে পরিচিত ছিল। ৯ জন বাংলাদেশী, ১ জন হিন্দু ও ৮ জন মুসলমান বিদ্যোৎসাহী ব্যক্তির একটি কমিটির উপর এর পরিচালনার দায়িত্ব ন্যাস্ত ছিল। এদেশের অধিবাসীদের বাংলায় শিক্ষায় শিক্ষিত করার জন্য এ বিদ্যালয় চালু করা হয়। ২০২৩ ইংরেজির ১ ই মে মি: XYZ বিদ্যালয়ের প্রধান শিক্ষক নিযুক্ত হন।
                         </p>
@@ -188,7 +248,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-5">
                     <div class="about-school-image">
                         <img src="../images/about-img.png" alt="XYZ School Building" class="img-fluid">
                         <div class="image-overlay">
@@ -205,8 +265,8 @@
     <!-- Mission Vision Section -->
     <section class="mission-vision-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="mv-card mission-card">
                         <div class="mv-icon">
                             <i class="fas fa-bullseye"></i>
@@ -215,7 +275,7 @@
                         <p>গুণগত শিক্ষার মাধ্যমে দক্ষ, নৈতিকতাসম্পন্ন ও দেশপ্রেমিক নাগরিক গড়ে তোলা যারা জাতীয় ও আন্তর্জাতিক পর্যায়ে অবদান রাখতে সক্ষম।</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="mv-card vision-card">
                         <div class="mv-icon">
                             <i class="fas fa-eye"></i>
@@ -224,7 +284,7 @@
                         <p>একটি আদর্শ শিক্ষাপ্রতিষ্ঠান হিসেবে গড়ে তোলা যা শিক্ষার্থীদের সর্বাঙ্গীণ বিকাশ নিশ্চিত করবে এবং তাদেরকে ভবিষ্যতের জন্য প্রস্তুত করবে।</p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-12">
                     <div class="mv-card values-card">
                         <div class="mv-icon">
                             <i class="fas fa-heart"></i>
@@ -270,18 +330,6 @@
                         <p>প্রথম এইচএসসি পরীক্ষায় অংশগ্রহণ করে এবং ৯৮% পাশের হার অর্জন করে।</p>
                     </div>
                 </div>
-                <div class="timeline-container left">
-                    <div class="timeline-content">
-                        <h3>২০২৭</h3>
-                        <p>নতুন একাডেমিক ভবন উদ্বোধন করা হয় এবং আধুনিক ল্যাবরেটরি স্থাপন করা হয়।</p>
-                    </div>
-                </div>
-                <div class="timeline-container right">
-                    <div class="timeline-content">
-                        <h3>২০২৮</h3>
-                        <p>জাতীয় পর্যায়ে শ্রেষ্ঠ শিক্ষাপ্রতিষ্ঠান হিসেবে স্বীকৃতি লাভ করে।</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -318,158 +366,74 @@
                     <h3>মাল্টিমিডিয়া ক্লাসরুম</h3>
                     <p>সব ক্লাসরুমে প্রজেক্টর ও সাউন্ড সিস্টেম সহ মাল্টিমিডিয়া শিক্ষার সুবিধা।</p>
                 </div>
-                
-                <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-running"></i>
-                    </div>
-                    <h3>খেলার মাঠ</h3>
-                    <p>বৃহৎ খেলার মাঠ যেখানে ক্রিকেট, ফুটবল, ভলিবল, ব্যাডমিন্টন খেলার সুবিধা রয়েছে।</p>
-                </div>
-                
-                <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-music"></i>
-                    </div>
-                    <h3>সাংস্কৃতিক কার্যক্রম</h3>
-                    <p>সংগীত, নৃত্য, নাটক ও চিত্রাঙ্কনের জন্য আলাদা কক্ষ ও প্রশিক্ষণের ব্যবস্থা।</p>
-                </div>
-                
-                <div class="facility-card">
-                    <div class="facility-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
-                    <h3>পরিবহন সুবিধা</h3>
-                    <p>শহরের বিভিন্ন রুটে স্কুল বাসের মাধ্যমে নিরাপদ যাতায়াতের ব্যবস্থা।</p>
-                </div>
             </div>
         </div>
     </section> 
 
-    <!-- School Gallery Section --> <!-- 
-    <section class="school-gallery-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">স্কুল গ্যালারী</h2>
-                <p class="section-subtitle">আমাদের স্কুলের কিছু মুহূর্ত</p>
-            </div>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="../images/gallery-1.png" alt="School Event">
-                    <div class="gallery-overlay">
-                        <a href="../images/gallery-1.png" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/gallery-2.png" alt="Classroom">
-                    <div class="gallery-overlay">
-                        <a href="../images/gallery-2.png" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/gallery-3.png" alt="Sports Day">
-                    <div class="gallery-overlay">
-                        <a href="../images/gallery-3.png" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/gallery-4.jpg" alt="Laboratory">
-                    <div class="gallery-overlay">
-                        <a href="../images/gallery-4.jpg" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/library.jpg" alt="Library">
-                    <div class="gallery-overlay">
-                        <a href="../images/library.jpg" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="../images/playground.jpg" alt="playground">
-                    <div class="gallery-overlay">
-                        <a href="../images/playground.jpg" data-fancybox="school-gallery" class="gallery-btn">
-                            <i class="fas fa-search-plus"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="../gallery.html" class="view-all-btn">সম্পূর্ণ গ্যালারী দেখুন</a>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- Footer Area -->
+    <!-- Footer Area from index.html -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-grid">
-                <!-- Quick Links -->
+                <!-- Official Links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">অন্যান্য লিঙ্ক</h4>
+                    <h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4>
                     <ul class="footer-links">
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>ওয়েব মেইল লগিন
+                            <a href="https://nctb.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় (সরকারি মাধ্যমিক)
+                            <a href="https://dshe.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় – মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর
+                            <a href="https://www.teachers.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন (Teachers' Portal)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>প্রধানমন্ত্রীর কার্যালয়
+                            <a href="https://banbeis.portal.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো (BANBEIS)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা অধিদপ্তর
+                            <a href="https://bteb.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB)
                             </a>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Important Links -->
+                <!-- More Official Links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">গুরুত্বপূর্ণ লিঙ্ক</h4>
+                    <h4 class="footer-title"> </h4>
                     <ul class="footer-links">
                         <li>
-                            <a href="../contact.html"><i class="fas fa-arrow-right"></i>যোগাযোগ</a>
+                            <a href="https://bangladesh.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় তথ্য বাতায়ন (Bangladesh National Portal)
+                            </a>
                         </li>
                         <li>
-                            <a href="about.html"><i class="fas fa-arrow-right"></i>প্রতিষ্ঠান পরিচিতি</a>
+                            <a href="https://www.barisalboard.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বরিশাল শিক্ষা বোর্ড
+                            </a>
                         </li>
                         <li>
-                            <a href="../about/school-information.html"><i class="fas fa-arrow-right"></i>প্রতিষ্ঠানের তথ্যাদি</a>
+                            <a href="https://shed.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>প্রাথমিক শিক্ষা অধিদপ্তর
+                            </a>
                         </li>
                         <li>
-                            <a href="../manpower/school-teachers.html"><i class="fas fa-arrow-right"></i>সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
+                            <a href="https://www.nu.ac.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় বিশ্ববিদ্যালয় (National University)
+                            </a>
                         </li>
                         <li>
-                            <a href="../manpower/school-committee.html"><i class="fas fa-arrow-right"></i>স্কুল কমিটির সদস্যবৃন্দ</a>
+                            <a href="https://muktopaath.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>মুক্তপাঠ (Open Educational Resources)
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -531,7 +495,7 @@
             <!-- Copyright -->
             <div class="copyright-section">
                 <div class="copyright-text">
-                    &copy; 2023 XYZ School & College. All rights reserved.
+                    © 2023 XYZ School & College. All rights reserved.
                 </div>
                 <div class="developer-credit">
                     Design & Developed by: <a href="https://bdtender.com/" target="_blank">BD Tender</a>
@@ -549,12 +513,10 @@
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
-    <!-- CounterUp JS -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
    
-    <!-- Main JS -->
+    <!-- Main JS from index -->
     <script src="../script.js"></script>
-    <!-- About Page JS -->
+    <!-- About Page Specific JS -->
     <script src="about.js"></script>
 </body>
 </html>

@@ -759,6 +759,7 @@ img {
     margin-bottom: 20px;
     height: 100%;
     transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .quick-link-box:hover {
@@ -1325,105 +1326,85 @@ img {
     opacity: 0.3;
 }
 
-/* Gallery Section (Redesigned) */
+/* Gallery Section --- REDESIGNED */
 .gallery-section {
-    padding: 60px 0;
-    background: #f9f9f9;
+    padding: 40px 0;
+    background: white;
 }
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
     margin-top: 30px;
 }
 
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    height: 280px;
-    transition: all 0.4s ease;
+    border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 250px;
 }
 
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.gallery-item a {
+.gallery-item .gallery-link {
     display: block;
     width: 100%;
     height: 100%;
-}
-
-.gallery-item a::after {
-    content: '\f06e'; /* FontAwesome eye icon */
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: white;
-    font-size: 40px;
-    opacity: 0;
-    transition: all 0.4s ease;
-    z-index: 2;
-}
-
-.gallery-item a:hover::after {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
 }
 
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .gallery-item:hover img {
     transform: scale(1.1);
 }
 
-.gallery-item .gallery-caption {
+.gallery-overlay {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(46, 125, 50, 0.85);
+    color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
     opacity: 0;
     transition: opacity 0.4s ease;
-    z-index: 1;
 }
 
-.gallery-item:hover .gallery-caption {
+.gallery-item:hover .gallery-overlay {
     opacity: 1;
 }
 
-.gallery-caption h5 {
+.gallery-content {
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-content {
+    transform: translateY(0);
+}
+
+.gallery-content i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.gallery-content h5 {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
-    transform: translateY(20px);
-    transition: transform 0.4s ease 0.1s;
 }
-
-.gallery-item:hover .gallery-caption h5 {
-    transform: translateY(0);
-}
-
 
 /* Student Counter Section */
 .counter-section {

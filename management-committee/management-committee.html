@@ -4,15 +4,15 @@
     <!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="XYZ School, Committee, Governing Body">
-    <meta name="description" content="Meet our dedicated school committee members at XYZ School & College who guide our institution.">
+    <meta name="keywords" content="XYZ School, Management Committee, Governing Body, School Administration">
+    <meta name="description" content="Meet the dedicated Management Committee members of XYZ School & College who guide our institution towards excellence.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
     <!-- Site Title --> 
-    <title>স্কুল কমিটি - XYZ School & College</title>
+    <title>ব্যবস্থাপনা কমিটি - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg">
@@ -21,19 +21,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Owl Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
-
+    
     <!-- Google Fonts - Anek Bangla -->
     <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Main CSS -->
+    <!-- Main CSS from index -->
     <link rel="stylesheet" href="../style.css">
-    <!-- Committee Page CSS -->
-    <link rel="stylesheet" href="committee.css">
+    <!-- Management Committee Page Specific CSS -->
+    <link rel="stylesheet" href="management-committee.css">
 
     <!-- IE Support -->
     <!--[if lt IE 9]>
@@ -59,7 +56,7 @@
         </svg>
     </div>
 
-    <!-- Topbar Area -->
+    <!-- Topbar Area from index.html -->
     <div class="topbar-area">
         <div class="container">
             <div class="row align-items-center">
@@ -71,17 +68,21 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <ul class="topbar-school-info-list">
-                        <li>EIIN: <span>121314</span></li>
-                        <li>Code: <span>123456</span></li>
-                        <li>Reg: <span>654321</span></li>
-                    </ul>
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="language-toggle me-3">
+                            <select class="form-select form-select-sm">
+                                <option value="bn">বাংলা</option>
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+                        <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Header Area -->
+    <!-- Header Area from index.html -->
     <header class="header-area">
         <div class="container">
             <div class="row align-items-center">
@@ -95,56 +96,109 @@
                 </div>
 
                 <!-- Desktop Navigation -->
-                <div class="col-lg-8 col-md-7 d-none d-md-block">
+                <div class="col-lg-10 col-md-9 d-none d-md-block">
                     <nav class="navigation">
                         <ul class="header-menu-list">
                             <li><a href="../index.html">মূলপাতা</a></li>
+                            
                             <li>
                                 <a href="../about/about.html">পরিচিতি</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../about/about.html">প্রতিষ্ঠান পরিচিতি</a></li>
+                                    <li><a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
                                     <li><a href="../about/school-information.html">বিদ্যালয়ের তথ্যাদি</a></li>
-                                    <li><a href="../about/corner-message.html">স্কুল পরিচালকদের বাণী</a></li>
+                                    <li><a href="../about/directors-messages.html">স্কুল পরিচালকদের বাণী</a></li>
+                                    <li><a href="../about/land-schedule.html">ভূমির তপসিল</a></li>
+                                    <li><a href="../about/land-ownership.html">ভূমি মালিকানা তথ্য</a></li>
                                 </ul>
                             </li>
+                            
                             <li>
-                                <a href="../manpower/manpower.html" class="active">জনবল</a>
+                                <a href="#" class="active">প্রশাসন</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../manpower/school-teachers.html">শিক্ষক/শিক্ষিকা</a></li>
-                                    <li><a href="school-committee.html" class="active">স্কুল কমিটি সদস্যবৃন্দ</a></li>
+                                    <li><a href="management-committee.html" class="active">ব্যবস্থাপনা কমিটি</a></li>
+                                    <li><a href="../administration/mp-nationalization.html">এমপি ও জাতীয়করণ তথ্য</a></li>
+                                    <li><a href="../administration/approved-positions.html">অনুমোদিত পদ সংখ্যা</a></li>
                                 </ul>
                             </li>
+                            
                             <li>
-                                <a href="../students/students.html">শিক্ষার্থী</a>
+                                <a href="../faculty-staff.html">শিক্ষক/কর্মচারী</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../students/running-student-data.html">অধ্যয়নরত শিক্ষার্থীর সংখ্যা</a></li>
-                                    <li><a href="../students/student-list.html">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
+                                    <li><a href="../faculty-staff/teachers-info.html">শিক্ষকদের তথ্য</a></li>
+                                    <li><a href="../faculty-staff/teacher-attendance.html">শিক্ষক উপস্থিতি</a></li>
+                                    <li><a href="../faculty-staff/staff-info.html">কর্মকর্তা/কর্মচারী তথ্য</a></li>
+                                    <li><a href="../faculty-staff/staff-attendance.html">কর্মচারী উপস্থিতি</a></li>
                                 </ul>
                             </li>
+                            
                             <li>
-                                <a href="../exam-result/exam-result.html">পরীক্ষার ফলাফল</a>
+                                <a href="../students.html">শিক্ষার্থী</a>
                                 <ul class="sub-menu">
-                                    <li><a href="../exam-result/public-exam.html">পাবলিক পরীক্ষা</a></li>
-                                    <li><a href="../exam-result/school-internal-exam.html">বিদ্যালয়ের অভ্যন্তরীন পরীক্ষা</a></li>
+                                    <li><a href="../students/gender-data.html">লিঙ্গ ভিত্তিক তথ্য</a></li>
+                                    <li><a href="../students/current-students.html">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
+                                    <li><a href="../students/student-attendance.html">শিক্ষার্থী উপস্থিতি</a></li>
+                                    <li><a href="../students/merit-list.html">মেধা তালিকা</a></li>
+                                    <li><a href="../students/pass-fail-lists.html">পাস/ফেল তালিকা</a></li>
                                 </ul>
                             </li>
-                            <li><a href="../gallery/gallery.html">গ্যালারী</a></li>
-                            <li><a href="../contact/contact.html">যোগাযোগ</a></li>
+                            
+                            <li>
+                                <a href="../admission.html">ভর্তি</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../admission/application.html">ভর্তি আবেদন</a></li>
+                                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
+                                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
+                                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                                    <li><a href="../admission/download-form.html">অনলাইন ফরম ডাউনলোড</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="../exams.html">পরীক্ষা</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a></li>
+                                    <li><a href="../exams/public-results.html">পাবলিক পরীক্ষার ফল</a></li>
+                                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
+                                    <li><a href="../exams/class-routine.html">ক্লাস রুটিন</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="../academic.html">একাডেমিক</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                                    <li><a href="../academic/book-list.html">বইয়ের তালিকা</a></li>
+                                    <li><a href="../academic/multimedia-classes.html">মাল্টিমিডিয়া ক্লাস</a></li>
+                                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                                    <li><a href="../academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="../facilities.html">সুবিধাদি</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../facilities/buildings.html">ভবন</a></li>
+                                    <li><a href="../facilities/computer-lab.html">কম্পিউটার ল্যাব</a></li>
+                                    <li><a href="../facilities/playground.html">খেলার মাঠ</a></li>
+                                    <li><a href="../facilities/transport.html">যানবহন</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="../gallery.html">গ্যালারী</a></li>
+                            
+                            <li>
+                                <a href="../notices.html">ফলাফল</a>
+                                <ul class="sub-menu">
+                                    <li><a href="../notices/general.html"> ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a></li>
+                                    <li><a href="../notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a></li>
+                                    <li><a href="../notices/admission.html">সার্টিফিকেট সংক্রান্ত তথ্য</a></li>
+                                    <li><a href="../notices/fee.html"> ফলাফল ডাউনলোড</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="../contact.html">যোগাযোগ</a></li>
                         </ul>
                     </nav>
-                </div>
-
-                <!-- Language and Login Toggle -->
-                <div class="col-lg-2 col-md-2 d-none d-md-block text-end">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <div class="language-toggle me-2">
-                            <select class="form-select form-select-sm">
-                                <option value="bn">বাংলা</option>
-                                <option value="en">English</option>
-                            </select>
-                        </div>
-                        <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
-                    </div>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -160,17 +214,17 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Committee Page Hero Section -->
-    <section class="committee-hero-section">
+    <!-- Committee Page Hero Section (Styled like About Page) -->
+    <section class="page-hero-section">
         <div class="container">
-            <div class="committee-hero-content">
-                <h1 class="committee-hero-title animate__animated animate__fadeInDown">স্কুল কমিটি সদস্যবৃন্দ</h1>
+            <div class="hero-content">
+                <h1 class="hero-title animate__animated animate__fadeInDown">ব্যবস্থাপনা কমিটি</h1>
                 <div class="breadcrumb animate__animated animate__fadeIn animate__delay-1s">
                     <a href="../index.html">মূলপাতা</a>
                     <i class="fas fa-angle-double-right"></i>
-                    <a href="../manpower/manpower.html">জনবল</a>
+                    <span>প্রশাসন</span>
                     <i class="fas fa-angle-double-right"></i>
-                    <span>স্কুল কমিটি সদস্যবৃন্দ</span>
+                    <span>ব্যবস্থাপনা কমিটি</span>
                 </div>
             </div>
         </div>
@@ -184,16 +238,17 @@
                     <div class="committee-filter-form">
                         <form>
                             <div class="row g-3">
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <select class="form-select" id="position-filter">
                                         <option value="">সকল পদবী</option>
-                                        <option value="president">সভাপতি</option>
-                                        <option value="vice-president">সহ-সভাপতি</option>
-                                        <option value="secretary">সেক্রেটারী</option>
-                                        <option value="member">সদস্য</option>
+                                        <option value="সভাপতি">সভাপতি</option>
+                                        <option value="সহ-সভাপতি">সহ-সভাপতি</option>
+                                        <option value="ক্যাশিয়ার">ক্যাশিয়ার</option>
+                                        <option value="সেক্রেটারী">সেক্রেটারী</option>
+                                        <option value="সদস্য">সদস্য</option>
                                     </select>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-5">
                                     <select class="form-select" id="type-filter">
                                         <option value="">সকল ধরন</option>
                                         <option value="management">ম্যানেজিং কমিটি</option>
@@ -201,8 +256,8 @@
                                         <option value="other">অন্যান্য কমিটি</option>
                                     </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn btn-primary w-100">ফিল্টার করুন</button>
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">ফিল্টার</button>
                                 </div>
                             </div>
                         </form>
@@ -216,13 +271,13 @@
     <section class="all-committee-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">আমাদের স্কুল কমিটি সদস্যবৃন্দ</h2>
-                <p class="section-subtitle">যারা পরিচালনা করেন আমাদের প্রতিষ্ঠান</p>
+                <h2 class="section-title">আমাদের পরিচালনা পর্ষদ</h2>
+                <p class="section-subtitle">প্রতিষ্ঠানের অগ্রগতিতে নিবেদিতপ্রাণ ব্যক্তিবর্গ</p>
             </div>
 
             <div class="row">
                 <!-- Member 1 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সভাপতি">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-1.png" alt="Committee Member">
@@ -240,13 +295,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 2 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সহ-সভাপতি">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-2.jpg" alt="Committee Member">
@@ -264,13 +319,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 3 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="ক্যাশিয়ার">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-3.jpg" alt="Committee Member">
@@ -279,7 +334,7 @@
                         <div class="committee-info">
                             <h4 class="member-name">রেজাউল ইসলাম</h4>
                             <p class="member-position">স্কুল ক্যাশিয়ার</p>
-                            <div class="member-details">
+                             <div class="member-details">
                                 <p><i class="fas fa-calendar-alt"></i> যোগদান: ১ জানুয়ারী, ২০২২</p>
                                 <p><i class="fas fa-clock"></i> মেয়াদ: ১ জানুয়ারী, ২০২৭</p>
                             </div>
@@ -288,13 +343,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 4 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সেক্রেটারী">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-4.jpg" alt="Committee Member">
@@ -303,22 +358,22 @@
                         <div class="committee-info">
                             <h4 class="member-name">মাহবুব আলম</h4>
                             <p class="member-position">স্কুল সেক্রেটারী</p>
-                            <div class="member-details">
+                             <div class="member-details">
                                 <p><i class="fas fa-calendar-alt"></i> যোগদান: ১ জানুয়ারী, ২০২২</p>
-                                <p><i class="fas fa-clock"></i> মেয়াদ: ১ জানুয়ারী, ২০২৭</p>
+                                <p><i class="fas fa-clock"></i> মেয়াদ: ১ জানুয়ারী, ২০ ২৭</p>
                             </div>
                             <div class="member-social">
                                 <a href="#"><i class="fas fa-phone"></i></a>
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 5 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-5.jpeg" alt="Committee Member">
@@ -327,7 +382,7 @@
                         <div class="committee-info">
                             <h4 class="member-name">আনিসুর রহমান</h4>
                             <p class="member-position">শিক্ষক প্রতিনিধি</p>
-                            <div class="member-details">
+                             <div class="member-details">
                                 <p><i class="fas fa-calendar-alt"></i> যোগদান: ১ জানুয়ারী, ২০২২</p>
                                 <p><i class="fas fa-clock"></i> মেয়াদ: ১ জানুয়ারী, ২০২৭</p>
                             </div>
@@ -336,13 +391,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Member 6 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-6.jpeg" alt="Committee Member">
@@ -360,13 +415,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 7 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-7.jpeg" alt="Committee Member">
@@ -384,13 +439,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 8 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-8.jpeg" alt="Committee Member">
@@ -408,13 +463,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 9 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-9.jpeg" alt="Committee Member">
@@ -432,13 +487,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 10 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-10.jpeg" alt="Committee Member">
@@ -456,13 +511,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 11 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-11.jpeg" alt="Committee Member">
@@ -480,13 +535,13 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Member 12 -->
-                <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="col-lg-3 col-md-4 col-sm-6 committee-member-card" data-position="সদস্য">
                     <div class="committee-card">
                         <div class="committee-image">
                             <img src="../images/committee-12.jpeg" alt="Committee Member">
@@ -504,7 +559,7 @@
                                 <a href="#"><i class="fas fa-envelope"></i></a>
                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                             </div>
-                            <a href="member-details.html" class="committee-btn">বিস্তারিত দেখুন</a>
+                            <a href="#" class="committee-btn">বিস্তারিত দেখুন</a>
                         </div>
                     </div>
                 </div>
@@ -529,60 +584,70 @@
         </div>
     </section>
 
-    <!-- Footer Area -->
+    <!-- Footer Area from index.html -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-grid">
-                <!-- Quick Links -->
+                <!-- Official Links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">অন্যান্য লিঙ্ক</h4>
+                    <h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4>
                     <ul class="footer-links">
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>ওয়েব মেইল লগিন
+                            <a href="https://nctb.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় (সরকারি মাধ্যমিক)
+                            <a href="https://dshe.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় – মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর
+                            <a href="https://www.teachers.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন (Teachers' Portal)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>প্রধানমন্ত্রীর কার্যালয়
+                            <a href="https://banbeis.portal.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো (BANBEIS)
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
-                                <i class="fas fa-external-link-alt"></i>মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা অধিদপ্তর
+                            <a href="https://bteb.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB)
                             </a>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Important Links -->
+                <!-- More Official Links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">গুরুত্বপূর্ণ লিঙ্ক</h4>
+                    <h4 class="footer-title"> </h4>
                     <ul class="footer-links">
                         <li>
-                            <a href="../contact/contact.html"><i class="fas fa-arrow-right"></i>যোগাযোগ</a>
+                            <a href="https://bangladesh.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় তথ্য বাতায়ন (Bangladesh National Portal)
+                            </a>
                         </li>
                         <li>
-                            <a href="../about/about.html"><i class="fas fa-arrow-right"></i>প্রতিষ্ঠান পরিচিতি</a>
+                            <a href="https://www.barisalboard.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>বরিশাল শিক্ষা বোর্ড
+                            </a>
                         </li>
                         <li>
-                            <a href="../about/school-information.html"><i class="fas fa-arrow-right"></i>প্রতিষ্ঠানের তথ্যাদি</a>
+                            <a href="https://shed.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>প্রাথমিক শিক্ষা অধিদপ্তর
+                            </a>
                         </li>
                         <li>
-                            <a href="../manpower/school-teachers.html"><i class="fas fa-arrow-right"></i>সকল শিক্ষক/শিক্ষিকা বৃন্দ</a>
+                            <a href="https://www.nu.ac.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>জাতীয় বিশ্ববিদ্যালয় (National University)
+                            </a>
                         </li>
                         <li>
-                            <a href="school-committee.html"><i class="fas fa-arrow-right"></i>স্কুল কমিটির সদস্যবৃন্দ</a>
+                            <a href="https://muktopaath.gov.bd/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>মুক্তপাঠ (Open Educational Resources)
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -644,7 +709,7 @@
             <!-- Copyright -->
             <div class="copyright-section">
                 <div class="copyright-text">
-                    &copy; 2023 XYZ School & College. All rights reserved.
+                    © 2023 XYZ School & College. All rights reserved.
                 </div>
                 <div class="developer-credit">
                     Design & Developed by: <a href="https://bdtender.com/" target="_blank">BD Tender</a>
@@ -658,16 +723,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- Waypoints JS -->
-    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
-    <!-- CounterUp JS -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
-   
-    <!-- Main JS -->
+    
+    <!-- Main JS from index -->
     <script src="../script.js"></script>
-    <!-- Committee Page JS -->
-    <script src="committee.js"></script>
+    <!-- Management Committee Page Specific JS -->
+    <script src="management-committee.js"></script>
 </body>
 </html>
