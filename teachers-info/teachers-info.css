@@ -1,6 +1,7 @@
 /*
  * ===================================================
- * Management Committee Page Specific Styles
+ * Teacher Info Page Specific Styles
+ * (Following the Committee Page Pattern)
  * ===================================================
  */
 
@@ -14,10 +15,10 @@
   --border-color: #e0e0e0;
 }
 
-/* Hero Section (Pattern from About Page) */
+/* Hero Section (Pattern from Committee Page) */
 .page-hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/committee-hero-bg.jpg");
+    url("../images/teachers-hero-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -106,6 +107,9 @@
   background: white;
   border: 1px solid #eee;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .committee-card:hover {
@@ -147,6 +151,9 @@
 .committee-info {
   padding: 25px 20px;
   text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .member-name {
@@ -168,6 +175,7 @@
   color: #555;
   border-top: 1px solid #f0f0f0;
   padding-top: 15px;
+  flex-grow: 1;
 }
 
 .member-details p {
@@ -215,6 +223,7 @@
   font-weight: 500;
   transition: all 0.3s ease;
   border: 1px solid var(--primary-color);
+  margin-top: auto;
 }
 
 .committee-btn:hover {
