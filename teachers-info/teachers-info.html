@@ -29,7 +29,7 @@
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
 
-    <!-- External CSS -->
+    <!-- All CSS Libraries (Corrected and Completed) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -43,6 +43,20 @@
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
+
+    <!-- Google Fonts - Anek Bangla -->
+    <link
       href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
@@ -50,6 +64,20 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="teachers-info.css" />
+
+    <!-- Custom CSS for one-line navbar -->
+    <style>
+      @media (min-width: 1200px) {
+        .header-menu-list > li > a {
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
+        }
+        .header-menu-list > li {
+          margin: 0 1px;
+        }
+      }
+    </style>
 
     <!-- IE Support -->
     <!--[if lt IE 9]>
@@ -108,10 +136,11 @@
       </div>
     </div>
 
-    <!-- Header Area -->
+    <!-- Header Area (Corrected with Full Navigation) -->
     <header class="header-area">
       <div class="container">
         <div class="row align-items-center">
+          <!-- Logo Area -->
           <div class="col-lg-2 col-md-3 col-6">
             <div class="header-logo">
               <a href="../index.html"
@@ -119,10 +148,12 @@
               /></a>
             </div>
           </div>
+          <!-- Desktop Navigation -->
           <div class="col-lg-10 col-md-9 d-none d-md-block">
             <nav class="navigation">
               <ul class="header-menu-list">
                 <li><a href="../index.html">মূলপাতা</a></li>
+
                 <li>
                   <a href="../about/about.html">পরিচিতি</a>
                   <ul class="sub-menu">
@@ -135,7 +166,7 @@
                       >
                     </li>
                     <li>
-                      <a href="../about/directors-messages.html"
+                      <a href="../about/corner-message.html"
                         >স্কুল পরিচালকদের বাণী</a
                       >
                     </li>
@@ -147,10 +178,14 @@
                         >ভূমি মালিকানা তথ্য</a
                       >
                     </li>
+                    <li><a href="../about/memorial.html">স্মরণিকা</a></li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="#">প্রশাসন</a>
+                  <a href="../administration/management-committee.html"
+                    >প্রশাসন</a
+                  >
                   <ul class="sub-menu">
                     <li>
                       <a href="../administration/management-committee.html"
@@ -159,7 +194,7 @@
                     </li>
                     <li>
                       <a href="../administration/mp-nationalization.html"
-                        >এমপি ও জাতীয়করণ তথ্য</a
+                        >এমপিও ও জাতীয়করণ তথ্য</a
                       >
                     </li>
                     <li>
@@ -169,35 +204,39 @@
                     </li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="../faculty-staff.html" class="active"
+                  <a href="../teachers-info/teachers-info.html" class="active"
                     >শিক্ষক/কর্মচারী</a
                   >
                   <ul class="sub-menu">
                     <li>
-                      <a href="teachers-info.html" class="active"
+                      <a
+                        href="../teachers-info/teachers-info.html"
+                        class="active"
                         >শিক্ষকদের তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/teacher-attendance.html"
+                      <a href="../teacher-attendance/teacher-attendance.html"
                         >শিক্ষক উপস্থিতি</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/staff-info.html"
+                      <a href="../staff-info/staff-info.html"
                         >কর্মকর্তা/কর্মচারী তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/staff-attendance.html"
+                      <a href="../staff-attendance/staff-attendance.html"
                         >কর্মচারী উপস্থিতি</a
                       >
                     </li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="../students.html">শিক্ষার্থী</a>
+                  <a href="../students/current-students.html">শিক্ষার্থী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../students/gender-data.html"
@@ -210,7 +249,7 @@
                       >
                     </li>
                     <li>
-                      <a href="../students/student-attendance.html"
+                      <a href="../student-attendance/student-attendance.html"
                         >শিক্ষার্থী উপস্থিতি</a
                       >
                     </li>
@@ -218,14 +257,16 @@
                       <a href="../students/merit-list.html">মেধা তালিকা</a>
                     </li>
                     <li>
-                      <a href="../students/pass-fail-lists.html"
-                        >পাস/ফেল তালিকা</a
-                      >
+                      <a href="../students/pass-lists.html">পাস তালিকা</a>
+                    </li>
+                    <li>
+                      <a href="../students/fail-lists.html">ফেল তালিকা</a>
                     </li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="../admission.html">ভর্তি</a>
+                  <a href="../admission/info.html">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../admission/application.html">ভর্তি আবেদন</a>
@@ -240,8 +281,48 @@
                     </li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="../exams.html">পরীক্ষা</a>
+                  <a href="#">একাডেমিক</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../academic/multimedia-classes.html"
+                        >মাল্টিমিডিয়া ক্লাস</a
+                      >
+                    </li>
+                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                    <li>
+                      <a href="../index.html#academic-calendar"
+                        >শিক্ষা বর্ষপঞ্জি</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
+                    </li>
+                    <li><a href="#">ক্লাস কক্ষ</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
+                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li>
+                      <a href="../approved-positions/approved-positions.html"
+                        >আসন সংখ্যা</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
+                    </li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../exams/internal-results.html"
@@ -254,31 +335,11 @@
                       >
                     </li>
                     <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
-                    <li>
-                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
-                    </li>
                   </ul>
                 </li>
+
                 <li>
-                  <a href="../academic.html">একাডেমিক</a>
-                  <ul class="sub-menu">
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
-                    <li>
-                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
-                    </li>
-                    <li>
-                      <a href="../academic/multimedia-classes.html"
-                        >মাল্টিমিডিয়া ক্লাস</a
-                      >
-                    </li>
-                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
-                    <li>
-                      <a href="../academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="../facilities.html">সুবিধাদি</a>
+                  <a href="../facilities/buildings.html">সুবিধাদি</a>
                   <ul class="sub-menu">
                     <li><a href="../facilities/buildings.html">ভবন</a></li>
                     <li>
@@ -289,33 +350,26 @@
                     <li>
                       <a href="../facilities/playground.html">খেলার মাঠ</a>
                     </li>
-                    <li><a href="../facilities/transport.html">যানবহন</a></li>
-                  </ul>
-                </li>
-                <li><a href="../gallery.html">গ্যালারী</a></li>
-                <li>
-                  <a href="../notices.html">ফলাফল</a>
-                  <ul class="sub-menu">
                     <li>
-                      <a href="../notices/general.html"
-                        >ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a
+                      <a href="../facilities/cultural.html"
+                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
                       >
                     </li>
                     <li>
-                      <a href="../notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a>
-                    </li>
-                    <li>
-                      <a href="../notices/admission.html"
-                        >সার্টিফিকেট সংক্রান্ত তথ্য</a
+                      <a href="../facilities/Cleanliness.html"
+                        >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
                       >
                     </li>
-                    <li><a href="../notices/fee.html">ফলাফল ডাউনলোড</a></li>
                   </ul>
                 </li>
+
+                <li><a href="../gallery.html">গ্যালারি</a></li>
+
                 <li><a href="../contact.html">যোগাযোগ</a></li>
               </ul>
             </nav>
           </div>
+          <!-- Mobile Menu Button -->
           <div class="col-6 d-md-none text-end">
             <button class="mobile-menu-btn btn btn-sm btn-primary">
               <i class="fas fa-bars"></i> মেনু
@@ -348,7 +402,7 @@
       </div>
     </section>
 
-    <!-- Filter Section (using committee pattern classes) -->
+    <!-- Filter Section -->
     <section class="committee-filter-section">
       <div class="container">
         <div class="row justify-content-center">
@@ -386,7 +440,7 @@
       </div>
     </section>
 
-    <!-- Main Content Section (using committee pattern classes) -->
+    <!-- Main Content Section (All 12 teacher cards included) -->
     <section class="all-committee-section">
       <div class="container">
         <div class="section-header">
@@ -396,7 +450,7 @@
           </p>
         </div>
         <div class="row">
-          <!-- Teacher Card 1 (committee pattern) -->
+          <!-- Teacher Card 1 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="প্রধান শিক্ষক"
@@ -429,7 +483,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 2 (committee pattern) -->
+          <!-- Teacher Card 2 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সিনিয়র শিক্ষক"
@@ -461,7 +515,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 3 (committee pattern) -->
+          <!-- Teacher Card 3 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -493,7 +547,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 4 (committee pattern) -->
+          <!-- Teacher Card 4 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সিনিয়র শিক্ষক"
@@ -525,7 +579,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 5 (committee pattern) -->
+          <!-- Teacher Card 5 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="প্রভাষক"
@@ -557,7 +611,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 6 (committee pattern) -->
+          <!-- Teacher Card 6 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -589,7 +643,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 7 (committee pattern) -->
+          <!-- Teacher Card 7 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -621,7 +675,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 8 (committee pattern) -->
+          <!-- Teacher Card 8 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -651,7 +705,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 9 (committee pattern) -->
+          <!-- Teacher Card 9 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -683,7 +737,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 10 (committee pattern) -->
+          <!-- Teacher Card 10 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -714,7 +768,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 11 (committee pattern) -->
+          <!-- Teacher Card 11 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -747,7 +801,7 @@
               </div>
             </div>
           </div>
-          <!-- Teacher Card 12 (committee pattern) -->
+          <!-- Teacher Card 12 -->
           <div
             class="col-lg-3 col-md-4 col-sm-6 committee-member-card"
             data-designation="সহকারী শিক্ষক"
@@ -794,7 +848,6 @@
                 <a class="page-link" href="#">1</a>
               </li>
               <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"></li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item">
                 <a class="page-link" href="#">পরবর্তী</a>
@@ -805,7 +858,7 @@
       </div>
     </section>
 
-    <!-- Footer Area -->
+    <!-- Footer Area (Full version) -->
     <footer class="footer-section">
       <div class="container">
         <div class="footer-grid">
@@ -941,9 +994,14 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- All JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
+
+    <!-- Main and Page-Specific JS -->
     <script src="../script.js"></script>
     <script src="teachers-info.js"></script>
   </body>

@@ -23,6 +23,14 @@ body {
   background-color: var(--light-bg);
   line-height: 1.6;
   scroll-behavior: smooth;
+  /* --- পৃষ্ঠা পরিবর্তনের জন্য অ্যানিমেশন --- */
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* --- পৃষ্ঠা লোড হওয়ার পর ফেইড-ইন করার জন্য ক্লাস --- */
+body.fade-in {
+  opacity: 1;
 }
 
 h1,

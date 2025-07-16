@@ -29,36 +29,31 @@
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
 
-    <!-- Bootstrap -->
+    <!-- All CSS Libraries (Corrected and Completed) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Animate CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
-
-    <!-- =================================================== -->
-    <!-- START: Owl Carousel CSS (FIX) -->
-    <!-- =================================================== -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
-    <!-- =================================================== -->
-    <!-- END: Owl Carousel CSS (FIX) -->
-    <!-- =================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -66,10 +61,24 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS from index -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Management Committee Page Specific CSS -->
+    <!-- Page Specific CSS -->
     <link rel="stylesheet" href="management-committee.css" />
+
+    <!-- Custom CSS for one-line navbar -->
+    <style>
+      @media (min-width: 1200px) {
+        .header-menu-list > li > a {
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
+        }
+        .header-menu-list > li {
+          margin: 0 1px;
+        }
+      }
+    </style>
 
     <!-- IE Support -->
     <!--[if lt IE 9]>
@@ -100,7 +109,7 @@
       </svg>
     </div>
 
-    <!-- Topbar Area from index.html -->
+    <!-- Topbar Area -->
     <div class="topbar-area">
       <div class="container">
         <div class="row align-items-center">
@@ -130,7 +139,7 @@
       </div>
     </div>
 
-    <!-- Header Area from index.html -->
+    <!-- Header Area (Corrected with Full Navigation) -->
     <header class="header-area">
       <div class="container">
         <div class="row align-items-center">
@@ -161,7 +170,7 @@
                       >
                     </li>
                     <li>
-                      <a href="../about/directors-messages.html"
+                      <a href="../about/corner-message.html"
                         >স্কুল পরিচালকদের বাণী</a
                       >
                     </li>
@@ -173,14 +182,21 @@
                         >ভূমি মালিকানা তথ্য</a
                       >
                     </li>
+                    <li><a href="../about/memorial.html">স্মরণিকা</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">প্রশাসন</a>
+                  <a
+                    href="../administration/management-committee.html"
+                    class="active"
+                    >প্রশাসন</a
+                  >
                   <ul class="sub-menu">
                     <li>
-                      <a href="management-committee.html" class="active"
+                      <a
+                        href="../administration/management-committee.html"
+                        class="active"
                         >ব্যবস্থাপনা কমিটি</a
                       >
                     </li>
@@ -198,25 +214,27 @@
                 </li>
 
                 <li>
-                  <a href="../faculty-staff.html">শিক্ষক/কর্মচারী</a>
+                  <a href="../teachers-info/teachers-info.html"
+                    >শিক্ষক/কর্মচারী</a
+                  >
                   <ul class="sub-menu">
                     <li>
-                      <a href="../faculty-staff/teachers-info.html"
+                      <a href="../teachers-info/teachers-info.html"
                         >শিক্ষকদের তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/teacher-attendance.html"
+                      <a href="../teacher-attendance/teacher-attendance.html"
                         >শিক্ষক উপস্থিতি</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/staff-info.html"
+                      <a href="../staff-info/staff-info.html"
                         >কর্মকর্তা/কর্মচারী তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="../faculty-staff/staff-attendance.html"
+                      <a href="../staff-attendance/staff-attendance.html"
                         >কর্মচারী উপস্থিতি</a
                       >
                     </li>
@@ -224,7 +242,7 @@
                 </li>
 
                 <li>
-                  <a href="../students.html">শিক্ষার্থী</a>
+                  <a href="../students/current-students.html">শিক্ষার্থী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../students/gender-data.html"
@@ -237,7 +255,7 @@
                       >
                     </li>
                     <li>
-                      <a href="../students/student-attendance.html"
+                      <a href="../student-attendance/student-attendance.html"
                         >শিক্ষার্থী উপস্থিতি</a
                       >
                     </li>
@@ -245,15 +263,16 @@
                       <a href="../students/merit-list.html">মেধা তালিকা</a>
                     </li>
                     <li>
-                      <a href="../students/pass-fail-lists.html"
-                        >পাস/ফেল তালিকা</a
-                      >
+                      <a href="../students/pass-lists.html">পাস তালিকা</a>
+                    </li>
+                    <li>
+                      <a href="../students/fail-lists.html">ফেল তালিকা</a>
                     </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../admission.html">ভর্তি</a>
+                  <a href="../admission/info.html">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../admission/application.html">ভর্তি আবেদন</a>
@@ -270,7 +289,46 @@
                 </li>
 
                 <li>
-                  <a href="../exams.html">পরীক্ষা</a>
+                  <a href="#">একাডেমিক</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../academic/multimedia-classes.html"
+                        >মাল্টিমিডিয়া ক্লাস</a
+                      >
+                    </li>
+                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                    <li>
+                      <a href="../index.html#academic-calendar"
+                        >শিক্ষা বর্ষপঞ্জি</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
+                    </li>
+                    <li><a href="#">ক্লাস কক্ষ</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
+                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li>
+                      <a href="../approved-positions/approved-positions.html"
+                        >আসন সংখ্যা</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
+                    </li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../exams/internal-results.html"
@@ -283,33 +341,11 @@
                       >
                     </li>
                     <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
-                    <li>
-                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
-                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../academic.html">একাডেমিক</a>
-                  <ul class="sub-menu">
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
-                    <li>
-                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
-                    </li>
-                    <li>
-                      <a href="../academic/multimedia-classes.html"
-                        >মাল্টিমিডিয়া ক্লাস</a
-                      >
-                    </li>
-                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
-                    <li>
-                      <a href="../academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="../facilities.html">সুবিধাদি</a>
+                  <a href="../facilities/buildings.html">সুবিধাদি</a>
                   <ul class="sub-menu">
                     <li><a href="../facilities/buildings.html">ভবন</a></li>
                     <li>
@@ -320,31 +356,20 @@
                     <li>
                       <a href="../facilities/playground.html">খেলার মাঠ</a>
                     </li>
-                    <li><a href="../facilities/transport.html">যানবহন</a></li>
-                  </ul>
-                </li>
-
-                <li><a href="../gallery.html">গ্যালারী</a></li>
-
-                <li>
-                  <a href="../notices.html">ফলাফল</a>
-                  <ul class="sub-menu">
                     <li>
-                      <a href="../notices/general.html">
-                        ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a
+                      <a href="../facilities/cultural.html"
+                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
                       >
                     </li>
                     <li>
-                      <a href="../notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a>
-                    </li>
-                    <li>
-                      <a href="../notices/admission.html"
-                        >সার্টিফিকেট সংক্রান্ত তথ্য</a
+                      <a href="../facilities/Cleanliness.html"
+                        >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
                       >
                     </li>
-                    <li><a href="../notices/fee.html"> ফলাফল ডাউনলোড</a></li>
                   </ul>
                 </li>
+
+                <li><a href="../gallery.html">গ্যালারি</a></li>
 
                 <li><a href="../contact.html">যোগাযোগ</a></li>
               </ul>
@@ -364,7 +389,7 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Committee Page Hero Section (Styled like About Page) -->
+    <!-- Committee Page Hero Section -->
     <section class="page-hero-section">
       <div class="container">
         <div class="hero-content">
@@ -806,7 +831,7 @@
       </div>
     </section>
 
-    <!-- Footer Area from index.html -->
+    <!-- Footer Area -->
     <footer class="footer-section">
       <div class="container">
         <div class="footer-grid">
@@ -905,14 +930,6 @@
                   <a href="mailto:hello@xyzschool.com">hello@xyzschool.com</a>
                 </div>
               </div>
-              <div class="contact-item">
-                <i class="fas fa-info-circle"></i>
-                <div class="school-info">
-                  <p>EIIN no: <span>121314</span></p>
-                  <p>School code: <span>12345678</span></p>
-                  <p>Reg. no: <span>123456789012</span></p>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -956,24 +973,15 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <!-- jQuery -->
+    <!-- All JavaScript Libraries (Corrected and Completed) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
-    <!-- =================================================== -->
-    <!-- START: Owl Carousel JS (FIX) -->
-    <!-- It MUST come AFTER jQuery and BEFORE script.js -->
-    <!-- =================================================== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- =================================================== -->
-    <!-- END: Owl Carousel JS (FIX) -->
-    <!-- =================================================== -->
-
-    <!-- Main JS from index -->
+    <!-- Main and Page-Specific JS -->
     <script src="../script.js"></script>
-    <!-- Management Committee Page Specific JS -->
     <script src="management-committee.js"></script>
   </body>
 </html>

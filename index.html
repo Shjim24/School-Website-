@@ -62,7 +62,7 @@
     <!-- Icofont -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css"
     />
 
     <!-- Google Fonts - Anek Bangla -->
@@ -71,8 +71,22 @@
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
+    <!-- Custom CSS (এই লিঙ্কটি এখন সঠিকভাবে কাজ করবে) -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Custom CSS for one-line navbar -->
+    <style>
+      @media (min-width: 1200px) {
+        .header-menu-list > li > a {
+          padding: 8px 7px; /* Reduced horizontal padding */
+          font-size: 0.82rem; /* Slightly smaller font */
+          white-space: nowrap; /* Prevent text wrapping */
+        }
+        .header-menu-list > li {
+          margin: 0 1px; /* Reduced margin between items */
+        }
+      }
+    </style>
 
     <!-- IE Support -->
     <!--[if lt IE 9]>
@@ -153,23 +167,30 @@
                 <li><a href="index.html">মূলপাতা</a></li>
 
                 <li>
-                  <a href="about.html">পরিচিতি</a>
+                  <a href="about/about.html">পরিচিতি</a>
                   <ul class="sub-menu">
-                    <li><a href="about/about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
                     <li>
-                      <a href="about/school-information.html"
+                      <a href="about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
+                    </li>
+                    <li>
+                      <a href="school information/school-information.html"
                         >বিদ্যালয়ের তথ্যাদি</a
                       >
                     </li>
                     <li>
-                      <a href="about/directors-messages.html"
+                      <a href="corner-message/corner-message.html"
                         >স্কুল পরিচালকদের বাণী</a
                       >
                     </li>
-                    <li><a href="about/land-schedule.html">ভূমির তপসিল</a></li>
                     <li>
-                      <a href="about/land-ownership.html">ভূমি মালিকানা তথ্য</a>
+                      <a href="land-schedule/land-schedule.html">ভূমির তপসিল</a>
                     </li>
+                    <li>
+                      <a href="land-ownership/land-ownership.html"
+                        >ভূমি মালিকানা তথ্য</a
+                      >
+                    </li>
+                    <li><a href="about/memorial.html">স্মরণিকা</a></li>
                   </ul>
                 </li>
 
@@ -177,17 +198,17 @@
                   <a href="administration.html">প্রশাসন</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="administration/management-committee.html"
+                      <a href="management-committee/management-committee.html"
                         >ব্যবস্থাপনা কমিটি</a
                       >
                     </li>
                     <li>
-                      <a href="administration/mp-nationalization.html"
+                      <a href="mp-nationalization/mp-nationalization.html"
                         >এমপি ও জাতীয়করণ তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="administration/approved-positions.html"
+                      <a href="approved-positions/approved-positions.html"
                         >অনুমোদিত পদ সংখ্যা</a
                       >
                     </li>
@@ -198,22 +219,22 @@
                   <a href="faculty-staff.html">শিক্ষক/কর্মচারী</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="faculty-staff/teachers-info.html"
+                      <a href="teachers-info/teachers-info.html"
                         >শিক্ষকদের তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="faculty-staff/teacher-attendance.html"
+                      <a href="teacher-attendance/teacher-attendance.html"
                         >শিক্ষক উপস্থিতি</a
                       >
                     </li>
                     <li>
-                      <a href="faculty-staff/staff-info.html"
+                      <a href="staff-info/staff-info.html"
                         >কর্মকর্তা/কর্মচারী তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="faculty-staff/staff-attendance.html"
+                      <a href="staff-attendance/staff-attendance.html"
                         >কর্মচারী উপস্থিতি</a
                       >
                     </li>
@@ -232,14 +253,13 @@
                       >
                     </li>
                     <li>
-                      <a href="students/student-attendance.html"
+                      <a href="student-attendance/student-attendance.html"
                         >শিক্ষার্থী উপস্থিতি</a
                       >
                     </li>
                     <li><a href="students/merit-list.html">মেধা তালিকা</a></li>
-                    <li>
-                      <a href="students/pass-fail-lists.html">পাস/ফেল তালিকা</a>
-                    </li>
+                    <li><a href="students/pass-lists.html">পাস তালিকা</a></li>
+                    <li><a href="students/fail-lists.html">ফেল তালিকা</a></li>
                   </ul>
                 </li>
 
@@ -261,7 +281,42 @@
                 </li>
 
                 <li>
-                  <a href="exams.html">পরীক্ষা</a>
+                  <a href="#">একাডেমিক</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="academic/multimedia-classes.html"
+                        >মাল্টিমিডিয়া ক্লাস</a
+                      >
+                    </li>
+                    <li><a href="academic/laboratory.html">গবেষণাগার</a></li>
+                    <li>
+                      <a href="#academic-calendar">শিক্ষা বর্ষপঞ্জি</a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <ul class="sub-menu">
+                    <li><a href="exams/class-routine.html">ক্লাস রুটিন</a></li>
+                    <li><a href="#">ক্লাস কক্ষ</a></li>
+                    <li><a href="admission/fees.html">ফি তথ্য</a></li>
+                    <li><a href="academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li>
+                      <a href="approved-positions/approved-positions.html"
+                        >আসন সংখ্যা</a
+                      >
+                    </li>
+                    <li>
+                      <a href="academic/book-list.html">বইয়ের তালিকা</a>
+                    </li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a>
@@ -270,24 +325,6 @@
                       <a href="exams/public-results.html">পাবলিক পরীক্ষার ফল</a>
                     </li>
                     <li><a href="exams/schedule.html">পরীক্ষার রুটিন</a></li>
-                    <li><a href="exams/class-routine.html">ক্লাস রুটিন</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="academic.html">একাডেমিক</a>
-                  <ul class="sub-menu">
-                    <li><a href="academic/syllabus.html">পাঠ্যসূচি</a></li>
-                    <li><a href="academic/book-list.html">বইয়ের তালিকা</a></li>
-                    <li>
-                      <a href="academic/multimedia-classes.html"
-                        >মাল্টিমিডিয়া ক্লাস</a
-                      >
-                    </li>
-                    <li><a href="academic/laboratory.html">গবেষণাগার</a></li>
-                    <li>
-                      <a href="academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a>
-                    </li>
                   </ul>
                 </li>
 
@@ -298,32 +335,23 @@
                     <li>
                       <a href="facilities/computer-lab.html">কম্পিউটার ল্যাব</a>
                     </li>
-                    <li><a href="facilities/playground.html">খেলার মাঠ</a></li>
-                    <li><a href="facilities/transport.html">যানবহন</a></li>
-                  </ul>
-                </li>
-
-                <li><a href="gallery.html">গ্যালারী</a></li>
-
-                <li>
-                  <a href="notices.html">ফলাফল</a>
-                  <ul class="sub-menu">
                     <li>
-                      <a href="notices/general.html">
-                        ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a
+                      <a href="facilities/playground.html">খেলার মাঠ</a>
+                    </li>
+                    <li>
+                      <a href="facilities/cultural.html"
+                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
                       >
                     </li>
                     <li>
-                      <a href="notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a>
-                    </li>
-                    <li>
-                      <a href="notices/admission.html"
-                        >সার্টিফিকেট সংক্রান্ত তথ্য</a
+                      <a href="facilities/Cleanliness.html"
+                        >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
                       >
                     </li>
-                    <li><a href="notices/fee.html"> ফলাফল ডাউনলোড</a></li>
                   </ul>
                 </li>
+
+                <li><a href="gallery.html">গ্যালারি</a></li>
 
                 <li><a href="contact.html">যোগাযোগ</a></li>
               </ul>
@@ -490,15 +518,17 @@
                 <li><a href="about.html">এক নজরে</a></li>
                 <li><a href="about/history.html">প্রতিষ্ঠানের ইতিহাস</a></li>
                 <li>
-                  <a href="about/school-information.html">সাফল্য ও অর্জন</a>
+                  <a href="school information/school-information.html"
+                    >সাফল্য ও অর্জন</a
+                  >
                 </li>
                 <li>
-                  <a href="administration/management-committee.html"
+                  <a href="management-committee/management-committee.html"
                     >ব্যবস্থাপনা কমিটি</a
                   >
                 </li>
                 <li>
-                  <a href="administration/approved-positions.html"
+                  <a href="approved-positions/approved-positions.html"
                     >আসন সংখ্যা</a
                   >
                 </li>
@@ -514,7 +544,7 @@
               <h4>শিক্ষক ও শিক্ষার্থী</h4>
               <ul class="box-links">
                 <li>
-                  <a href="faculty-staff/teachers-info.html">শিক্ষকদের তথ্য</a>
+                  <a href="teachers-info/teachers-info.html">শিক্ষকদের তথ্য</a>
                 </li>
                 <li>
                   <a href="students/current-students.html"
@@ -522,7 +552,7 @@
                   >
                 </li>
                 <li>
-                  <a href="students/student-attendance.html"
+                  <a href="student-attendance/student-attendance.html"
                     >শিক্ষার্থী উপস্থিতি</a
                   >
                 </li>
@@ -569,7 +599,7 @@
                     >অভ্যন্তরীণ পরীক্ষার ফলাফল</a
                   >
                 </li>
-                <li><a href="academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a></li>
+                <li><a href="#academic-calendar">শিক্ষা বর্ষপঞ্জি</a></li>
                 <li><a href="facilities/laboratory.html">গবেষণাগার</a></li>
                 <li><a href="notices.html">নোটিশ বোর্ড</a></li>
               </ul>
@@ -662,7 +692,7 @@
     </section>
 
     <!-- Academic Calendar Section -->
-    <section class="calendar-section">
+    <section class="calendar-section" id="academic-calendar">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">একাডেমিক ক্যালেন্ডার</h2>
@@ -720,35 +750,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Muktopath Section -->
-    <!--
-    <section class="muktopath-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">মুক্তপাঠ</h2>
-            </div>
-            <div class="muktopath-container">
-                <div class="muktopath-content">
-                    <div class="muktopath-image">
-                        <img src="./images/muktopath-logo.png" alt="Muktopath">
-                    </div>
-                    <div class="muktopath-info">
-                        <h3>মুক্তপাথ - জাতীয় ই-লার্নিং প্ল্যাটফর্ম</h3>
-                        <p>মুক্তপাথ হল বাংলাদেশ সরকারের একটি ডিজিটাল লার্নিং প্ল্যাটফর্ম যেখানে বিনামূল্যে বিভিন্ন কোর্স ও শিক্ষামূলক উপকরণ পাওয়া যায়। আমাদের শিক্ষার্থীদের জন্য এই প্ল্যাটফর্মটি ব্যবহারের জন্য উৎসাহিত করা হচ্ছে।</p>
-                        <div class="muktopath-links">
-                            <a href="https://muktopaath.gov.bd/" target="_blank" class="muktopath-btn">
-                                <i class="fas fa-external-link-alt"></i> ওয়েবসাইট ভিজিট করুন
-                            </a>
-                            <a href="#" class="muktopath-btn">
-                                <i class="fas fa-book"></i> কোর্স তালিকা
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Teachers Area -->
     <section class="teachers-section">
@@ -1029,7 +1030,7 @@
     <section class="gallery-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">আমাদের গ্যালারী</h2>
+          <h2 class="section-title">আমাদের গ্যালারি</h2>
         </div>
         <div class="gallery-container">
           <!-- Gallery Item 1 -->
@@ -1102,7 +1103,7 @@
         </div>
         <div class="section-footer">
           <a href="gallery.html" class="view-all-btn"
-            >সম্পূর্ণ গ্যালারী দেখুন</a
+            >সম্পূর্ণ গ্যালারি দেখুন</a
           >
         </div>
       </div>
@@ -1148,7 +1149,7 @@
               <i class="fas fa-school"></i>
             </div>
             <div class="counter-number" data-count="12">0</div>
-            <div class="counter-label">শ্রেণণিকক্ষ</div>
+            <div class="counter-label"> শ্রেণণিকক্ষ</div>
           </div>
           <div class="counter-item box-shadow-effect">
             <div class="counter-icon">

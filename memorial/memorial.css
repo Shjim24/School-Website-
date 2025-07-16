@@ -1,0 +1,294 @@
+/* Variable Definitions (from original pattern for consistency) */
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+  --border-color: #e0e0e0;
+}
+
+/* Memorial Hero Section */
+.memorial-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80'); /* একটি উপযুক্ত ব্যাকগ্রাউন্ড ইমেজ */
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content .hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Tribute Timeline Section (Reusing History Section Style) */
+.tribute-section {
+  padding: 80px 0;
+  background: white;
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #e9ecef;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timeline-container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid var(--primary-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.3s;
+}
+
+.timeline-container:hover::after {
+  background-color: var(--primary-color);
+}
+
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  border: 10px solid transparent;
+  border-left-color: #f8f9fa;
+}
+
+.right::before {
+  content: " ";
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  border: 10px solid transparent;
+  border-right-color: #f8f9fa;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 25px;
+  background-color: #f8f9fa;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--primary-light);
+  transition: all 0.3s;
+}
+
+.timeline-container:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-left-color: var(--primary-dark);
+}
+
+.tribute-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.tribute-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tribute-details h3 {
+  color: var(--primary-dark);
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.tribute-role {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+.tribute-text {
+  line-height: 1.7;
+  color: var(--text-color);
+  font-size: 0.95rem;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-color);
+}
+
+
+/* Memorial Gallery Section */
+.memorial-gallery-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.gallery-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.15);
+}
+
+.gallery-card a {
+    display: block;
+    position: relative;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 125, 50, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-caption {
+    padding: 15px;
+    text-align: center;
+}
+
+.gallery-caption h5 {
+    color: var(--primary-dark);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .timeline-container::before {
+    left: 60px;
+    border: 10px solid transparent;
+    border-right-color: #f8f9fa;
+  }
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  .right {
+    left: 0%;
+  }
+   .tribute-info {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tribute-photo {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

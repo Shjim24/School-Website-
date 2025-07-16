@@ -23,36 +23,30 @@
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
 
-    <!-- Bootstrap -->
+    <!-- All CSS Libraries (Corrected and Completed) -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     />
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Animate CSS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
-
-    <!-- Owl Carousel CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
     />
-
-    <!-- Fancybox CSS -->
-    <link 
-      rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
     />
 
     <!-- Google Fonts - Anek Bangla -->
@@ -65,15 +59,45 @@
     <link rel="stylesheet" href="../style.css" />
     <!-- Staff Info Page Specific CSS -->
     <link rel="stylesheet" href="staff-info.css" />
+
+    <!-- Custom CSS for one-line navbar -->
+    <style>
+      @media (min-width: 1200px) {
+        .header-menu-list > li > a {
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
+        }
+        .header-menu-list > li {
+          margin: 0 1px;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Preloader -->
-    <div id="preloader"><div class="preloader-main"><div></div><div></div><div></div><div></div></div></div>
+    <div id="preloader">
+      <div class="preloader-main">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
     <!-- Back to Top -->
-    <div class="progress-wrap"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" /></svg></div>
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
 
-    <!-- Topbar Area (Exactly as requested) -->
+    <!-- Topbar Area -->
     <div class="topbar-area">
       <div class="container">
         <div class="row align-items-center">
@@ -103,7 +127,7 @@
       </div>
     </div>
 
-    <!-- Header Area (Restored with ALL dropdown menus) -->
+    <!-- Header Area (Corrected with Full Navigation) -->
     <header class="header-area">
       <div class="container">
         <div class="row align-items-center">
@@ -116,7 +140,7 @@
             </div>
           </div>
 
-          <!-- Desktop Navigation (Full version) -->
+          <!-- Desktop Navigation -->
           <div class="col-lg-10 col-md-9 d-none d-md-block">
             <nav class="navigation">
               <ul class="header-menu-list">
@@ -125,97 +149,211 @@
                 <li>
                   <a href="../about/about.html">পরিচিতি</a>
                   <ul class="sub-menu">
-                    <li><a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
-                    <li><a href="../about/school-information.html">বিদ্যালয়ের তথ্যাদি</a></li>
-                    <li><a href="../about/directors-messages.html">স্কুল পরিচালকদের বাণী</a></li>
-                    <li><a href="../about/land-schedule.html">ভূমির তপসিল</a></li>
-                    <li><a href="../about/land-ownership.html">ভূমি মালিকানা তথ্য</a></li>
+                    <li>
+                      <a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
+                    </li>
+                    <li>
+                      <a href="../about/school-information.html"
+                        >বিদ্যালয়ের তথ্যাদি</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../about/corner-message.html"
+                        >স্কুল পরিচালকদের বাণী</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../about/land-schedule.html">ভূমির তপসিল</a>
+                    </li>
+                    <li>
+                      <a href="../about/land-ownership.html"
+                        >ভূমি মালিকানা তথ্য</a
+                      >
+                    </li>
+                    <li><a href="../about/memorial.html">স্মরণিকা</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#">প্রশাসন</a>
+                  <a href="../administration/management-committee.html"
+                    >প্রশাসন</a
+                  >
                   <ul class="sub-menu">
-                    <li><a href="../administration/management-committee.html">ব্যবস্থাপনা কমিটি</a></li>
-                    <li><a href="../administration/mp-nationalization.html">এমপি ও জাতীয়করণ তথ্য</a></li>
-                    <li><a href="../administration/approved-positions.html">অনুমোদিত পদ সংখ্যা</a></li>
+                    <li>
+                      <a href="../administration/management-committee.html"
+                        >ব্যবস্থাপনা কমিটি</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../administration/mp-nationalization.html"
+                        >এমপিও ও জাতীয়করণ তথ্য</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../administration/approved-positions.html"
+                        >অনুমোদিত পদ সংখ্যা</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../faculty-staff.html" class="active">শিক্ষক/কর্মচারী</a>
+                  <a href="../teachers-info/teachers-info.html" class="active"
+                    >শিক্ষক/কর্মচারী</a
+                  >
                   <ul class="sub-menu">
-                    <li><a href="teachers-info.html">শিক্ষকদের তথ্য</a></li>
-                    <li><a href="teacher-attendance.html">শিক্ষক উপস্থিতি</a></li>
-                    <li><a href="staff-info.html" class="active">কর্মকর্তা/কর্মচারী তথ্য</a></li>
-                    <li><a href="staff-attendance.html">কর্মচারী উপস্থিতি</a></li>
+                    <li>
+                      <a href="../teachers-info/teachers-info.html"
+                        >শিক্ষকদের তথ্য</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../teacher-attendance/teacher-attendance.html"
+                        >শিক্ষক উপস্থিতি</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../staff-info/staff-info.html" class="active"
+                        >কর্মকর্তা/কর্মচারী তথ্য</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../staff-attendance/staff-attendance.html"
+                        >কর্মচারী উপস্থিতি</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../students.html">শিক্ষার্থী</a>
+                  <a href="../students/current-students.html">শিক্ষার্থী</a>
                   <ul class="sub-menu">
-                    <li><a href="../students/gender-data.html">লিঙ্গ ভিত্তিক তথ্য</a></li>
-                    <li><a href="../students/current-students.html">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
-                    <li><a href="../students/student-attendance.html">শিক্ষার্থী উপস্থিতি</a></li>
-                    <li><a href="../students/merit-list.html">মেধা তালিকা</a></li>
-                    <li><a href="../students/pass-fail-lists.html">পাস/ফেল তালিকা</a></li>
+                    <li>
+                      <a href="../students/gender-data.html"
+                        >লিঙ্গ ভিত্তিক তথ্য</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../students/current-students.html"
+                        >অধ্যয়নরত শিক্ষার্থীর তালিকা</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../student-attendance/student-attendance.html"
+                        >শিক্ষার্থী উপস্থিতি</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../students/merit-list.html">মেধা তালিকা</a>
+                    </li>
+                    <li>
+                      <a href="../students/pass-lists.html">পাস তালিকা</a>
+                    </li>
+                    <li>
+                      <a href="../students/fail-lists.html">ফেল তালিকা</a>
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../admission.html">ভর্তি</a>
+                  <a href="../admission/info.html">ভর্তি</a>
                   <ul class="sub-menu">
-                    <li><a href="../admission/application.html">ভর্তি আবেদন</a></li>
+                    <li>
+                      <a href="../admission/application.html">ভর্তি আবেদন</a>
+                    </li>
                     <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
                     <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
                     <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
-                    <li><a href="../admission/download-form.html">অনলাইন ফরম ডাউনলোড</a></li>
+                    <li>
+                      <a href="../admission/download-form.html"
+                        >অনলাইন ফরম ডাউনলোড</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../exams.html">পরীক্ষা</a>
+                  <a href="#">একাডেমিক</a>
                   <ul class="sub-menu">
-                    <li><a href="../exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a></li>
-                    <li><a href="../exams/public-results.html">পাবলিক পরীক্ষার ফল</a></li>
-                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
-                    <li><a href="../exams/class-routine.html">ক্লাস রুটিন</a></li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="../academic.html">একাডেমিক</a>
-                  <ul class="sub-menu">
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
-                    <li><a href="../academic/book-list.html">বইয়ের তালিকা</a></li>
-                    <li><a href="../academic/multimedia-classes.html">মাল্টিমিডিয়া ক্লাস</a></li>
+                    <li>
+                      <a href="../academic/multimedia-classes.html"
+                        >মাল্টিমিডিয়া ক্লাস</a
+                      >
+                    </li>
                     <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
-                    <li><a href="../academic/calendar.html">শিক্ষা বর্ষপঞ্জি</a></li>
+                    <li>
+                      <a href="../index.html#academic-calendar"
+                        >শিক্ষা বর্ষপঞ্জি</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../facilities.html">সুবিধাদি</a>
+                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
+                    </li>
+                    <li><a href="#">ক্লাস কক্ষ</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
+                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li>
+                      <a href="../approved-positions/approved-positions.html"
+                        >আসন সংখ্যা</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
+                    </li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="../exams/internal-results.html"
+                        >অভ্যন্তরীণ ফলাফল</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
+                    </li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="../facilities/buildings.html">সুবিধাদি</a>
                   <ul class="sub-menu">
                     <li><a href="../facilities/buildings.html">ভবন</a></li>
-                    <li><a href="../facilities/computer-lab.html">কম্পিউটার ল্যাব</a></li>
-                    <li><a href="../facilities/playground.html">খেলার মাঠ</a></li>
-                    <li><a href="../facilities/transport.html">যানবহন</a></li>
+                    <li>
+                      <a href="../facilities/computer-lab.html"
+                        >কম্পিউটার ল্যাব</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../facilities/playground.html">খেলার মাঠ</a>
+                    </li>
+                    <li>
+                      <a href="../facilities/cultural.html"
+                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
+                      >
+                    </li>
+                    <li>
+                      <a href="../facilities/Cleanliness.html"
+                        >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
-                <li><a href="../gallery.html">গ্যালারী</a></li>
-
-                <li>
-                  <a href="../notices.html">ফলাফল</a>
-                  <ul class="sub-menu">
-                    <li><a href="../notices/general.html">ফলাফল সংক্রান্ত বিজ্ঞপ্তি</a></li>
-                    <li><a href="../notices/exam.html">ফলাফল সংক্রান্ত তথ্য</a></li>
-                    <li><a href="../notices/admission.html">সার্টিফিকেট সংক্রান্ত তথ্য</a></li>
-                    <li><a href="../notices/fee.html"> ফলাফল ডাউনলোড</a></li>
-                  </ul>
-                </li>
+                <li><a href="../gallery.html">গ্যালারি</a></li>
 
                 <li><a href="../contact.html">যোগাযোগ</a></li>
               </ul>
@@ -224,7 +362,9 @@
 
           <!-- Mobile Menu Button -->
           <div class="col-6 d-md-none text-end">
-            <button class="mobile-menu-btn btn btn-sm btn-primary"><i class="fas fa-bars"></i> মেনু</button>
+            <button class="mobile-menu-btn btn btn-sm btn-primary">
+              <i class="fas fa-bars"></i> মেনু
+            </button>
           </div>
         </div>
       </div>
@@ -234,66 +374,679 @@
     <div class="mobile-menu-overlay"></div>
 
     <!-- Staff Page Hero Section -->
-    <section class="page-hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1170&q=80');">
-        <div class="container"><div class="hero-content"><h1 class="hero-title animate__animated animate__fadeInDown">কর্মকর্তা/কর্মচারী বৃন্দ</h1><div class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"><a href="../index.html">মূলপাতা</a><i class="fas fa-angle-double-right"></i><span>শিক্ষক/কর্মচারী</span><i class="fas fa-angle-double-right"></i><span>কর্মকর্তা/কর্মচারী তথ্য</span></div></div></div>
+    <section
+      class="page-hero-section"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1170&q=80');
+      "
+    >
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title animate__animated animate__fadeInDown">
+            কর্মকর্তা/কর্মচারী বৃন্দ
+          </h1>
+          <div
+            class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
+          >
+            <a href="../index.html">মূলপাতা</a
+            ><i class="fas fa-angle-double-right"></i
+            ><span>শিক্ষক/কর্মচারী</span
+            ><i class="fas fa-angle-double-right"></i
+            ><span>কর্মকর্তা/কর্মচারী তথ্য</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Staff Filter Section -->
-    <section class="staff-filter-section"><div class="container"><div class="row justify-content-center"><div class="col-lg-8"><div class="staff-filter-form"><form><div class="row g-3"><div class="col-md-5"><select class="form-select" id="department-filter"><option value="">সকল বিভাগ</option><option value="বিজ্ঞান">বিজ্ঞান</option><option value="ইংরেজি">ইংরেজি</option><option value="গণিত">গণিত</option><option value="বাংলা">বাংলা</option><option value="আইসিটি">আইসিটি</option><option value="মানবিক">মানবিক</option><option value="ব্যবসা">ব্যবসা শিক্ষা</option><option value="প্রশাসন">প্রশাসন</option></select></div><div class="col-md-5"><select class="form-select" id="type-filter"><option value="">সকল ধরন</option><option value="শিক্ষক">শিক্ষক</option><option value="কর্মকর্তা">কর্মকর্তা</option><option value="কর্মচারী">কর্মচারী</option></select></div><div class="col-md-2"><button type="submit" class="btn btn-primary w-100">ফিল্টার</button></div></div></form></div></div></div></div></section>
-
-    <!-- All Staff Section (Now with 12 members) -->
-    <section class="all-staff-section">
+    <section class="staff-filter-section">
       <div class="container">
-        <div class="section-header"><h2 class="section-title">আমাদের নিবেদিতপ্রাণ শিক্ষক ও কর্মচারী</h2><p class="section-subtitle">জ্ঞান ও মূল্যবোধ গঠনে যারা নিরলস কাজ করে যাচ্ছেন</p></div>
-        <div class="row">
-            <!-- Staff Member 1 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="বিজ্ঞান" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=388&q=80" alt="প্রধান শিক্ষক" /><div class="staff-badge">বিজ্ঞান</div></div><div class="staff-info"><h4 class="member-name">ড. আফসানা বেগম</h4><p class="member-position">প্রধান শিক্ষক</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: পিএইচ.ডি (রসায়ন)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ১০ মার্চ, ২০১৫</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="ড. আফসানা বেগম <br/> প্রধান শিক্ষক">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 2 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="ইংরেজি" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1590650213165-c21d8c6b5f42?auto=format&fit=crop&w=387&q=80" alt="সহকারী অধ্যাপক" /><div class="staff-badge">ইংরেজি</div></div><div class="staff-info"><h4 class="member-name">জনাব আহসান হাবীব</h4><p class="member-position">সহকারী অধ্যাপক</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এ (ইংরেজি)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০৫ জুলাই, ২০১৮</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1590650213165-c21d8c6b5f42?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="জনাব আহসান হাবীব <br/> সহকারী অধ্যাপক">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 3 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="গণিত" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1580894732444-84cf70b6e582?auto=format&fit=crop&w=387&q=80" alt="সহকারী শিক্ষক" /><div class="staff-badge">গণিত</div></div><div class="staff-info"><h4 class="member-name">মিসেস রোকসানা পারভীন</h4><p class="member-position">সহকারী শিক্ষক (গণিত)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এস.সি (গণিত)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ২১ আগস্ট, ২০১৯</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1580894732444-84cf70b6e582?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="মিসেস রোকসানা পারভীন <br/> সহকারী শিক্ষক (গণিত)">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 4 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="বাংলা" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1544717297-fa95b6ee8643?auto=format&fit=crop&w=387&q=80" alt="সহকারী শিক্ষক" /><div class="staff-badge">বাংলা</div></div><div class="staff-info"><h4 class="member-name">জনাব কামরুল হাসান</h4><p class="member-position">সহকারী শিক্ষক (বাংলা)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এ (বাংলা)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০১ জানুয়ারি, ২০২০</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1544717297-fa95b6ee8643?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="জনাব কামরুল হাসান <br/> সহকারী শিক্ষক (বাংলা)">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 5 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="আইসিটি" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1531482615713-2c657f6b86e5?auto=format&fit=crop&w=387&q=80" alt="আইসিটি শিক্ষক" /><div class="staff-badge">আইসিটি</div></div><div class="staff-info"><h4 class="member-name">ফাহমিদা আক্তার</h4><p class="member-position">প্রভাষক (আইসিটি)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: বি.এসসি (সিএসই)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ১২ ফেব্রুয়ারি, ২০২১</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1531482615713-2c657f6b86e5?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="ফাহমিদা আক্তার <br/> প্রভাষক (আইসিটি)">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 6 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="মানবিক" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=387&q=80" alt="সহকারী শিক্ষক" /><div class="staff-badge">মানবিক</div></div><div class="staff-info"><h4 class="member-name">শারমিন সুলতানা</h4><p class="member-position">সহকারী শিক্ষক (ইতিহাস)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এস.এস (ইতিহাস)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০২ জুন, ২০২১</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="শারমিন সুলতানা <br/> সহকারী শিক্ষক (ইতিহাস)">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 7 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="প্রশাসন" data-type="কর্মকর্তা"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1556742044-59324e2ea271?auto=format&fit=crop&w=387&q=80" alt="হিসাবরক্ষক" /><div class="staff-badge">প্রশাসন</div></div><div class="staff-info"><h4 class="member-name">মোঃ রফিকুল ইসলাম</h4><p class="member-position">হিসাবরক্ষক</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.কম (হিসাববিজ্ঞান)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ১৫ নভেম্বর, ২০১৭</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1556742044-59324e2ea271?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="মোঃ রফিকুল ইসলাম <br/> হিসাবরক্ষক">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 8 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="প্রশাসন" data-type="কর্মকর্তা"><div class="staff-card"><div class="staff-image"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=387&q=80" alt="লাইব্রেরিয়ান" /><div class="staff-badge">প্রশাসন</div></div><div class="staff-info"><h4 class="member-name">আবু সাইদ</h4><p class="member-position">লাইব্রেরিয়ান</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এ (তথ্য বিজ্ঞান)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০১ মার্চ, ২০২২</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=870&q=80" class="staff-btn" data-fancybox="staff" data-caption="আবু সাইদ <br/> লাইব্রেরিয়ান">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 9 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="প্রশাসন" data-type="কর্মচারী"><div class="staff-card"><div class="staff-image"><img src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=400" alt="অফিস সহকারী" /><div class="staff-badge">প্রশাসন</div></div><div class="staff-info"><h4 class="member-name">নাসরিন আক্তার</h4><p class="member-position">অফিস সহকারী</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এইচ.এস.সি</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ৩০ মে, ২০১৬</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="staff-btn" data-fancybox="staff" data-caption="নাসরিন আক্তার <br/> অফিস সহকারী">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 10 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="বিজ্ঞান" data-type="কর্মচারী"><div class="staff-card"><div class="staff-image"><img src="https://images.pexels.com/photos/3807743/pexels-photo-3807743.jpeg?auto=compress&cs=tinysrgb&w=400" alt="ল্যাব সহকারী" /><div class="staff-badge">বিজ্ঞান</div></div><div class="staff-info"><h4 class="member-name">সোহেল রানা</h4><p class="member-position">ল্যাব সহকারী</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: ডিপ্লোমা (ইলেকট্রনিক্স)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০৯ এপ্রিল, ২০১৯</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.pexels.com/photos/3807743/pexels-photo-3807743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="staff-btn" data-fancybox="staff" data-caption="সোহেল রানা <br/> ল্যাব সহকারী">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 11 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="ব্যবসা" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg?auto=compress&cs=tinysrgb&w=400" alt="ব্যবসা শিক্ষক" /><div class="staff-badge">ব্যবসা</div></div><div class="staff-info"><h4 class="member-name">ইমতিয়াজ আহমেদ</h4><p class="member-position">সহকারী শিক্ষক (ব্যবসা)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.বি.এ (ফিন্যান্স)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ০৩ মার্চ, ২০১৮</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.pexels.com/photos/842548/pexels-photo-842548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="staff-btn" data-fancybox="staff" data-caption="ইমতিয়াজ আহমেদ <br/> সহকারী শিক্ষক (ব্যবসা)">বিস্তারিত দেখুন</a></div></div></div>
-            <!-- Staff Member 12 -->
-            <div class="col-lg-3 col-md-4 col-sm-6 staff-member-card" data-department="বিজ্ঞান" data-type="শিক্ষক"><div class="staff-card"><div class="staff-image"><img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=400" alt="জীববিজ্ঞান শিক্ষক" /><div class="staff-badge">বিজ্ঞান</div></div><div class="staff-info"><h4 class="member-name">ফারিহা তাসনিম</h4><p class="member-position">সহকারী শিক্ষক (জীববিজ্ঞান)</p><div class="member-details"><p><i class="fas fa-graduation-cap"></i> শিক্ষা: এম.এস.সি (প্রাণিবিদ্যা)</p><p><i class="fas fa-calendar-alt"></i> যোগদান: ১১ নভেম্বর, ২০২০</p></div><div class="member-social"><a href="#"><i class="fas fa-phone"></i></a><a href="#"><i class="fas fa-envelope"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div><a href="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="staff-btn" data-fancybox="staff" data-caption="ফারিহা তাসনিম <br/> সহকারী শিক্ষক (জীববিজ্ঞান)">বিস্তারিত দেখুন</a></div></div></div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="staff-filter-form">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-5">
+                    <select class="form-select" id="department-filter">
+                      <option value="">সকল বিভাগ</option>
+                      <option value="লাইব্রেরি">লাইব্রেরি</option>
+                      <option value="বিজ্ঞানাগার">বিজ্ঞানাগার</option>
+                      <option value="অফিস">অফিস</option>
+                      <option value="সহায়ক">সহায়ক</option>
+                      <option value="ক্রীড়া">ক্রীড়া</option>
+                      <option value="আইসিটি">আইসিটি</option>
+                      <option value="পরিবহন">পরিবহন</option>
+                      <option value="ক্যাফেটেরিয়া">ক্যাফেটেরিয়া</option>
+                      <option value="স্বাস্থ্য">স্বাস্থ্য</option>
+                      <option value="অভ্যর্থনা">অভ্যর্থনা</option>
+                      <option value="পরামর্শ">পরামর্শ</option>
+                      <option value="শিক্ষক सहायक">শিক্ষক सहायक</option>
+                    </select>
+                  </div>
+                  <div class="col-md-5">
+                    <select class="form-select" id="type-filter">
+                      <option value="">সকল ধরন</option>
+                      <option value="কর্মকর্তা">কর্মকর্তা</option>
+                      <option value="কর্মচারী">কর্মচারী</option>
+                      <option value="শিক্ষক">শিক্ষক</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                      ফিল্টার
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <!-- Pagination -->
-        <div class="pagination-wrapper"><nav aria-label="Page navigation"><ul class="pagination justify-content-center"><li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">পূর্ববর্তী</a></li><li class="page-item active"><a class="page-link" href="#">1</a></li><li class="page-item"><a class="page-link" href="#">2</a></li><li class="page-item"><a class="page-link" href="#">3</a></li><li class="page-item"><a class="page-link" href="#">পরবর্তী</a></li></ul></nav></div>
       </div>
     </section>
 
-    <!-- Footer Area (Exactly as requested) -->
+    <!-- All Staff Section (Updated with 12 members) -->
+    <section class="all-staff-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            আমাদের নিবেদিতপ্রাণ কর্মকর্তা ও কর্মচারী
+          </h2>
+          <p class="section-subtitle">
+            শিক্ষা ও প্রতিষ্ঠানের উন্নয়নে যারা নিরলস কাজ করে যাচ্ছেন
+          </p>
+        </div>
+        <div class="row">
+          <!-- Staff Member 1: Librarian -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="লাইব্রেরি"
+            data-type="কর্মকর্তা"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="লাইব্রেরিয়ান"
+                />
+                <div class="staff-badge">লাইব্রেরি</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব হাসান মাহমুদ</h4>
+                <p class="member-position">লাইব্রেরিয়ান</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: তথ্য বিজ্ঞান ও
+                    গ্রন্থাগার ব্যবস্থাপনায় স্নাতকোত্তর
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ১৫ জানুয়ারি,
+                    ২০১৮
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/261949/pexels-photo-261949.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব হাসান মাহমুদ <br/> লাইব্রেরিয়ান"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 2: Lab Assistant -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="বিজ্ঞানাগার"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="ল্যাব সহকারী"
+                />
+                <div class="staff-badge">বিজ্ঞানাগার</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস ফারিয়া আক্তার</h4>
+                <p class="member-position">ল্যাব সহকারী</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: রসায়নে স্নাতক
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ১০ আগস্ট, ২০১৯
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস ফারিয়া আক্তার <br/> ল্যাব সহকারী"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 3: Office Staff -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="অফিস"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="অফিস স্টাফ"
+                />
+                <div class="staff-badge">অফিস</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব চন্দন কুমার</h4>
+                <p class="member-position">অফিস সহকারী</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: বাণিজ্য বিভাগে
+                    স্নাতক
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০১ মার্চ, ২০২০
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব চন্দন কুমার <br/> অফিস সহকারী"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 4: Support Staff -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="সহায়ক"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/7643776/pexels-photo-7643776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="সহায়ক স্টাফ"
+                />
+                <div class="staff-badge">সহায়ক</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস আশা বেগম</h4>
+                <p class="member-position">পরিচ্ছন্নতাকর্মী</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: অষ্টম শ্রেণি
+                    পাশ
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০৫ ফেব্রুয়ারি,
+                    ২০২১
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/7643776/pexels-photo-7643776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস আশা বেগম <br/> পরিচ্ছন্নতাকর্মী"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 5: Sports Teacher -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="ক্রীড়া"
+            data-type="শিক্ষক"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/6147118/pexels-photo-6147118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="ক্রীড়া শিক্ষক"
+                />
+                <div class="staff-badge">ক্রীড়া</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব আকাশ চৌধুরী</h4>
+                <p class="member-position">ক্রীড়া শিক্ষক</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: শারীরিক
+                    শিক্ষায় স্নাতক (বিপিএড)
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ২১ জুলাই, ২০১৭
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/6147118/pexels-photo-6147118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব আকাশ চৌধুরী <br/> ক্রীড়া শিক্ষক"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 6: IT Technician -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="আইসিটি"
+            data-type="কর্মকর্তা"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="আইসিটি টেকনিশিয়ান"
+                />
+                <div class="staff-badge">আইসিটি</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস বনানী ইসলাম</h4>
+                <p class="member-position">আইসিটি টেকনিশিয়ান</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: কম্পিউটার
+                    সায়েন্সে ডিপ্লোমা
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০২ জুন, ২০২২
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস বনানী ইসলাম <br/> আইসিটি টেকনিশিয়ান"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 7: Driver -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="পরিবহন"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/5969695/pexels-photo-5969695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="ড্রাইভার"
+                />
+                <div class="staff-badge">পরিবহন</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব লোকমান হোসেন</h4>
+                <p class="member-position">ড্রাইভার</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: এস.এস.সি,
+                    পেশাদার ড্রাইভিং লাইসেন্স
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ১৫ নভেম্বর, ২০১৬
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/5969695/pexels-photo-5969695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব লোকমান হোসেন <br/> ড্রাইভার"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 8: Cafeteria Staff -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="ক্যাফেটেরিয়া"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/4049791/pexels-photo-4049791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="ক্যাফেটেরিয়া স্টাফ"
+                />
+                <div class="staff-badge">ক্যাফেটেরিয়া</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস পারভীন বেগম</h4>
+                <p class="member-position">ক্যাফেটেরিয়া স্টাফ</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: খাদ্য ও
+                    পুষ্টিতে প্রশিক্ষণপ্রাপ্ত
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০১ মার্চ, ২০২৩
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/4049791/pexels-photo-4049791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস পারভীন বেগম <br/> ক্যাফেটেরিয়া স্টাফ"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 9: School Nurse -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="স্বাস্থ্য"
+            data-type="কর্মকর্তা"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/5206931/pexels-photo-5206931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="স্কুল নার্স"
+                />
+                <div class="staff-badge">স্বাস্থ্য</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব ইমরান খান</h4>
+                <p class="member-position">স্কুল নার্স</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: নার্সিং এ
+                    ডিপ্লোমা (আর.এন)
+                  </p>
+                  <p><i class="fas fa-calendar-alt"></i> যোগদান: ৩০ মে, ২০২১</p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/5206931/pexels-photo-5206931.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব ইমরান খান <br/> স্কুল নার্স"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 10: Receptionist -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="অভ্যর্থনা"
+            data-type="কর্মচারী"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="রিসেপশনিস্ট"
+                />
+                <div class="staff-badge">অভ্যর্থনা</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস জুলেখা খাতুন</h4>
+                <p class="member-position">রিসেপশনিস্ট</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: এইচ.এস.সি পাশ
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০৯ এপ্রিল, ২০১৯
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/3771089/pexels-photo-3771089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস জুলেখা খাতুন <br/> রিসেপশনিস্ট"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 11: School Counselor -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="পরামর্শ"
+            data-type="কর্মকর্তা"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/5699475/pexels-photo-5699475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="স্কুল কাউন্সেলর"
+                />
+                <div class="staff-badge">পরামর্শ</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">জনাব কালাম আহমেদ</h4>
+                <p class="member-position">স্কুল কাউন্সেলর</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: মনোবিজ্ঞানে
+                    স্নাতকোত্তর
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ০৩ মার্চ, ২০১৮
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/5699475/pexels-photo-5699475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="জনাব কালাম আহমেদ <br/> স্কুল কাউন্সেলর"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Staff Member 12: Teacher Assistant -->
+          <div
+            class="col-lg-3 col-md-4 col-sm-6 staff-member-card"
+            data-department="শিক্ষক सहायक"
+            data-type="শিক্ষক"
+          >
+            <div class="staff-card">
+              <div class="staff-image">
+                <img
+                  src="https://images.pexels.com/photos/8199736/pexels-photo-8199736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  alt="শিক্ষক सहायक"
+                />
+                <div class="staff-badge">শিক্ষক सहायक</div>
+              </div>
+              <div class="staff-info">
+                <h4 class="member-name">মিসেস রোকসানা পারভীন</h4>
+                <p class="member-position">শিক্ষক सहायक</p>
+                <div class="member-details">
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> শিক্ষা: শিক্ষায় স্নাতক
+                  </p>
+                  <p>
+                    <i class="fas fa-calendar-alt"></i> যোগদান: ১১ নভেম্বর, ২০২০
+                  </p>
+                </div>
+                <div class="member-social">
+                  <a href="#"><i class="fas fa-phone"></i></a
+                  ><a href="#"><i class="fas fa-envelope"></i></a
+                  ><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <a
+                  href="https://images.pexels.com/photos/8199736/pexels-photo-8199736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  class="staff-btn"
+                  data-fancybox="staff"
+                  data-caption="মিসেস রোকসানা পারভীন <br/> শিক্ষক सहायक"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                  >পূর্ববর্তী</a
+                >
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">পরবর্তী</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Area -->
     <footer class="footer-section">
       <div class="container">
         <div class="footer-grid">
-          <div class="footer-column"><h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4><ul class="footer-links"><li><a href="https://nctb.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও পাঠ্যপুস্তক বোর্ড (NCTB)</a></li><li><a href="https://dshe.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় – মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)</a></li><li><a href="https://www.teachers.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন (Teachers' Portal)</a></li><li><a href="https://banbeis.portal.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>বাংলাদেশ শিক্ষাতথ্য ও পরিসংখ্যান ব্যুরো (BANBEIS)</a></li><li><a href="https://bteb.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>বাংলাদেশ কারিগরি শিক্ষা বোর্ড (BTEB)</a></li></ul></div>
-          <div class="footer-column"><h4 class="footer-title"> </h4><ul class="footer-links"><li><a href="https://bangladesh.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>জাতীয় তথ্য বাতায়ন (Bangladesh National Portal)</a></li><li><a href="https://www.barisalboard.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>বরিশাল শিক্ষা বোর্ড</a></li><li><a href="https://shed.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>প্রাথমিক শিক্ষা অধিদপ্তর</a></li><li><a href="https://www.nu.ac.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>জাতীয় বিশ্ববিদ্যালয় (National University)</a></li><li><a href="https://muktopaath.gov.bd/" target="_blank"><i class="fas fa-external-link-alt"></i>মুক্তপাঠ (Open Educational Resources)</a></li></ul></div>
-          <div class="footer-column"><h4 class="footer-title">যোগাযোগ</h4><div class="contact-info"><div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Flat #B4, House No: 71, Road: 27, Gulshan-1, Dhaka 1212</p></div><div class="contact-item"><i class="fas fa-phone-alt"></i><div class="phone-numbers"><a href="tel:+8801234567890">+880 1234 567890</a><a href="tel:+8801234567891">+880 1234 567891</a></div></div><div class="contact-item"><i class="fas fa-envelope"></i><div class="emails"><a href="mailto:info@xyzschool.com">info@xyzschool.com</a><a href="mailto:hello@xyzschool.com">hello@xyzschool.com</a></div></div><div class="contact-item"><i class="fas fa-info-circle"></i><div class="school-info"><p>EIIN no: <span>121314</span></p><p>School code: <span>12345678</span></p><p>Reg. no: <span>123456789012</span></p></div></div></div></div>
-          <div class="footer-column"><h4 class="footer-title">আমাদের সাথে যুক্ত থাকুন</h4><div class="social-media"><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a><a href="#" class="social-icon"><i class="fab fa-youtube"></i></a><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></div><div class="newsletter"><h5>নিউজলেটার সাবস্ক্রাইব করুন</h5><form class="newsletter-form"><input type="email" placeholder="আপনার ইমেইল ঠিকানা" /><button type="submit"><i class="fas fa-paper-plane"></i></button></form></div></div>
+          <div class="footer-column">
+            <h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://nctb.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও
+                  পাঠ্যপুস্তক বোর্ড (NCTB)</a
+                >
+              </li>
+              <li>
+                <a href="https://dshe.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় –
+                  মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)</a
+                >
+              </li>
+              <li>
+                <a href="https://www.teachers.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন
+                  (Teachers' Portal)</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">যোগাযোগ</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Flat #B4, House No: 71, Road: 27, Gulshan-1, Dhaka 1212</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="phone-numbers">
+                  <a href="tel:+8801234567890">+880 1234 567890</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">আমাদের সাথে যুক্ত থাকুন</h4>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i></a
+              ><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a
+              ><a href="#" class="social-icon"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
         </div>
-        <div class="copyright-section"><div class="copyright-text">© 2023 XYZ School & College. All rights reserved.</div><div class="developer-credit">Design & Developed by: <a href="https://bdtender.com/" target="_blank">BD Tender</a></div></div>
+        <div class="copyright-section">
+          <div class="copyright-text">
+            © 2023 XYZ School & College. All rights reserved.
+          </div>
+          <div class="developer-credit">
+            Design & Developed by:
+            <a href="https://bdtender.com/" target="_blank">BD Tender</a>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <!-- JavaScript Section (Correct Order) -->
+    <!-- All JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
+
+    <!-- Main and Page-Specific JS -->
     <script src="../script.js"></script>
     <script src="staff-info.js"></script>
   </body>

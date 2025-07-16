@@ -8,6 +8,32 @@ $(document).ready(function () {
       });
   });
 
+  // --- পৃষ্ঠা লোড হওয়ার সময় ফেইড-ইন করার জন্য ---
+  $("body").addClass("fade-in");
+
+  // --- মসৃণ পৃষ্ঠা পরিবর্তনের জন্য ---
+  $("a").on("click", function (e) {
+    var href = $(this).attr("href");
+    // লিঙ্কটি অ্যাঙ্কর, নতুন ট্যাব, বা বিশেষ কোনো লিঙ্ক (যেমন fancybox) কি না তা চেক করা হচ্ছে
+    if (
+      href &&
+      href !== "#" &&
+      !href.startsWith("#") &&
+      !href.startsWith("mailto:") &&
+      !href.startsWith("tel:") &&
+      $(this).attr("target") !== "_blank" &&
+      !$(this).data("fancybox")
+    ) {
+      e.preventDefault(); // লিঙ্কটিকে তাৎক্ষণিক লোড হওয়া থেকে আটকানো
+      $("body").removeClass("fade-in"); // ফেইড-আউট অ্যানিমেশন শুরু
+
+      // অ্যানিমেশন শেষ হওয়ার জন্য অপেক্ষা এবং তারপর নতুন পৃষ্ঠায় নেভিগেট করা
+      setTimeout(function () {
+        window.location.href = href;
+      }, 500); // এই সময়টি CSS ট্রানজিশনের সময়ের (0.5s) সাথে মিলতে হবে
+    }
+  });
+
   // Back to Top
   var progressPath = document.querySelector(".progress-wrap path");
   var pathLength = progressPath.getTotalLength();
@@ -230,23 +256,26 @@ $(document).ready(function () {
     $(".mobile-menu-overlay").removeClass("active");
   });
 
-  // Smooth Scroll for Anchor Links
+  // Smooth Scroll for Anchor Links on the same page
   $('a[href*="#"]').on("click", function (e) {
-    e.preventDefault();
+    var href = $(this).attr("href");
+    if (href.startsWith("#")) {
+      e.preventDefault();
 
-    $("html, body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      500,
-      "linear"
-    );
+      $("html, body").animate(
+        {
+          scrollTop: $(href).offset().top,
+        },
+        500,
+        "linear"
+      );
+    }
   });
 
   // Force page reload when navigating back/forward
   window.onpageshow = function (event) {
     if (event.persisted) {
-      window.location.reload();
+      $("body").addClass("fade-in");
     }
   };
 
