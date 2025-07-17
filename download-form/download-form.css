@@ -1,0 +1,222 @@
+/*======================================
+    Page Hero Section (MODIFIED - about.css pattern)
+========================================*/
+.page-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0; /* Standardized hero height */
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.page-hero-title {
+  font-size: 2.8rem; /* Matched with about-hero-title */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Matched with about-hero-title */
+}
+
+/* Standardized breadcrumb style */
+.breadcrumb {
+  display: inline-flex; /* To allow centering */
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2); /* Matched with about.css */
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin: 0;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light); /* Using theme variable */
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.breadcrumb span {
+  color: var(--primary-light); /* Using theme variable */
+  font-weight: 500;
+}
+
+/*======================================
+    Download Form Section (MODIFIED - about.css pattern)
+========================================*/
+.download-form-section {
+  padding: 80px 0;
+  background-color: #f8f9fa; /* Light background from theme */
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-dark); /* Using theme variable */
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color); /* Using theme variable */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.download-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Matching facility-card */
+  transition: all 0.3s;
+}
+
+.download-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(46, 125, 50, 0.15); /* Matching facility-card */
+}
+
+.download-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-light); /* Matching facility-icon */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 25px;
+  color: var(--primary-dark);
+  font-size: 2.5rem; /* Adjusted size */
+  transition: all 0.3s;
+}
+
+.download-card:hover .download-icon {
+  background: var(--primary-color); /* Matching facility-icon hover */
+  color: white;
+  transform: rotate(-15deg) scale(1.1);
+}
+
+.download-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-dark); /* Using theme variable */
+}
+
+.download-description {
+  font-size: 1rem;
+  color: var(--text-color); /* Using theme variable */
+  margin-bottom: 25px;
+  min-height: 48px;
+}
+
+/* MODIFIED: Theme-consistent button style */
+.btn-brand {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+  padding: 12px 28px;
+  font-weight: 500;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* MODIFIED: Instructions Box to match theme */
+.instructions-box {
+  background: #e8f5e9; /* Light green, from primary color family */
+  border-left: 5px solid var(--primary-color);
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.instructions-box h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+}
+
+.instructions-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.instructions-box ul li {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.instructions-box ul li:last-child {
+  margin-bottom: 0;
+}
+
+.instructions-box ul li .fa-check-circle {
+  color: var(--accent-color); /* Theme accent color for icons */
+  margin-right: 12px;
+  margin-top: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-hero-title {
+    font-size: 2.2rem; /* Adjusted for smaller screens */
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-section {
+    padding: 60px 0;
+  }
+  .page-hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}

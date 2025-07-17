@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+}
+
+/* Admission Results Hero Section */
+.results-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing the same background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.results-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Admission Results Content Section */
+.results-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.results-filter-card {
+  background: #f8f9fa;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-bottom: 50px;
+  border: 1px solid var(--border-color);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-filter-card .form-label {
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.results-filter-card .form-control {
+  height: 55px;
+  border-radius: 8px;
+  border-color: var(--border-color);
+  transition: all 0.3s;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.results-filter-card .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+}
+
+.btn-search-result {
+  width: 100%;
+  height: 55px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-search-result:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-search-result i {
+  margin-right: 10px;
+}
+
+/* Results Display Area */
+.results-display-area {
+  display: none; /* Initially hidden, shown with JS */
+  padding: 40px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.07);
+  background: white;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.result-status-selected .result-icon {
+  color: var(--success-color);
+}
+.result-status-waiting .result-icon {
+  color: var(--warning-color);
+}
+.result-status-not-selected .result-icon {
+  color: var(--danger-color);
+}
+
+.result-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-status-selected h3 {
+  color: var(--success-color);
+}
+.result-status-waiting h3 {
+  color: var(--warning-color);
+}
+.result-status-not-selected h3 {
+  color: var(--danger-color);
+}
+
+.result-card .applicant-info {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.result-card .applicant-info span {
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.result-card .details-message {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.result-status-selected .details-message {
+  background-color: #e8f5e9; /* Light green */
+  border: 1px solid #c8e6c9;
+}
+.result-status-waiting .details-message {
+  background-color: #fffde7; /* Light yellow */
+  border: 1px solid #fff9c4;
+}
+.result-status-not-selected .details-message {
+  background-color: #ffebee; /* Light red */
+  border: 1px solid #ffcdd2;
+}
+
+.no-result-message {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff3cd;
+  color: #664d03;
+  border: 1px solid #ffecb5;
+  border-radius: 8px;
+}
+
+.no-result-message i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .results-hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .results-hero-section {
+    padding: 60px 0;
+  }
+  .results-hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+  .results-filter-card {
+    padding: 25px;
+  }
+}

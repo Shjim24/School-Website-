@@ -1,0 +1,206 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+  --form-bg: #f8f9fa;
+  --required-star: #dc3545;
+}
+
+/* Application Hero Section */
+.application-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing the same background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.application-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Admission Application Section */
+.admission-application-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.application-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid var(--primary-color);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-title {
+  color: var(--primary-dark);
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.form-section {
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-light);
+  display: inline-block;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.required {
+    color: var(--required-star);
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.form-control, .form-select {
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-check-label {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    .application-form-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+  .application-hero-title {
+    font-size: 2.2rem;
+  }
+  .form-title {
+      font-size: 1.8rem;
+  }
+  .section-heading {
+      font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .application-hero-section {
+    padding: 60px 0;
+  }
+
+  .application-hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .application-form-wrapper {
+        padding: 20px;
+    }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}

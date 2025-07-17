@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Admission Results, Admission, Results"
+      content="XYZ School, Admission, Application, Form"
     />
     <meta
       name="description"
-      content="Check admission test results for XYZ School & College. Find out if you have been selected."
+      content="Apply for admission to XYZ School & College. Fill out the online application form to start your journey with us."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>ভর্তি ফলাফল - XYZ School & College</title>
+    <title>ভর্তি আবেদন - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -68,8 +68,8 @@
 
     <!-- Main CSS (সঠিক পাথ সহ) -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Results Page Specific CSS -->
-    <link rel="stylesheet" href="results.css" />
+    <!-- Application Page Specific CSS -->
+    <link rel="stylesheet" href="application.css" />
 
     <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
     <style>
@@ -167,7 +167,9 @@
                   <a href="../about/about.html">পরিচিতি</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
+                      <a href="../about/about.html"
+                        >প্রতিষ্ঠানের পরিচিতি</a
+                      >
                     </li>
                     <li>
                       <a href="../school information/school-information.html"
@@ -275,20 +277,16 @@
                 </li>
 
                 <li>
-                  <a href="../admission/info.html" class="active">ভর্তি</a>
+                  <a href="info.html" class="active">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../admission/application.html">ভর্তি আবেদন</a>
+                      <a href="application.html" class="active">ভর্তি আবেদন</a>
                     </li>
-                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
-                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
+                    <li><a href="info.html">ভর্তি তথ্য</a></li>
+                    <li><a href="fees.html">ভর্তি ফি</a></li>
+                    <li><a href="results.html">ভর্তি ফলাফল</a></li>
                     <li>
-                      <a href="../admission/results.html" class="active"
-                        >ভর্তি ফলাফল</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../admission/download-form.html"
+                      <a href="download-form.html"
                         >অনলাইন ফরম ডাউনলোড</a
                       >
                     </li>
@@ -335,7 +333,7 @@
                 </li>
 
                 <li>
-                  <a href="../exams/internal-results.html">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../exams/internal-results.html"
@@ -396,64 +394,130 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Admission Results Page Hero Section -->
-    <section class="results-hero-section">
+    <!-- Application Page Hero Section -->
+    <section class="application-hero-section">
       <div class="container">
-        <div class="results-hero-content">
-          <h1 class="results-hero-title animate__animated animate__fadeInDown">
-            ভর্তি পরীক্ষার ফলাফল
+        <div class="application-hero-content">
+          <h1 class="application-hero-title animate__animated animate__fadeInDown">
+            ভর্তি আবেদন ফরম
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="../admission/info.html">ভর্তি</a>
+            <a href="info.html">ভর্তি</a>
             <i class="fas fa-angle-double-right"></i>
-            <span>ভর্তি ফলাফল</span>
+            <span>ভর্তি আবেদন</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Admission Results Content Section -->
-    <section class="results-section">
-      <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="section-title">আপনার ফলাফল জানুন</h2>
-          <p class="section-subtitle">
-            আপনার ভর্তি পরীক্ষার রোল নম্বর ব্যবহার করে ফলাফল অনুসন্ধান করুন।
-          </p>
-        </div>
+    <!-- Admission Application Section -->
+    <section class="admission-application-section">
+        <div class="container">
+            <div class="application-form-wrapper">
+                <div class="form-header">
+                    <h2 class="form-title">অনলাইন ভর্তি আবেদন</h2>
+                    <p class="form-subtitle">প্রয়োজনীয় সকল তথ্য সঠিকভাবে পূরণ করুন।</p>
+                </div>
+                <form id="admissionForm" class="admission-form" novalidate>
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3 class="section-heading">ব্যক্তিগত তথ্য</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="studentName" class="form-label">শিক্ষার্থীর নাম (বাংলায়)<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="studentName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="studentNameEn" class="form-label">শিক্ষার্থীর নাম (ইংরেজিতে)<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="studentNameEn" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="dob" class="form-label">জন্ম তারিখ<span class="required">*</span></label>
+                                <input type="date" class="form-control" id="dob" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="gender" class="form-label">লিঙ্গ<span class="required">*</span></label>
+                                <select class="form-select" id="gender" required>
+                                    <option value="">নির্বাচন করুন</option>
+                                    <option value="male">ছাত্র</option>
+                                    <option value="female">ছাত্রী</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 
-        <!-- Filter Form -->
-        <div class="results-filter-card">
-          <form id="admission-result-form">
-            <div class="mb-3">
-              <label for="admission-roll" class="form-label d-block text-center"
-                >আপনার ভর্তি রোল নম্বর দিন</label
-              >
-              <input
-                type="text"
-                id="admission-roll"
-                class="form-control"
-                placeholder="उदा: A1025"
-                required
-              />
+                    <!-- Guardian Information -->
+                    <div class="form-section">
+                        <h3 class="section-heading">অভিভাবকের তথ্য</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fatherName" class="form-label">পিতার নাম<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="fatherName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="motherName" class="form-label">মাতার নাম<span class="required">*</span></label>
+                                <input type="text" class="form-control" id="motherName" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="guardianPhone" class="form-label">অভিভাবকের মোবাইল নম্বর<span class="required">*</span></label>
+                                <input type="tel" class="form-control" id="guardianPhone" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Information -->
+                    <div class="form-section">
+                        <h3 class="section-heading">একাডেমিক তথ্য</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="admissionClass" class="form-label">ভর্তিচ্ছু শ্রেণি<span class="required">*</span></label>
+                                <select class="form-select" id="admissionClass" required>
+                                    <option value="">নির্বাচন করুন</option>
+                                    <option value="6">৬ষ্ঠ শ্রেণি</option>
+                                    <option value="7">৭ম শ্রেণি</option>
+                                    <option value="8">৮ম শ্রেণি</option>
+                                    <option value="9">৯ম শ্রেণি</option>
+                                    <option value="11">একাদশ শ্রেণি</option>
+                                </select>
+                            </div>
+                             <div class="col-md-6 mb-3">
+                                <label for="previousSchool" class="form-label">পূর্ববর্তী প্রতিষ্ঠানের নাম</label>
+                                <input type="text" class="form-control" id="previousSchool">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File Uploads -->
+                    <div class="form-section">
+                        <h3 class="section-heading">প্রয়োজনীয় সংযুক্তি</h3>
+                         <div class="row">
+                            <div class="col-md-6 mb-3">
+                                 <label for="studentPhoto" class="form-label">শিক্ষার্থীর ছবি (পাসপোর্ট সাইজ)<span class="required">*</span></label>
+                                 <input type="file" class="form-control" id="studentPhoto" accept="image/*" required>
+                            </div>
+                             <div class="col-md-6 mb-3">
+                                 <label for="birthCertificate" class="form-label">জন্ম নিবন্ধন সনদ<span class="required">*</span></label>
+                                 <input type="file" class="form-control" id="birthCertificate" accept=".pdf,image/*" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                            <label class="form-check-label" for="agreement">
+                                আমি এই মর্মে অঙ্গীকার করছি যে, উপরে বর্ণিত সকল তথ্য সঠিক ও নির্ভুল।
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">আবেদন জমা দিন</button>
+                    </div>
+                </form>
             </div>
-            <button type="submit" class="btn btn-search-result">
-              <i class="fas fa-search"></i> ফলাফল দেখুন
-            </button>
-          </form>
         </div>
-
-        <!-- Results Display -->
-        <div id="results-display" class="results-display-area">
-          <div id="result-info" class="result-card">
-            <!-- Dynamic result content goes here -->
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- Footer Area -->
@@ -499,7 +563,7 @@
 
           <!-- More Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title"> </h4>
+            <h4 class="footer-title"> </h4>
             <ul class="footer-links">
               <li>
                 <a href="https://bangladesh.gov.bd/" target="_blank">
@@ -620,7 +684,7 @@
 
     <!-- Main JS (সঠিক পাথ সহ) -->
     <script src="../script.js"></script>
-    <!-- Results Page Specific JS -->
-    <script src="results.js"></script>
+    <!-- Application Page Specific JS -->
+    <script src="application.js"></script>
   </body>
 </html>
