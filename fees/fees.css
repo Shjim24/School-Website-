@@ -1,0 +1,331 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+  --info-bg: #e3f2fd;
+  --info-border: #90caf9;
+  --info-text: #1e88e5;
+}
+
+/* Fees Hero Section */
+.fees-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/fees-hero-bg.jpg"); /* Ensure you have a relevant background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.fees-hero-content {
+  /* This container helps in centering the breadcrumb */
+  text-align: center;
+}
+
+.fees-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* MODIFIED: Standardized breadcrumb style (Copied from about.css) */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+  color: white; /* Ensure icon color is consistent */
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+
+/* Fees Details Section */
+.fees-details-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Fees Table */
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.fees-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.fees-table th,
+.fees-table td {
+  padding: 18px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.fees-table th {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.fees-table tbody tr {
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.fees-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.fees-table tbody tr:hover {
+  background-color: #e8f5e9; /* Light green on hover */
+}
+
+.fees-table td {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.fees-table td:last-child {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Payment Methods Section */
+.payment-methods-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.payment-card {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.payment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.payment-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.payment-card:hover .payment-icon {
+  transform: scale(1.1);
+}
+
+.payment-card h3 {
+  font-size: 1.4rem;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+}
+
+.payment-card p {
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* Important Notes Section */
+.important-notes-section {
+  padding: 60px 0;
+  background: var(--light-bg);
+}
+
+.notes-box {
+  background: var(--info-bg);
+  border: 1px solid var(--info-border);
+  border-left: 5px solid var(--info-text);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.notes-box h3 {
+  color: var(--info-text);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.notes-box h3 i {
+  margin-right: 15px;
+  font-size: 1.8rem;
+}
+
+.notes-box ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.notes-box li {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.notes-box li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .fees-table {
+    font-size: 0.9rem;
+  }
+  .fees-table th,
+  .fees-table td {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .fees-hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .fees-details-section,
+  .payment-methods-section,
+  .important-notes-section {
+    padding: 60px 0;
+  }
+
+  .fees-table thead {
+    display: none; /* Hide table header on mobile */
+  }
+
+  .fees-table,
+  .fees-table tbody,
+  .fees-table tr,
+  .fees-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .fees-table tr {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+  }
+
+  .fees-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .fees-table td:last-child {
+    border-bottom: none;
+  }
+
+  .fees-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: calc(50% - 30px);
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .fees-hero-section {
+    padding: 60px 0;
+  }
+  .fees-hero-title {
+    font-size: 1.8rem;
+  }
+
+  /* Responsive Breadcrumb */
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}
