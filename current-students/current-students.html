@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="bn" class="no-js">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="XYZ School, Current Students, Student List, Class Roster"
+    />
+    <meta
+      name="description"
+      content="Browse the list of current students at XYZ School & College. Search and filter by class, section, name, or roll number."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <!-- Site Title -->
+    <title>অধ্যয়নরত শিক্ষার্থীর তালিকা - XYZ School & College</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="../images/favicon.svg" />
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts - Anek Bangla -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Current Students Page Specific CSS -->
+    <link rel="stylesheet" href="current-students.css" />
+
+    <!-- Custom CSS for one-line navbar -->
+    <style>
+      @media (min-width: 1200px) {
+        .header-menu-list > li > a {
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
+        }
+        .header-menu-list > li {
+          margin: 0 1px;
+        }
+      }
+    </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-main">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <div class="progress-wrap">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+
+    <!-- Topbar Area -->
+    <div class="topbar-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <div class="notice-ticker">
+              <div class="scrolling-text">
+                <i class="fas fa-bullhorn me-2"></i>নাম বিস্তৃতি ******খণ্ডকালীন
+                পদার্থবিজ্ঞান প্রভাষক নিয়োগ বিজ্ঞপ্তি******পঞ্চম ও দ্বাদশ
+                শ্রেণির শ্রেণিপাঠদান বন্ধ প্রসঙ্গে ******একাদশ শ্রেণির বার্ষিক
+                পরীক্ষা-২০২৫ এর ফলাফল (দিবা) *****একাদশ শ্রেণির বার্ষিক
+                পরীক্ষা-২০২৫ এর ফলাফল (প্রভাতি) *****
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex align-items-center justify-content-end">
+              <div class="language-toggle me-3">
+                <select class="form-select form-select-sm">
+                  <option value="bn">বাংলা</option>
+                  <option value="en">English</option>
+                </select>
+              </div>
+              <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header Area -->
+    <header class="header-area">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Logo Area -->
+          <div class="col-lg-2 col-md-3 col-6">
+            <div class="header-logo">
+              <a href="../index.html">
+                <img src="../images/logo.svg" alt="XYZ School & College" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="col-lg-10 col-md-9 d-none d-md-block">
+            <nav class="navigation">
+              <ul class="header-menu-list">
+                <li><a href="../index.html">মূলপাতা</a></li>
+                <li>
+                  <a href="../about/about.html">পরিচিতি</a>
+                  <ul class="sub-menu">
+                    <li><a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
+                    <li><a href="../school information/school-information.html">বিদ্যালয়ের তথ্যাদি</a></li>
+                    <li><a href="../corner-message/corner-message.html">স্কুল পরিচালকদের বাণী</a></li>
+                    <li><a href="../land-schedule/land-schedule.html">ভূমির তপসিল</a></li>
+                    <li><a href="../land-ownership/land-ownership.html">ভূমি মালিকানা তথ্য</a></li>
+                    <li><a href="../about/memorial.html">স্মরণিকা</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../administration/management-committee.html">প্রশাসন</a>
+                  <ul class="sub-menu">
+                    <li><a href="../administration/management-committee.html">ব্যবস্থাপনা কমিটি</a></li>
+                    <li><a href="../mp-nationalization/mp-nationalization.html">এমপি ও জাতীয়করণ তথ্য</a></li>
+                    <li><a href="../approved-positions/approved-positions.html">অনুমোদিত পদ সংখ্যা</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../teachers-info/teachers-info.html">শিক্ষক/কর্মচারী</a>
+                  <ul class="sub-menu">
+                    <li><a href="../teachers-info/teachers-info.html">শিক্ষকদের তথ্য</a></li>
+                    <li><a href="../teacher-attendance/teacher-attendance.html">শিক্ষক উপস্থিতি</a></li>
+                    <li><a href="../staff-info/staff-info.html">কর্মকর্তা/কর্মচারী তথ্য</a></li>
+                    <li><a href="../staff-attendance/staff-attendance.html">কর্মচারী উপস্থিতি</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="current-students.html" class="active">শিক্ষার্থী</a>
+                  <ul class="sub-menu">
+                    <li><a href="gender-data.html">লিঙ্গ ভিত্তিক তথ্য</a></li>
+                    <li><a href="current-students.html" class="active">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
+                    <li><a href="../student-attendance/student-attendance.html">শিক্ষার্থী উপস্থিতি</a></li>
+                    <li><a href="merit-list.html">মেধা তালিকা</a></li>
+                    <li><a href="pass-lists.html">পাস তালিকা</a></li>
+                    <li><a href="fail-lists.html">ফেল তালিকা</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../admission/info.html">ভর্তি</a>
+                  <ul class="sub-menu">
+                    <li><a href="../admission/application.html">ভর্তি আবেদন</a></li>
+                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
+                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
+                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                    <li><a href="../admission/download-form.html">অনলাইন ফরম ডাউনলোড</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">একাডেমিক</a>
+                  <ul class="sub-menu">
+                    <li><a href="../academic/multimedia-classes.html">মাল্টিমিডিয়া ক্লাস</a></li>
+                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                    <li><a href="../index.html#academic-calendar">শিক্ষা বর্ষপঞ্জি</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <ul class="sub-menu">
+                    <li><a href="../exams/class-routine.html">ক্লাস রুটিন</a></li>
+                    <li><a href="#">ক্লাস কক্ষ</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
+                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li><a href="../approved-positions/approved-positions.html">আসন সংখ্যা</a></li>
+                    <li><a href="../academic/book-list.html">বইয়ের তালিকা</a></li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
+                  <ul class="sub-menu">
+                    <li><a href="../exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a></li>
+                    <li><a href="../exams/public-results.html">পাবলিক পরীক্ষার ফল</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../facilities/buildings.html">সুবিধাদি</a>
+                  <ul class="sub-menu">
+                    <li><a href="../facilities/buildings.html">ভবন</a></li>
+                    <li><a href="../facilities/computer-lab.html">কম্পিউটার ল্যাব</a></li>
+                    <li><a href="../facilities/playground.html">খেলার মাঠ</a></li>
+                    <li><a href="../facilities/cultural.html">ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a></li>
+                    <li><a href="../facilities/Cleanliness.html">পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a></li>
+                  </ul>
+                </li>
+                <li><a href="../gallery.html">গ্যালারি</a></li>
+                <li><a href="../contact.html">যোগাযোগ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="col-6 d-md-none text-end">
+            <button class="mobile-menu-btn btn btn-sm btn-primary">
+              <i class="fas fa-bars"></i> মেনু
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title animate__animated animate__fadeInDown">
+            অধ্যয়নরত শিক্ষার্থীর তালিকা
+          </h1>
+          <div
+            class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
+          >
+            <a href="../index.html">মূলপাতা</a>
+            <i class="fas fa-angle-double-right"></i>
+            <span>শিক্ষার্থী</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student List Section -->
+    <section class="student-list-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">শিক্ষার্থী খুঁজুন</h2>
+          <p class="section-subtitle">
+            শ্রেণি, শাখা অথবা শিক্ষার্থীর নাম/রোল দিয়ে সহজেই খুঁজে বের করুন।
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+          <form id="student-filter-form">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-3">
+                <label for="filter-class" class="form-label">শ্রেণি</label>
+                <select id="filter-class" class="form-select">
+                  <option value="">সব শ্রেণি</option>
+                  <option value="ষষ্ঠ">ষষ্ঠ</option>
+                  <option value="সপ্তম">সপ্তম</option>
+                  <option value="অষ্টম">অষ্টম</option>
+                  <option value="নবম">নবম</option>
+                  <option value="দশম">দশম</option>
+                  <option value="একাদশ">একাদশ</option>
+                  <option value="দ্বাদশ">দ্বাদশ</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="filter-section" class="form-label">শাখা</label>
+                <select id="filter-section" class="form-select">
+                  <option value="">সব শাখা</option>
+                  <option value="ক">ক</option>
+                  <option value="খ">খ</option>
+                  <option value="গ">গ</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="filter-search" class="form-label"
+                  >নাম বা রোল</label
+                >
+                <input
+                  type="text"
+                  id="filter-search"
+                  class="form-control"
+                  placeholder="এখানে লিখুন..."
+                />
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-success w-100">
+                  <i class="fas fa-search"></i> খুঁজুন
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Student Table -->
+        <div class="student-table-container">
+          <div class="table-responsive">
+            <table class="table custom-table">
+              <thead>
+                <tr>
+                  <th>রোল নং</th>
+                  <th>ছবি</th>
+                  <th>শিক্ষার্থীর নাম</th>
+                  <th>শ্রেণি</th>
+                  <th>শাখা</th>
+                  <th>কার্যক্রম</th>
+                </tr>
+              </thead>
+              <tbody id="student-table-body">
+                <!-- Dummy Data Rows (20 entries) -->
+                <tr>
+                  <td>101</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>মোঃ আরিফ হোসেন</td>
+                  <td class="student-class">ষষ্ঠ</td>
+                  <td class="student-section">ক</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>সুরাইয়া আক্তার</td>
+                  <td class="student-class">ষষ্ঠ</td>
+                  <td class="student-section">খ</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                <tr>
+                  <td>201</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>জাহিদ হাসান</td>
+                  <td class="student-class">সপ্তম</td>
+                  <td class="student-section">ক</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>202</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>ফারিয়া ইসলাম</td>
+                  <td class="student-class">সপ্তম</td>
+                  <td class="student-section">ক</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>301</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>মেহেদী হাসান</td>
+                  <td class="student-class">অষ্টম</td>
+                  <td class="student-section">খ</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>302</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>নাফিসা রহমান</td>
+                  <td class="student-class">অষ্টম</td>
+                  <td class="student-section">গ</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>401</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>ইমরান খান</td>
+                  <td class="student-class">নবম</td>
+                  <td class="student-section">ক</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>402</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>সাদিয়া সুলতানা</td>
+                  <td class="student-class">নবম</td>
+                  <td class="student-section">খ</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>501</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>রাকিবুল ইসলাম</td>
+                  <td class="student-class">দশম</td>
+                  <td class="student-section">ক</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                 <tr>
+                  <td>502</td>
+                  <td><img src="../images/student-avatar.png" alt="Student Photo" class="student-photo"/></td>
+                  <td>তাসনিয়া কবির</td>
+                  <td class="student-class">দশম</td>
+                  <td class="student-section">গ</td>
+                  <td><a href="#" class="btn btn-sm btn-details">বিস্তারিত</a></td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <p id="no-results-message">কোনো ফলাফল পাওয়া যায়নি।</p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="pagination-container" aria-label="Page navigation">
+          <ul class="pagination" id="pagination-controls">
+            <!-- Pagination links will be inserted here by JS -->
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Official Links -->
+          <div class="footer-column">
+            <h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://nctb.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও
+                  পাঠ্যপুস্তক বোর্ড (NCTB)
+                </a>
+              </li>
+              <li>
+                <a href="https://dshe.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় –
+                  মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.teachers.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন
+                  (Teachers' Portal)
+                </a>
+              </li>
+              <li>
+                <a href="https://banbeis.portal.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>বাংলাদেশ শিক্ষাতথ্য ও
+                  পরিসংখ্যান ব্যুরো (BANBEIS)
+                </a>
+              </li>
+              <li>
+                <a href="https://bteb.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>বাংলাদেশ কারিগরি
+                  শিক্ষা বোর্ড (BTEB)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- More Official Links -->
+          <div class="footer-column">
+            <h4 class="footer-title"> </h4>
+            <ul class="footer-links">
+              <li>
+                <a href="https://bangladesh.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>জাতীয় তথ্য বাতায়ন
+                  (Bangladesh National Portal)
+                </a>
+              </li>
+              <li>
+                <a href="https://www.barisalboard.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>বরিশাল শিক্ষা বোর্ড
+                </a>
+              </li>
+              <li>
+                <a href="https://shed.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>প্রাথমিক শিক্ষা
+                  অধিদপ্তর
+                </a>
+              </li>
+              <li>
+                <a href="https://www.nu.ac.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>জাতীয় বিশ্ববিদ্যালয়
+                  (National University)
+                </a>
+              </li>
+              <li>
+                <a href="https://muktopaath.gov.bd/" target="_blank">
+                  <i class="fas fa-external-link-alt"></i>মুক্তপাঠ (Open
+                  Educational Resources)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-column">
+            <h4 class="footer-title">যোগাযোগ</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Flat #B4, House No: 71, Road: 27, Gulshan-1, Dhaka 1212</p>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div class="phone-numbers">
+                  <a href="tel:+8801234567890">+880 1234 567890</a>
+                  <a href="tel:+8801234567891">+880 1234 567891</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div class="emails">
+                  <a href="mailto:info@xyzschool.com">info@xyzschool.com</a>
+                  <a href="mailto:hello@xyzschool.com">hello@xyzschool.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-info-circle"></i>
+                <div class="school-info">
+                  <p>EIIN no: <span>121314</span></p>
+                  <p>School code: <span>12345678</span></p>
+                  <p>Reg. no: <span>123456789012</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="footer-column">
+            <h4 class="footer-title">আমাদের সাথে যুক্ত থাকুন</h4>
+            <div class="social-media">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter">
+              <h5>নিউজলেটার সাবস্ক্রাইব করুন</h5>
+              <form class="newsletter-form">
+                <input type="email" placeholder="আপনার ইমেইল ঠিকানা" />
+                <button type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright-section">
+          <div class="copyright-text">
+            © 2023 XYZ School & College. All rights reserved.
+          </div>
+          <div class="developer-credit">
+            Design & Developed by:
+            <a href="https://bdtender.com/" target="_blank">BD Tender</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="../script.js"></script>
+    <!-- Current Students Page Specific JS -->
+    <script src="current-students.js"></script>
+  </body>
+</html>

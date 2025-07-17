@@ -1,0 +1,245 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Hero Section - Standardized */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/students-hero-bg.jpg"); /* New relevant background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Breadcrumb - Standardized */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Student List Section */
+.student-list-section {
+  padding: 80px 0;
+  background: var(--secondary-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Filter Controls */
+.filter-controls {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  margin-bottom: 40px;
+}
+
+.filter-controls .form-label {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.filter-controls .form-control,
+.filter-controls .form-select {
+  border: 1px solid var(--border-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.filter-controls .form-control:focus,
+.filter-controls .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+}
+
+/* Student Table */
+.student-table-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.custom-table tbody tr {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.custom-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f8e9; /* A lighter shade of primary */
+}
+
+.student-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-details {
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  transition: background-color 0.3s;
+}
+
+.btn-details:hover {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.pagination .page-item .page-link {
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  margin: 0 2px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #e9ecef;
+  border-color: var(--border-color);
+}
+
+#no-results-message {
+  display: none;
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+  .filter-controls .btn {
+    width: 100%;
+  }
+}

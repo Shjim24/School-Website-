@@ -1,0 +1,188 @@
+/* Color variables from the root */
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+  --danger-color: #dc3545;
+}
+
+/* Page Hero Section - Standardized */
+.page-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.page-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Fail List Section */
+.fail-list-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+/* Filter Controls */
+.filter-controls {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+
+.filter-controls .form-select,
+.filter-controls .btn {
+  height: 45px;
+}
+
+.filter-controls .btn {
+  font-weight: 600;
+}
+
+/* Fail List Table */
+.fail-list-table {
+  font-size: 0.95rem;
+  vertical-align: middle;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.fail-list-table thead th {
+  background-color: var(--primary-dark);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 15px;
+}
+
+.fail-list-table tbody tr:hover {
+  background-color: #e9f5ea;
+  transform: scale(1.01);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.fail-list-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.fail-list-table .badge.bg-danger {
+  background-color: var(--danger-color) !important;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  font-weight: 500;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 30px;
+}
+
+.pagination .page-item .page-link {
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    margin: 0 3px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    z-index: 1;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #e9ecef;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: var(--primary-light);
+    color: var(--dark-text);
+    border-color: var(--primary-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .page-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+  }
+  
+  .fail-list-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-section {
+    padding: 60px 0;
+  }
+
+  .page-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}

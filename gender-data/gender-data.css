@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+  --male-color: #2196f3;
+  --female-color: #e91e63;
+}
+
+/* Hero Section - Standardized */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/gender-hero-bg.jpg"); /* Consider a relevant background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Breadcrumb - Standardized */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Gender Data Section */
+.gender-data-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gender-stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Chart Container */
+.chart-container {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  position: relative;
+}
+
+/* Stats Summary Cards */
+.stats-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-left: 5px solid transparent;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.male {
+  border-color: var(--male-color);
+}
+.stat-card.female {
+  border-color: var(--female-color);
+}
+.stat-card.total {
+  border-color: var(--primary-color);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  width: 60px;
+  text-align: center;
+}
+
+.stat-card.male .stat-icon {
+  color: var(--male-color);
+}
+.stat-card.female .stat-icon {
+  color: var(--female-color);
+}
+.stat-card.total .stat-icon {
+  color: var(--primary-dark);
+}
+
+.stat-info h4 {
+  font-size: 1.2rem;
+  color: var(--dark-text);
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.stat-info p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+/* Data Table Section */
+.data-table-section {
+  padding: 60px 0;
+  background: var(--secondary-color);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 15px 20px;
+  text-align: left;
+}
+
+.custom-table tbody tr {
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.custom-table tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.custom-table td {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .gender-stats-container {
+    flex-direction: column;
+  }
+  .stats-summary {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .custom-table th,
+  .custom-table td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .stat-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
