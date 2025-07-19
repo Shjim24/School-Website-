@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Login, Student Portal, Bangla E-School"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Login to your account at XYZ School & College to access student information, results, and more."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>লগইন - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -51,12 +51,12 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS (সঠিক পাথ সহ) -->
+    <!-- Main CSS from Index -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
+    <!-- Login Page Specific CSS -->
+    <link rel="stylesheet" href="login.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar from index -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
@@ -69,6 +69,12 @@
         }
       }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -93,7 +99,7 @@
       </svg>
     </div>
 
-    <!-- Topbar Area -->
+    <!-- Topbar Area from index.html -->
     <div class="topbar-area">
       <div class="container">
         <div class="row align-items-center">
@@ -116,14 +122,16 @@
                   <option value="en">English</option>
                 </select>
               </div>
-              <a href="../login.html" class="btn btn-sm btn-success">লগইন</a>
+              <a href="login.html" class="btn btn-sm btn-success active"
+                >লগইন</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Header Area -->
+    <!-- Header Area (Navbar) from index.html -->
     <header class="header-area">
       <div class="container">
         <div class="row align-items-center">
@@ -168,17 +176,16 @@
                         >ভূমি মালিকানা তথ্য</a
                       >
                     </li>
-                    <li><a href="../about/memorial.html">স্মরণিকা</a></li>
+                    <li><a href="../memorial/memorial.html">স্মরণিকা</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../administration/management-committee.html"
-                    >প্রশাসন</a
-                  >
+                  <a href="#">প্রশাসন</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../administration/management-committee.html"
+                      <a
+                        href="../management-committee/management-committee.html"
                         >ব্যবস্থাপনা কমিটি</a
                       >
                     </li>
@@ -196,9 +203,7 @@
                 </li>
 
                 <li>
-                  <a href="../teachers-info/teachers-info.html"
-                    >শিক্ষক/কর্মচারী</a
-                  >
+                  <a href="#">শিক্ষক/কর্মচারী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../teachers-info/teachers-info.html"
@@ -224,15 +229,15 @@
                 </li>
 
                 <li>
-                  <a href="../students/current-students.html">শিক্ষার্থী</a>
+                  <a href="#">শিক্ষার্থী</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../students/gender-data.html"
+                      <a href="../gender-data/gender-data.html"
                         >লিঙ্গ ভিত্তিক তথ্য</a
                       >
                     </li>
                     <li>
-                      <a href="../students/current-students.html"
+                      <a href="../current-students/current-students.html"
                         >অধ্যয়নরত শিক্ষার্থীর তালিকা</a
                       >
                     </li>
@@ -242,28 +247,28 @@
                       >
                     </li>
                     <li>
-                      <a href="../students/merit-list.html">মেধা তালিকা</a>
+                      <a href="../merit-list/merit-list.html">মেধা তালিকা</a>
                     </li>
                     <li>
-                      <a href="../students/pass-lists.html">পাস তালিকা</a>
+                      <a href="../pass-lists/pass-lists.html">পাস তালিকা</a>
                     </li>
                     <li>
-                      <a href="../students/fail-lists.html">ফেল তালিকা</a>
+                      <a href="../fail-lists/fail-lists.html">ফেল তালিকা</a>
                     </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../admission/info.html">ভর্তি</a>
+                  <a href="#">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../admission/application.html">ভর্তি আবেদন</a>
+                      <a href="../application/application.html">ভর্তি আবেদন</a>
                     </li>
-                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
-                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
-                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                    <li><a href="../info/info.html">ভর্তি তথ্য</a></li>
+                    <li><a href="../fees/fees.html">ভর্তি ফি</a></li>
+                    <li><a href="../results/results.html">ভর্তি ফলাফল</a></li>
                     <li>
-                      <a href="../admission/download-form.html"
+                      <a href="../download-form/download-form.html"
                         >অনলাইন ফরম ডাউনলোড</a
                       >
                     </li>
@@ -274,11 +279,13 @@
                   <a href="#">একাডেমিক</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../academic/multimedia-classes.html"
+                      <a href="../multimedia-classes/multimedia-classes.html"
                         >মাল্টিমিডিয়া ক্লাস</a
                       >
                     </li>
-                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                    <li>
+                      <a href="../laboratory/laboratory.html">গবেষণাগার</a>
+                    </li>
                     <li>
                       <a href="../index.html#academic-calendar"
                         >শিক্ষা বর্ষপঞ্জি</a
@@ -291,67 +298,77 @@
                   <a href="#">পাঠদান ও স্বীকৃতি</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
+                      <a href="../class-routine/class-routine.html"
+                        >ক্লাস রুটিন</a
+                      >
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
                     <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li><a href="../syllabus/syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
                         >আসন সংখ্যা</a
                       >
                     </li>
                     <li>
-                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
+                      <a href="../book-list/book-list.html">বইয়ের তালিকা</a>
                     </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="../dress/dress.html">পোশাকের বিবরণ</a></li>
+                    <li>
+                      <a href="../pathdan-onumuti/pathdan-onumuti.html"
+                        >পাঠদানের অনুমতি ও স্বীকৃতি</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../internal-results/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../public-results/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li>
+                      <a href="../schedule/schedule.html">পরীক্ষার রুটিন</a>
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../facilities/buildings.html">সুবিধাদি</a>
+                  <a href="#">সুবিধাদি</a>
                   <ul class="sub-menu">
-                    <li><a href="../facilities/buildings.html">ভবন</a></li>
+                    <li><a href="../buildings/buildings.html">ভবন</a></li>
                     <li>
-                      <a href="../facilities/computer-lab.html"
+                      <a href="../computer-lab/computer-lab.html"
                         >কম্পিউটার ল্যাব</a
                       >
                     </li>
                     <li>
-                      <a href="../facilities/playground.html">খেলার মাঠ</a>
+                      <a href="../playground/playground.html">খেলার মাঠ</a>
                     </li>
                     <li>
-                      <a href="../facilities/cultural.html"
+                      <a href="../cultural/cultural.html"
                         >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
                       >
                     </li>
                     <li>
-                      <a href="../facilities/Cleanliness.html"
+                      <a href="../Cleanliness/Cleanliness.html"
                         >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
                       >
                     </li>
                   </ul>
                 </li>
 
-                <li><a href="../gallery.html">গ্যালারি</a></li>
+                <li><a href="../gallery/gallery.html">গ্যালারি</a></li>
 
-                <li><a href="../contact.html">যোগাযোগ</a></li>
+                <li><a href="../contact/contact.html">যোগাযোগ</a></li>
               </ul>
             </nav>
           </div>
@@ -369,104 +386,57 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
+    <!-- Login Page Hero Section -->
+    <section class="login-hero-section">
       <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
+        <div class="login-hero-content">
+          <h1 class="login-hero-title animate__animated animate__fadeInDown">
+            আপনার একাউন্টে লগইন করুন
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
+            <span>লগইন</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Login Section -->
+    <section class="login-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
-          <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
-          </p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
+        <div class="login-container">
+          <h2 class="login-title">স্বাগতম!</h2>
+          <form>
+            <div class="form-group">
+              <label for="email">ইমেইল বা ইউজার আইডি</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="আপনার ইমেইল অথবা ইউজার আইডি দিন"
+                required
+              />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
-              </div>
+            <div class="form-group">
+              <label for="password">পাসওয়ার্ড</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="আপনার পাসওয়ার্ড দিন"
+                required
+              />
             </div>
+            <button type="submit" class="btn btn-login">লগইন</button>
+          </form>
+          <div class="login-footer">
+            <p>
+              পাসওয়ার্ড ভুলে গেছেন?
+              <a href="#">এখানে ক্লিক করুন</a>
+            </p>
           </div>
         </div>
       </div>
@@ -627,12 +597,10 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Waypoints JS -->
-    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
-    <!-- Main JS (সঠিক পাথ সহ) -->
+    <!-- Main JS (for navbar, preloader, etc.) -->A
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+    <!-- Login Page Specific JS -->
+    <script src="login.js"></script>
   </body>
 </html>

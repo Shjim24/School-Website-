@@ -1,0 +1,261 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Lab Hero Section - Styled like About Hero */
+.lab-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/lab-hero-bg.jpg"); /* Assumes a new background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.lab-hero-section .hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.lab-hero-section .breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.lab-hero-section .breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.lab-hero-section .breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.lab-hero-section .breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.lab-hero-section .breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Labs Section */
+.labs-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.lab-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.lab-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.lab-image-main {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lab-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.lab-image-main:hover img {
+  transform: scale(1.1);
+}
+
+.lab-image-main .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 125, 50, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.lab-image-main:hover .image-overlay {
+  opacity: 1;
+}
+
+.lab-content {
+  padding-left: 15px;
+}
+
+.lab-content .lab-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  background: rgba(46, 125, 50, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lab-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.lab-content p {
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.lab-content h5 {
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 10px;
+}
+
+.equipment-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.equipment-list li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+}
+
+.equipment-list li i {
+  color: var(--accent-color);
+  margin-right: 12px;
+  font-size: 1.1rem;
+}
+
+/* Lab Rules Section */
+.lab-rules-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.rules-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border: 1px solid var(--border-color);
+    margin-top: 30px;
+}
+
+.rules-list {
+    padding-left: 25px;
+    font-size: 1.05rem;
+}
+
+.rules-list li {
+    color: var(--text-color);
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+  .lab-content {
+    padding-left: 0;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .lab-content .lab-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lab-content h5 {
+    text-align: left;
+  }
+  .equipment-list {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .lab-hero-section .hero-title {
+    font-size: 2.2rem;
+  }
+  .lab-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lab-hero-section {
+    padding: 60px 0;
+  }
+
+  .lab-hero-section .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+
+  .rules-content {
+      padding: 25px;
+  }
+  .rules-list {
+      padding-left: 15px;
+  }
+}

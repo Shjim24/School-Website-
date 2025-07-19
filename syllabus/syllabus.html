@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Syllabus, পাঠ্যসূচি, Class Syllabus"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Download the official academic syllabus for all classes at XYZ School & College. Find syllabus for JSC, SSC, HSC and all other classes."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>পাঠ্যসূচি - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +44,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Owl Carousel CSS for sliders -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <!-- FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -53,8 +68,8 @@
 
     <!-- Main CSS (সঠিক পাথ সহ) -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
+    <!-- Syllabus Page Specific CSS -->
+    <link rel="stylesheet" href="syllabus.css" />
 
     <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
     <style>
@@ -69,6 +84,12 @@
         }
       }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -294,8 +315,10 @@
                       <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
-                    <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
+                    <li>
+                      <a href="syllabus.html" class="active">পাঠ্যসূচি</a>
+                    </li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
                         >আসন সংখ্যা</a
@@ -304,23 +327,25 @@
                     <li>
                       <a href="../academic/book-list.html">বইয়ের তালিকা</a>
                     </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../exams/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
@@ -369,104 +394,148 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
+    <!-- Syllabus Page Hero Section (Reusing About Hero Style) -->
+    <section class="about-hero-section">
       <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
+        <div class="about-hero-content">
+          <h1 class="about-hero-title animate__animated animate__fadeInDown">
+            পাঠ্যসূচি (Syllabus)
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
+            <span>পাঠ্যসূচি</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Syllabus Section -->
+    <section class="syllabus-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
+          <h2 class="section-title">আমাদের পাঠ্যসূচি ডাউনলোড করুন</h2>
           <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
+            আপনার প্রয়োজনীয় শ্রেণির পাঠ্যসূচি খুঁজে নিন এবং ডাউনলোড করুন।
           </p>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+        <!-- Filter Buttons -->
+        <div class="syllabus-filters">
+          <button class="filter-btn active" data-filter="*">সকল</button>
+          <button class="filter-btn" data-filter=".class-6">৬ষ্ঠ শ্রেণি</button>
+          <button class="filter-btn" data-filter=".class-7">৭ম শ্রেণি</button>
+          <button class="filter-btn" data-filter=".class-8">৮ম শ্রেণি</button>
+          <button class="filter-btn" data-filter=".class-9">৯ম শ্রেণি</button>
+          <button class="filter-btn" data-filter=".class-10">
+            ১০ম শ্রেণি
+          </button>
+          <button class="filter-btn" data-filter=".class-11">
+            একাদশ শ্রেণি
+          </button>
+          <button class="filter-btn" data-filter=".class-12">
+            দ্বাদশ শ্রেণি
+          </button>
         </div>
-      </div>
-    </section>
 
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
-              </div>
+        <!-- Syllabus Grid -->
+        <div class="syllabus-grid">
+          <!-- Item 1 -->
+          <div class="syllabus-card class-6">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
             </div>
+            <h3 class="syllabus-title">ষষ্ঠ শ্রেণি</h3>
+            <p class="syllabus-subject">সকল বিষয় (সমন্বিত)</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 2 -->
+          <div class="syllabus-card class-7">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">সপ্তম শ্রেণি</h3>
+            <p class="syllabus-subject">সকল বিষয় (সমন্বিত)</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 3 -->
+          <div class="syllabus-card class-8">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">অষ্টম শ্রেণি</h3>
+            <p class="syllabus-subject">সকল বিষয় (সমন্বিত)</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 4 -->
+          <div class="syllabus-card class-9">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">নবম শ্রেণি</h3>
+            <p class="syllabus-subject">বিজ্ঞান বিভাগ</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 5 -->
+          <div class="syllabus-card class-9">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">নবম শ্রেণি</h3>
+            <p class="syllabus-subject">মানবিক বিভাগ</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 6 -->
+          <div class="syllabus-card class-10">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">দশম শ্রেণি</h3>
+            <p class="syllabus-subject">সকল বিভাগ (সমন্বিত)</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 7 -->
+          <div class="syllabus-card class-11">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">একাদশ শ্রেণি</h3>
+            <p class="syllabus-subject">বিজ্ঞান বিভাগ</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
+          </div>
+
+          <!-- Item 8 -->
+          <div class="syllabus-card class-12">
+            <div class="syllabus-icon">
+              <i class="far fa-file-pdf"></i>
+            </div>
+            <h3 class="syllabus-title">দ্বাদশ শ্রেণি</h3>
+            <p class="syllabus-subject">বিজ্ঞান বিভাগ</p>
+            <a href="#" class="btn btn-primary syllabus-download-btn"
+              ><i class="fas fa-download"></i> ডাউনলোড</a
+            >
           </div>
         </div>
       </div>
@@ -515,7 +584,7 @@
 
           <!-- More Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title"> </h4>
+            <h4 class="footer-title"> </h4>
             <ul class="footer-links">
               <li>
                 <a href="https://bangladesh.gov.bd/" target="_blank">
@@ -625,14 +694,20 @@
     <!-- JavaScript -->
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <!-- Isotope JS for filtering -->
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS for sliders -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- FancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
     <!-- Main JS (সঠিক পাথ সহ) -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+    <!-- Syllabus Page Specific JS -->
+    <script src="syllabus.js"></script>
   </body>
 </html>

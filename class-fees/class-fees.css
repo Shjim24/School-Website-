@@ -1,0 +1,226 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Page Hero Section - Standardized */
+.page-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing the same background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Fees Section */
+.fees-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Fees Table */
+.table-responsive {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden; /* Important for border-radius to work */
+}
+
+.fees-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.fees-table th,
+.fees-table td {
+  padding: 15px 20px;
+  border: 1px solid var(--border-color);
+}
+
+.fees-table thead {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.fees-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.fees-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.fees-table tbody tr:hover {
+  background-color: #e9f3e9;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.fees-table td:first-child {
+  font-weight: 600;
+  color: var(--primary-dark);
+  text-align: left;
+}
+
+/* Fees Notes Section */
+.fees-notes {
+  margin-top: 40px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--text-color);
+}
+
+.fees-notes h4 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.fees-notes ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.fees-notes li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.fees-notes li:last-child {
+  margin-bottom: 0;
+}
+
+.fees-notes i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+
+  .fees-table {
+    font-size: 0.9rem;
+  }
+
+  .fees-table th,
+  .fees-table td {
+    padding: 10px 12px;
+  }
+}

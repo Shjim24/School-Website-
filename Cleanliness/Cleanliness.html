@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Cleanliness, Physical Exercise, Sanitation, Bangladesh"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Learn about the cleanliness, physical exercise, and sanitation programs at XYZ School & College."
     />
     <meta
       name="viewport"
@@ -24,7 +24,9 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>
+      পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন - XYZ School & College
+    </title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +46,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <!-- Magnific Popup CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css"
+    />
+    <!-- FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -51,12 +73,10 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS (সঠিক পাথ সহ) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
@@ -68,7 +88,85 @@
           margin: 0 1px; /* Reduced margin between items */
         }
       }
+
+      /* Custom styles for the cleanliness page */
+      .page-header {
+        background: url("../images/slider-img-2.png") no-repeat center
+          center/cover;
+        padding: 80px 0;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .page-header-content {
+        position: relative;
+        z-index: 1;
+      }
+      .page-header h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+      }
+      .breadcrumb {
+        background: transparent;
+        justify-content: center;
+        padding: 0;
+        margin-top: 10px;
+      }
+      .breadcrumb-item a {
+        color: var(--primary-light);
+      }
+      .breadcrumb-item.active {
+        color: white;
+      }
+      .content-section {
+        padding: 60px 0;
+      }
+      .content-section img {
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .content-section h3 {
+        color: var(--primary-dark);
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      .content-section p {
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .feature-list {
+        list-style: none;
+        padding-left: 0;
+      }
+      .feature-list li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+      }
+      .feature-list i {
+        color: var(--primary-color);
+        margin-right: 15px;
+        font-size: 1.5rem;
+      }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -173,12 +271,10 @@
                 </li>
 
                 <li>
-                  <a href="../administration/management-committee.html"
-                    >প্রশাসন</a
-                  >
+                  <a href="../administration.html">প্রশাসন</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../administration/management-committee.html"
+                      <a href="../management-committee/management-committee.html"
                         >ব্যবস্থাপনা কমিটি</a
                       >
                     </li>
@@ -196,9 +292,7 @@
                 </li>
 
                 <li>
-                  <a href="../teachers-info/teachers-info.html"
-                    >শিক্ষক/কর্মচারী</a
-                  >
+                  <a href="../faculty-staff.html">শিক্ষক/কর্মচারী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../teachers-info/teachers-info.html"
@@ -224,7 +318,7 @@
                 </li>
 
                 <li>
-                  <a href="../students/current-students.html">শিক্ষার্থী</a>
+                  <a href="../students.html">শিক্ষার্থী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../students/gender-data.html"
@@ -254,14 +348,16 @@
                 </li>
 
                 <li>
-                  <a href="../admission/info.html">ভর্তি</a>
+                  <a href="../admission.html">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../admission/application.html">ভর্তি আবেদন</a>
                     </li>
                     <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
                     <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
-                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                    <li>
+                      <a href="../admission/results.html">ভর্তি ফলাফল</a>
+                    </li>
                     <li>
                       <a href="../admission/download-form.html"
                         >অনলাইন ফরম ডাউনলোড</a
@@ -278,11 +374,11 @@
                         >মাল্টিমিডিয়া ক্লাস</a
                       >
                     </li>
-                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
                     <li>
-                      <a href="../index.html#academic-calendar"
-                        >শিক্ষা বর্ষপঞ্জি</a
-                      >
+                      <a href="../academic/laboratory.html">গবেষণাগার</a>
+                    </li>
+                    <li>
+                      <a href="#academic-calendar">শিক্ষা বর্ষপঞ্জি</a>
                     </li>
                   </ul>
                 </li>
@@ -294,7 +390,9 @@
                       <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
-                    <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
+                    <li>
+                      <a href="../class-fees/class-fees.html">ফি তথ্য</a>
+                    </li>
                     <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
@@ -305,27 +403,33 @@
                       <a href="../academic/book-list.html">বইয়ের তালিকা</a>
                     </li>
                     <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li>
+                      <a href="../academic/pathdan-onumuti.html"
+                        >পাঠদানের অনুমতি ও স্বীকৃতি</a
+                      >
+                    </li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../exams/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../facilities/buildings.html">সুবিধাদি</a>
+                  <a href="../facilities.html">সুবিধাদি</a>
                   <ul class="sub-menu">
                     <li><a href="../facilities/buildings.html">ভবন</a></li>
                     <li>
@@ -369,108 +473,107 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
-      <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
-          </h1>
-          <div
-            class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
-          >
-            <a href="../index.html">মূলপাতা</a>
-            <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
-          </div>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="page-header-content">
+        <div class="container">
+          <h1>পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">মূলপাতা</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                পরিষ্ছন্নতা
+              </li>
+            </ol>
+          </nav>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Main Content Section -->
+    <main class="content-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
-          <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
-          </p>
-        </div>
+        <div class="row">
+          <div class="col-lg-8">
+            <h3>আমাদের প্রতিশ্রুতি: একটি সুস্থ ও পরিচ্ছন্ন পরিবেশ</h3>
+            <p>
+              XYZ স্কুল ও কলেজে আমরা বিশ্বাস করি, একটি সুস্থ মন এবং সুস্থ দেহ
+              শিক্ষার অপরিহার্য অংশ। তাই, আমরা শিক্ষার্থীদের জন্য একটি পরিচ্ছন্ন,
+              নিরাপদ এবং স্বাস্থ্যকর পরিবেশ নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। আমাদের
+              পরিষ্কার-পরিচ্ছন্নতা, নিয়মিত শারীরচর্চা এবং উন্নত স্যানিটেশন
+              ব্যবস্থা শিক্ষার্থীদের শারীরিক ও মানসিক বিকাশে গুরুত্বপূর্ণ ভূমিকা
+              পালন করে।
+            </p>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
+            <h3>পরিষ্কার-পরিচ্ছন্নতা কার্যক্রম</h3>
+            <p>
+              আমরা একটি পরিচ্ছন্ন শিক্ষাঙ্গন বজায় রাখার জন্য কঠোর পরিশ্রম করি।
+              আমাদের শ্রেণীকক্ষ, খেলার মাঠ, লাইব্রেরি এবং অন্যান্য সকল স্থান
+              নিয়মিতভাবে পরিষ্কার করা হয়। আমরা শিক্ষার্থীদের মধ্যে
+              পরিষ্কার-পরিচ্ছন্নতার গুরুত্ব সম্পর্কে সচেতনতা তৈরি করি এবং তাদের
+              স্কুল প্রাঙ্গণ পরিষ্কার রাখতে উৎসাহিত করি।
+            </p>
+            <img
+              src="../images/gallery-1.jpg"
+              alt="Cleanliness Program"
+              class="img-fluid"
+            />
+
+            <h3>শারীরচর্চা ও খেলাধুলা</h3>
+            <p>
+              শিক্ষার্থীদের শারীরিক সুস্থতা নিশ্চিত করতে আমরা নিয়মিত
+              শারীরচর্চা এবং খেলাধুলার আয়োজন করি। আমাদের একটি প্রশস্ত খেলার মাঠ
+              রয়েছে যেখানে শিক্ষার্থীরা বিভিন্ন ধরনের খেলায় অংশ নিতে পারে।
+              দৈনিক অ্যাসেম্বলিতে সাধারণ শারীরিক ব্যায়াম বাধ্যতামূলকভাবে করানো
+              হয়, যা তাদের দিনটি সতেজভাবে শুরু করতে সাহায্য করে।
+            </p>
+            <img
+              src="../images/gallery-3.jpg"
+              alt="Physical Exercise"
+              class="img-fluid"
+            />
+
+            <h3>উন্নত স্যানিটেশন ব্যবস্থা</h3>
+            <p>
+              আমরা শিক্ষার্থীদের জন্য স্বাস্থ্যকর এবং আধুনিক স্যানিটেশন সুবিধা
+              নিশ্চিত করি। আমাদের প্রতিষ্ঠানে পর্যাপ্ত সংখ্যক स्वच्छ টয়লেট
+              রয়েছে এবং আমরা বিশুদ্ধ পানীয় জলের ব্যবস্থা করেছি। শিক্ষার্থীদের
+              হাত ধোয়ার গুরুত্ব সম্পর্কে শেখানো হয় এবং এর জন্য প্রয়োজনীয়
+              ব্যবস্থা গ্রহণ করা হয়েছে।
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="p-4 bg-light rounded">
+              <h3>আমাদের প্রধান লক্ষ্যসমূহ</h3>
+              <ul class="feature-list">
+                <li>
+                  <i class="fas fa-leaf"></i>পরিবেশগত পরিচ্ছন্নতা বজায় রাখা
+                </li>
+                <li>
+                  <i class="fas fa-running"></i>নিয়মিত শারীরিক ব্যায়ামের
+                  ব্যবস্থা করা
+                </li>
+                <li>
+                  <i class="fas fa-hand-sparkles"></i>হাইজিন ও স্যানিটেশন সম্পর্কে
+                  সচেতনতা বৃদ্ধি
+                </li>
+                <li>
+                  <i class="fas fa-recycle"></i>বর্জ্য ব্যবস্থাপনার উন্নয়ন
+                </li>
+                <li>
+                  <i class="fas fa-tint"></i>বিশুদ্ধ পানীয় জল নিশ্চিত করা
+                </li>
+                <li>
+                  <i class="fas fa-plus-square"></i>একটি স্বাস্থ্যকর শিক্ষণ
+                  পরিবেশ তৈরি করা
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </main>
+    <!-- End Main Content Section -->
 
     <!-- Footer Area -->
     <footer class="footer-section">
@@ -515,7 +618,7 @@
 
           <!-- More Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title"> </h4>
+            <h4 class="footer-title"></h4>
             <ul class="footer-links">
               <li>
                 <a href="https://bangladesh.gov.bd/" target="_blank">
@@ -627,12 +730,18 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <!-- FancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
+    <!-- CounterUp JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
 
-    <!-- Main JS (সঠিক পাথ সহ) -->
+    <!-- Custom JS -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
   </body>
 </html>

@@ -1,0 +1,233 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Hero Section (Re-using from about.css for consistency) */
+.about-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* You can change this background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.about-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Schedule Section */
+.schedule-section {
+  padding: 80px 0;
+  background-color: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Schedule Filters */
+.schedule-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: #f1f1f1;
+  color: var(--dark-text);
+  border: 1px solid #ddd;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* Schedule Table */
+.schedule-table-container {
+  display: none;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border-color);
+  animation: fadeIn 0.5s ease;
+}
+
+.schedule-table-container.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.table {
+  font-size: 1rem;
+}
+
+.table thead th {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tbody tr:hover {
+  background-color: #e9f5ea !important; /* light green hover */
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.download-btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.download-btn-container .btn-success {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.download-btn-container .btn-success:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .schedule-filters {
+    gap: 10px;
+  }
+  .filter-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  .schedule-table-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+    .about-hero-section {
+        padding: 60px 0;
+    }
+    .about-hero-title {
+        font-size: 1.8rem;
+    }
+    .breadcrumb {
+        flex-direction: column;
+    }
+    .breadcrumb i {
+        margin: 8px 0;
+        transform: rotate(90deg);
+    }
+}

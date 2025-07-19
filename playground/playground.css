@@ -1,0 +1,82 @@
+/* Playground Page Specific Styles */
+.playground-page {
+  padding: 60px 0;
+}
+
+.playground-section .section-header {
+  margin-bottom: 40px;
+}
+
+.playground-gallery {
+  margin-bottom: 40px;
+}
+
+.playground-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.playground-gallery-item .gallery-link {
+  display: block;
+}
+
+.playground-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.playground-gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.playground-gallery-item .gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.playground-gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.playground-description h3 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.playground-description p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.playground-description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.playground-description ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.playground-description ul li i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1.2rem;
+}

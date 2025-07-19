@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Page Hero Section - Common for internal pages */
+.page-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing a generic background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-content .hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Book List Section */
+.book-list-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Filter Controls */
+.filter-controls {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.filter-controls .form-control,
+.filter-controls .form-select {
+  height: 48px;
+  font-family: "Anek Bangla", sans-serif;
+}
+.filter-controls .btn {
+  height: 48px;
+  font-weight: 600;
+}
+
+/* Book Table Styling */
+.book-table {
+  font-size: 1rem;
+  font-family: "Anek Bangla", sans-serif;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.book-table thead th {
+  font-weight: 600;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.book-table tbody td {
+  vertical-align: middle;
+  color: var(--text-color);
+}
+
+.book-table tbody tr {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.book-table tbody tr:hover {
+  background-color: #e9f5ea;
+  transform: scale(1.015);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  position: relative;
+}
+
+.book-table tbody tr td:first-child,
+.book-table tbody tr td:nth-child(2) {
+  text-align: center;
+  font-weight: 500;
+}
+
+#no-results {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #e91e63;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-content .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-content .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+
+  .book-list-section {
+    padding: 60px 0;
+  }
+}

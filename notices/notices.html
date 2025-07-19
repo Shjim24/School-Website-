@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Notices, Announcements, News"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Latest notices, announcements, and news from XYZ School & College for students, parents, and staff."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>নোটিশ বোর্ড - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +44,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -51,24 +56,30 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS (সঠিক পাথ সহ) -->
+    <!-- Main CSS (Using the path from your example) -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
+    <!-- Notices Page Specific CSS -->
+    <link rel="stylesheet" href="notices.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
-          padding: 8px 7px; /* Reduced horizontal padding */
-          font-size: 0.82rem; /* Slightly smaller font */
-          white-space: nowrap; /* Prevent text wrapping */
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
         }
         .header-menu-list > li {
-          margin: 0 1px; /* Reduced margin between items */
+          margin: 0 1px;
         }
       }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -143,11 +154,9 @@
                 <li><a href="../index.html">মূলপাতা</a></li>
 
                 <li>
-                  <a href="../about/about.html">পরিচিতি</a>
+                  <a href="about.html">পরিচিতি</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
-                    </li>
+                    <li><a href="about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
                     <li>
                       <a href="../school information/school-information.html"
                         >বিদ্যালয়ের তথ্যাদি</a
@@ -294,7 +303,7 @@
                       <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
-                    <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
                     <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
@@ -304,23 +313,25 @@
                     <li>
                       <a href="../academic/book-list.html">বইয়ের তালিকা</a>
                     </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../exams/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
@@ -369,106 +380,154 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
+    <!-- Notices Page Hero Section -->
+    <section class="notices-hero-section">
       <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
+        <div class="hero-content">
+          <h1 class="hero-title animate__animated animate__fadeInDown">
+            নোটিশ বোর্ড
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
+            <span>নোটিশ</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Notices Section -->
+    <section class="notices-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
+          <h2 class="section-title">সকল নোটিশ</h2>
           <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
+            প্রতিষ্ঠানের সর্বশেষ সংবাদ এবং ঘোষণাসমূহ
           </p>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
+        <div class="row g-4">
+          <!-- Notice Item 1 -->
+          <div class="col-lg-6 col-md-12">
+            <div class="notice-card">
+              <div class="notice-content">
+                <h3 class="notice-title">
+                  খণ্ডকালীন পদার্থবিজ্ঞান প্রভাষক নিয়োগ বিজ্ঞপ্তি
+                </h3>
+                <p class="notice-text">
+                  XYZ স্কুল ও কলেজে পদার্থবিজ্ঞান বিভাগে একজন খণ্ডকালীন প্রভাষক
+                  নিয়োগ দেওয়া হবে। আগ্রহী প্রার্থীদের ৩০শে জুলাই, ২০২৫ এর মধ্যে
+                  আবেদন করার জন্য অনুরোধ করা হলো...
+                </p>
+              </div>
+              <div class="notice-footer">
+                <span class="notice-date">
+                  <i class="fas fa-calendar-alt me-2"></i>প্রকাশিত: ১৫ জুলাই,
+                  ২০২৫
+                </span>
+                <a href="#" class="btn btn-sm btn-outline-success"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
+          <!-- Notice Item 2 -->
+          <div class="col-lg-6 col-md-12">
+            <div class="notice-card">
+              <div class="notice-content">
+                <h3 class="notice-title">
+                  পঞ্চম ও দ্বাদশ শ্রেণির শ্রেণিপাঠদান বন্ধ প্রসঙ্গে
+                </h3>
+                <p class="notice-text">
+                  বার্ষিক পরীক্ষার প্রস্তুতিমূলক ছুটির জন্য আগামী ২০শে জুলাই থেকে
+                  ২৫শে জুলাই, ২০২৫ পর্যন্ত পঞ্চম ও দ্বাদশ শ্রেণির সকল ক্লাস বন্ধ
+                  থাকবে। সকল শিক্ষার্থীকে বিষয়টি অবহিত করা হলো...
+                </p>
+              </div>
+              <div class="notice-footer">
+                <span class="notice-date">
+                  <i class="fas fa-calendar-alt me-2"></i>প্রকাশিত: ১৪ জুলাই,
+                  ২০২৫
+                </span>
+                <a href="#" class="btn btn-sm btn-outline-success"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice Item 3 -->
+          <div class="col-lg-6 col-md-12">
+            <div class="notice-card">
+              <div class="notice-content">
+                <h3 class="notice-title">
+                  একাদশ শ্রেণির বার্ষিক পরীক্ষা-২০২৫ এর ফলাফল
+                </h3>
+                <p class="notice-text">
+                  একাদশ শ্রেণির (দিবা ও প্রভাতি শাখা) বার্ষিক পরীক্ষা-২০২৫ এর
+                  ফলাফল আগামী ১৯শে জুলাই, ২০২৫ তারিখে দুপুর ২:০০ ঘটিকায় প্রকাশ
+                  করা হবে। ফলাফল ওয়েবসাইটের নির্দিষ্ট প্যানেলে পাওয়া যাবে...
+                </p>
+              </div>
+              <div class="notice-footer">
+                <span class="notice-date">
+                  <i class="fas fa-calendar-alt me-2"></i>প্রকাশিত: ১২ জুলাই,
+                  ২০২৫
+                </span>
+                <a href="#" class="btn btn-sm btn-outline-success"
+                  >বিস্তারিত দেখুন</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Notice Item 4 -->
+          <div class="col-lg-6 col-md-12">
+            <div class="notice-card">
+              <div class="notice-content">
+                <h3 class="notice-title">
+                  ডেঙ্গু প্রতিরোধে সচেতনতামূলক কর্মসূচি
+                </h3>
+                <p class="notice-text">
+                  ডেঙ্গু রোগের প্রকোপ বৃদ্ধি পাওয়ায় সকল শিক্ষার্থী ও অভিভাবকদের
+                  সচেতন করার লক্ষ্যে আগামী ২২শে জুলাই, ২০২৫ তারিখে একটি বিশেষ
+                  কর্মসূচির আয়োজন করা হয়েছে। সকলের উপস্থিতি কাম্য...
+                </p>
+              </div>
+              <div class="notice-footer">
+                <span class="notice-date">
+                  <i class="fas fa-calendar-alt me-2"></i>প্রকাশিত: ১০ জুলাই,
+                  ২০২৫
+                </span>
+                <a href="#" class="btn btn-sm btn-outline-success"
+                  >বিস্তারিত দেখুন</a
+                >
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-5">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+                >পূর্ববর্তী</a
+              >
+            </li>
+            <li class="page-item active" aria-current="page">
+              <a class="page-link" href="#">১</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">২</a></li>
+            <li class="page-item"><a class="page-link" href="#">৩</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">পরবর্তী</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </section>
 
@@ -627,12 +686,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Waypoints JS -->
-    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
-
-    <!-- Main JS (সঠিক পাথ সহ) -->
+    <!-- Main JS (Using path from your example) -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+    <!-- Notices Page Specific JS -->
+    <script src="notices.js"></script>
   </body>
 </html>

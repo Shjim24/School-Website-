@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Multimedia Classes, E-Learning, Smart Classroom"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Explore the modern multimedia classrooms at XYZ School & College, equipped with the latest technology for an interactive learning experience."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>মাল্টিমিডিয়া ক্লাস - XYZ স্কুল ও কলেজ</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +44,26 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <!-- Magnific Popup CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css"
+    />
+    <!-- FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -51,12 +71,10 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS (সঠিক পাথ সহ) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
@@ -68,7 +86,76 @@
           margin: 0 1px; /* Reduced margin between items */
         }
       }
+      /* Additional styles for the new page content */
+      .page-header {
+        background: url("../images/slider-img-1.png") no-repeat center
+          center/cover;
+        padding: 80px 0;
+        position: relative;
+        color: white;
+        text-align: center;
+      }
+      .page-header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      .page-header-content {
+        position: relative;
+        z-index: 2;
+      }
+      .page-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: white;
+      }
+      .breadcrumb-container {
+        font-size: 1rem;
+      }
+      .breadcrumb-container a {
+        color: var(--primary-light);
+        text-decoration: none;
+      }
+      .breadcrumb-container .active {
+        color: white;
+      }
+      .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .feature-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+      .feature-title {
+        font-size: 1.4rem;
+        color: var(--primary-dark);
+        margin-bottom: 15px;
+      }
+      .main-content-section {
+        padding: 60px 0;
+      }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -173,12 +260,10 @@
                 </li>
 
                 <li>
-                  <a href="../administration/management-committee.html"
-                    >প্রশাসন</a
-                  >
+                  <a href="../administration.html">প্রশাসন</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../administration/management-committee.html"
+                      <a href="../management-committee/management-committee.html"
                         >ব্যবস্থাপনা কমিটি</a
                       >
                     </li>
@@ -196,9 +281,7 @@
                 </li>
 
                 <li>
-                  <a href="../teachers-info/teachers-info.html"
-                    >শিক্ষক/কর্মচারী</a
-                  >
+                  <a href="../faculty-staff.html">শিক্ষক/কর্মচারী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../teachers-info/teachers-info.html"
@@ -224,7 +307,7 @@
                 </li>
 
                 <li>
-                  <a href="../students/current-students.html">শিক্ষার্থী</a>
+                  <a href="../students.html">শিক্ষার্থী</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../students/gender-data.html"
@@ -254,14 +337,16 @@
                 </li>
 
                 <li>
-                  <a href="../admission/info.html">ভর্তি</a>
+                  <a href="../admission.html">ভর্তি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../admission/application.html">ভর্তি আবেদন</a>
                     </li>
                     <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
                     <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
-                    <li><a href="../admission/results.html">ভর্তি ফলাফল</a></li>
+                    <li>
+                      <a href="../admission/results.html">ভর্তি ফলাফল</a>
+                    </li>
                     <li>
                       <a href="../admission/download-form.html"
                         >অনলাইন ফরম ডাউনলোড</a
@@ -274,11 +359,9 @@
                   <a href="#">একাডেমিক</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="../academic/multimedia-classes.html"
-                        >মাল্টিমিডিয়া ক্লাস</a
-                      >
+                      <a href="multimedia-classes.html">মাল্টিমিডিয়া ক্লাস</a>
                     </li>
-                    <li><a href="../academic/laboratory.html">গবেষণাগার</a></li>
+                    <li><a href="laboratory.html">গবেষণাগার</a></li>
                     <li>
                       <a href="../index.html#academic-calendar"
                         >শিক্ষা বর্ষপঞ্জি</a
@@ -290,42 +373,36 @@
                 <li>
                   <a href="#">পাঠদান ও স্বীকৃতি</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
-                    </li>
+                    <li><a href="../exams/class-routine.html">ক্লাস রুটিন</a></li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
                     <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
-                    <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
+                    <li><a href="syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
                         >আসন সংখ্যা</a
                       >
                     </li>
-                    <li>
-                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
-                    </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="book-list.html">বইয়ের তালিকা</a></li>
+                    <li><a href="dress.html">পোশাকের বিবরণ</a></li>
+                    <li><a href="pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
-                        >অভ্যন্তরীণ ফলাফল</a
-                      >
+                      <a href="../exams/internal-results.html">অভ্যন্তরীণ ফলাফল</a>
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html">পাবলিক পরীক্ষার ফল</a>
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../facilities/buildings.html">সুবিধাদি</a>
+                  <a href="../facilities.html">সুবিধাদি</a>
                   <ul class="sub-menu">
                     <li><a href="../facilities/buildings.html">ভবন</a></li>
                     <li>
@@ -366,111 +443,194 @@
       </div>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu-overlay"></div>
+    <!-- ========= START OF NEW PAGE CONTENT ========= -->
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
-      <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
-          </h1>
-          <div
-            class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
-          >
-            <a href="../index.html">মূলপাতা</a>
-            <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results Search Section -->
-    <section class="results-search-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
-          <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
-          </p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
+    <main class="main-content">
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="page-header-content">
+          <div class="container">
+            <h1 class="page-title animate__animated animate__fadeInDown">
+              মাল্টিমিডিয়া ক্লাসরুম
+            </h1>
+            <div
+              class="breadcrumb-container animate__animated animate__fadeInUp"
+            >
+              <a href="../index.html">মূলপাতা</a> >
+              <span class="active">মাল্টিমিডিয়া ক্লাস</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
+      <!-- Introduction Section -->
+      <section class="main-content-section">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="about-image">
+                <img
+                  src="../images/gallery-2.png"
+                  alt="Multimedia Classroom"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="about-content ps-lg-5">
+                <h2 class="section-title">আধুনিক শিক্ষার মেলবন্ধন</h2>
+                <div class="about-text">
+                  <p>
+                    XYZ স্কুল ও কলেজে আমরা বিশ্বাস করি যে আধুনিক প্রযুক্তির সঠিক
+                    ব্যবহার শিক্ষার মান বহুগুণে বাড়িয়ে তুলতে পারে। এই লক্ষ্যে,
+                    আমাদের প্রতিটি শ্রেণিকক্ষকে মাল্টিমিডিয়া সুবিধাসম্পন্ন করা
+                    হয়েছে। এখানে শিক্ষার্থীরা শুধুমাত্র পাঠ্যবইয়ের সীমাবদ্ধতায়
+                    আবদ্ধ না থেকে অডিও-ভিজ্যুয়াল কন্টেন্টের মাধ্যমে জটিল বিষয়গুলোও
+                    সহজ এবং আনন্দদায়কভাবে শিখতে পারে।
+                  </p>
+                  <p>
+                    আমাদের লক্ষ্য হলো শিক্ষার্থীদের জন্য একটি আকর্ষণীয় এবং
+                    কার্যকরী শেখার পরিবেশ তৈরি করা, যা তাদের সৃজনশীলতা এবং
+                    সমালোচনামূলক চিন্তাভাবনার দক্ষতা বৃদ্ধিতে সহায়তা করবে।
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Features Section -->
+      <section class="main-content-section bg-light">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">আমাদের মাল্টিমিডিয়া ক্লাসের সুবিধাসমূহ</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <h3 class="feature-title">ইন্টারেক্টিভ স্মার্ট বোর্ড</h3>
+                <p>
+                  শিক্ষার্থীরা ডিজিটাল বোর্ডের মাধ্যমে পাঠ্য বিষয়ে সরাসরি অংশ
+                  নিতে পারে, যা শেখার প্রক্রিয়াকে আরও গতিশীল করে তোলে।
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-video"></i>
+                </div>
+                <h3 class="feature-title">হাই-ডেফিনিশন প্রজেক্টর</h3>
+                <p>
+                  উন্নতমানের প্রজেক্টরের মাধ্যমে পাঠ্য বিষয় সম্পর্কিত ভিডিও,
+                  ছবি এবং প্রেজেন্টেশন বড় পর্দায় দেখানো হয়, যা শিক্ষার্থীদের
+                  মনোযোগ ধরে রাখতে সাহায্য করে।
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-volume-up"></i>
+                </div>
+                <h3 class="feature-title">ক্রিস্টাল ক্লিয়ার সাউন্ড সিস্টেম</h3>
+                <p>
+                  প্রতিটি ক্লাসরুমে আধুনিক সাউন্ড সিস্টেম রয়েছে, যেন সকল
+                  শিক্ষার্থী শিক্ষকের কথা এবং অডিও কন্টেন্ট স্পষ্টভাবে শুনতে
+                  পারে।
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery-section main-content-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">ক্লাসরুমের কিছু মুহূর্ত</h2>
+          </div>
+          <div class="gallery-container">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+              <a
+                href="../images/gallery-1.jpg"
+                data-fancybox="gallery-class"
+                class="gallery-link"
+              >
+                <img
+                  src="../images/gallery-1.png"
+                  alt="শিক্ষার্থীদের অংশগ্রহণ"
+                />
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <i class="fas fa-plus"></i>
+                    <h5>শিক্ষার্থীদের অংশগ্রহণ</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+              <a
+                href="../images/gallery-2.jpg"
+                data-fancybox="gallery-class"
+                class="gallery-link"
+              >
+                <img src="../images/gallery-2.png" alt="পাঠদান কার্যক্রম" />
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <i class="fas fa-plus"></i>
+                    <h5>পাঠদান কার্যক্রম</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+              <a
+                href="../images/gallery-3.jpg"
+                data-fancybox="gallery-class"
+                class="gallery-link"
+              >
+                <img src="../images/gallery-3.png" alt="আধুনিক ক্লাসরুম" />
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <i class="fas fa-plus"></i>
+                    <h5>আধুনিক ক্লাসরুম</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+              <a
+                href="../images/gallery-4.jpg"
+                data-fancybox="gallery-class"
+                class="gallery-link"
+              >
+                <img src="../images/gallery-4.jpg" alt="প্রেজেন্টেশন" />
+                <div class="gallery-overlay">
+                  <div class="gallery-content">
+                    <i class="fas fa-plus"></i>
+                    <h5>শিক্ষামূলক প্রেজেন্টেশন</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========= END OF NEW PAGE CONTENT ========= -->
 
     <!-- Footer Area -->
     <footer class="footer-section">
@@ -515,7 +675,7 @@
 
           <!-- More Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title"> </h4>
+            <h4 class="footer-title"></h4>
             <ul class="footer-links">
               <li>
                 <a href="https://bangladesh.gov.bd/" target="_blank">
@@ -627,12 +787,29 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- Magnific Popup JS -->
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+    <!-- FancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
+    <!-- CounterUp JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
 
-    <!-- Main JS (সঠিক পাথ সহ) -->
+    <!-- Custom JS -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+
+    <script>
+      // Initialize FancyBox for the new gallery
+      $(document).ready(function () {
+        $('[data-fancybox="gallery-class"]').fancybox({
+          buttons: ["zoom", "slideShow", "fullScreen", "download", "close"],
+          loop: true,
+          protect: true,
+        });
+      });
+    </script>
   </body>
 </html>

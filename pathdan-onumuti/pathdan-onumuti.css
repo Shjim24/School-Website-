@@ -1,0 +1,204 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Hero Section - Standardized */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Using the same background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Breadcrumb Style - Standardized */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Recognition Content Section */
+.recognition-section {
+  padding: 80px 0;
+  background: var(--light-bg);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.recognition-content {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--text-color);
+  margin-bottom: 30px;
+}
+
+.recognition-table {
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.recognition-table thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.recognition-table th, .recognition-table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.recognition-table tbody tr:hover {
+    background-color: #e9f5e9;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Document Download Links */
+.document-links .links-title {
+  font-size: 1.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 2px solid var(--primary-light);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.doc-link {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  color: var(--dark-text);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+.doc-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.doc-link i {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-right: 15px;
+  transition: transform 0.3s;
+}
+
+.doc-link:hover i {
+    transform: scale(1.2);
+}
+
+.doc-link span {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .recognition-content {
+      padding: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+  .doc-link span {
+    font-size: 0.9rem;
+  }
+}

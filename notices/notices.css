@@ -1,0 +1,190 @@
+/* Color Variables from your provided CSS */
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Hero Section for Notices Page */
+.notices-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Reusing the same background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Standardized Hero Title */
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Standardized Breadcrumb Style */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Notices Section */
+.notices-section {
+  padding: 80px 0;
+  background: var(--secondary-color);
+}
+
+/* Common Section Header Styles (assuming from your main style.css) */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+/* End of common styles */
+
+.notice-card {
+  background: var(--light-bg);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.notice-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.notice-content {
+  padding: 25px 30px;
+  flex-grow: 1; /* Allows content to take up available space */
+}
+
+.notice-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+}
+
+.notice-text {
+  color: var(--text-color);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.notice-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 15px 30px;
+  background: #fafafa;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-date {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.notice-date i {
+  color: var(--accent-color);
+}
+
+.pagination .page-link {
+  color: var(--primary-color);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .notice-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .notices-hero-section {
+    padding: 60px 0;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .breadcrumb {
+    flex-direction: column;
+  }
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+  .notice-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .notice-footer .btn {
+    margin-top: 10px;
+  }
+}

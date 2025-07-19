@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# Dress Page Styles
+--------------------------------------------------------------*/
+.main-content {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.page-header .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.page-header .lead {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.dress-code-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dress-code-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dress-code-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dress-code-header i {
+  font-size: 1.8rem;
+  margin-right: 15px;
+}
+
+.dress-code-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.dress-code-body {
+  padding: 25px;
+}
+
+.uniform-section {
+  margin-bottom: 30px;
+}
+
+.uniform-section:last-child {
+  margin-bottom: 0;
+}
+
+.uniform-section h4 {
+  font-size: 1.3rem;
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 10px;
+}
+
+.uniform-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.uniform-item img {
+  max-width: 150px;
+  border-radius: 8px;
+  border: 3px solid #eee;
+}
+
+.uniform-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.uniform-item ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.uniform-item ul li i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,201 @@
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Reusing About Hero Section styles for consistency */
+.about-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* Ensure you have this image or change the path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.about-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Syllabus Section */
+.syllabus-section {
+  padding: 80px 0;
+  background: var(--secondary-color);
+}
+
+/* Filter Buttons */
+.syllabus-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+/* Syllabus Grid */
+.syllabus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.syllabus-card {
+  background: var(--light-bg);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.syllabus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-bottom-color: var(--primary-color);
+}
+
+.syllabus-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.syllabus-title {
+  font-size: 1.5rem;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.syllabus-subject {
+  color: var(--text-color);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.syllabus-download-btn {
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.syllabus-download-btn i {
+  margin-right: 8px;
+}
+
+.syllabus-download-btn:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .syllabus-filters {
+    gap: 8px;
+  }
+
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero-section {
+    padding: 60px 0;
+  }
+
+  .about-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+
+  .syllabus-grid {
+    grid-template-columns: 1fr;
+  }
+}

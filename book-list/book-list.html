@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Book List, Textbooks, Academic Books"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Find the official book list for all classes at XYZ School & College for the current academic year."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>বইয়ের তালিকা - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +44,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -53,8 +58,8 @@
 
     <!-- Main CSS (সঠিক পাথ সহ) -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
+    <!-- Book List Page Specific CSS -->
+    <link rel="stylesheet" href="book-list.css" />
 
     <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
     <style>
@@ -69,6 +74,12 @@
         }
       }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -288,13 +299,13 @@
                 </li>
 
                 <li>
-                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <a href="#" class="active">পাঠদান ও স্বীকৃতি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
-                    <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
                     <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
@@ -302,25 +313,29 @@
                       >
                     </li>
                     <li>
-                      <a href="../academic/book-list.html">বইয়ের তালিকা</a>
+                      <a href="book-list.html" class="active"
+                        >বইয়ের তালিকা</a
+                      >
                     </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../exams/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
@@ -369,105 +384,166 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
+    <!-- Book List Page Hero Section -->
     <section class="page-hero-section">
       <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
+        <div class="hero-content">
+          <h1 class="hero-title animate__animated animate__fadeInDown">
+            বইয়ের তালিকা
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
-            <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
+            <span>বইয়ের তালিকা</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Book List Section -->
+    <section class="book-list-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
+          <h2 class="section-title">পাঠ্যপুস্তকের তালিকা ২০২৫</h2>
           <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
+            সকল শ্রেণীর জন্য নির্ধারিত বইয়ের তালিকা নিচে দেওয়া হলো।
           </p>
         </div>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
+        <!-- Filter and Search -->
+        <div class="filter-controls">
+          <div class="row g-3">
+            <div class="col-md-5">
+              <input
+                type="text"
+                id="book-search"
+                class="form-control"
+                placeholder="বই, লেখক বা বিষয় খুঁজুন..."
+              />
+            </div>
+            <div class="col-md-5">
+              <select id="class-filter" class="form-select">
+                <option value="all">সকল শ্রেণী</option>
+                <option value="৬ষ্ঠ">৬ষ্ঠ শ্রেণী</option>
+                <option value="৭ম">৭ম শ্রেণী</option>
+                <option value="৮ম">৮ম শ্রেণী</option>
+                <option value="৯ম">৯ম শ্রেণী</option>
+                <option value="১০ম">১০ম শ্রেণী</option>
+                <option value="একাদশ">একাদশ শ্রেণী</option>
+                <option value="দ্বাদশ">দ্বাদশ শ্রেণী</option>
+              </select>
+            </div>
+            <div class="col-md-2">
+              <button id="download-btn" class="btn btn-primary w-100">
+                <i class="fas fa-download me-2"></i>ডাউনলোড
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
-              </div>
-            </div>
-          </div>
+        <!-- Book List Table -->
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered book-table">
+            <thead class="table-dark">
+              <tr>
+                <th>ক্রমিক নং</th>
+                <th>শ্রেণী</th>
+                <th>বিষয়</th>
+                <th>বইয়ের নাম</th>
+                <th>লেখক/সম্পাদক</th>
+                <th>প্রকাশক</th>
+              </tr>
+            </thead>
+            <tbody id="book-table-body">
+              <!-- Rows will be dynamically inserted here by JavaScript -->
+              <tr data-class="৬ষ্ঠ">
+                <td>১</td>
+                <td>৬ষ্ঠ</td>
+                <td>বাংলা</td>
+                <td>সাহিত্য কণিকা</td>
+                <td>এনসিটিবি</td>
+                <td>এনসিটিবি</td>
+              </tr>
+              <tr data-class="৬ষ্ঠ">
+                <td>২</td>
+                <td>৬ষ্ঠ</td>
+                <td>English</td>
+                <td>English for Today</td>
+                <td>NCTB</td>
+                <td>NCTB</td>
+              </tr>
+              <tr data-class="৬ষ্ঠ">
+                <td>৩</td>
+                <td>৬ষ্ঠ</td>
+                <td>গণিত</td>
+                <td>গণিত</td>
+                <td>এনসিটিবি</td>
+                <td>এনসিটিবি</td>
+              </tr>
+              <tr data-class="৭ম">
+                <td>৪</td>
+                <td>৭ম</td>
+                <td>বাংলা</td>
+                <td>সপ্তবর্ণা</td>
+                <td>এনসিটিবি</td>
+                <td>এনসিটিবি</td>
+              </tr>
+              <tr data-class="৭ম">
+                <td>৫</td>
+                <td>৭ম</td>
+                <td>English</td>
+                <td>English for Today</td>
+                <td>NCTB</td>
+                <td>NCTB</td>
+              </tr>
+              <tr data-class="৮ম">
+                <td>৬</td>
+                <td>৮ম</td>
+                <td>বাংলা</td>
+                <td>সাহিত্য মঞ্জুরী</td>
+                <td>এনসিটিবি</td>
+                <td>এনসিটিবি</td>
+              </tr>
+              <tr data-class="৯ম">
+                <td>৭</td>
+                <td>৯ম</td>
+                <td>পদার্থবিজ্ঞান</td>
+                <td>পদার্থবিজ্ঞান</td>
+                <td>ড. মুহম্মদ জাফর ইকবাল</td>
+                <td>লেকচার পাবলিকেশন্স</td>
+              </tr>
+              <tr data-class="১০ম">
+                <td>৮</td>
+                <td>১০ম</td>
+                <td>রসায়ন</td>
+                <td>রসায়ন</td>
+                <td>ড. সরোজ কান্তি সিংহ হাজারী</td>
+                <td>হাসান বুক হাউস</td>
+              </tr>
+              <tr data-class="একাদশ">
+                <td>৯</td>
+                <td>একাদশ</td>
+                <td>বাংলা</td>
+                <td>বাংলা সহপাঠ</td>
+                <td>এনসিটিবি</td>
+                <td>এনসিটিবি</td>
+              </tr>
+              <tr data-class="দ্বাদশ">
+                <td>১০</td>
+                <td>দ্বাদশ</td>
+                <td>তথ্য ও যোগাযোগ প্রযুক্তি</td>
+                <td>তথ্য ও যোগাযোগ প্রযুক্তি</td>
+                <td> প্রকৌশলী মুজিবুর রহমান</td>
+                <td>সিস্টেম পাবলিকেশন্স</td>
+              </tr>
+              <!-- Add more books as needed -->
+            </tbody>
+          </table>
+          <p id="no-results" class="text-center mt-4 d-none">
+            কোনো ফলাফল পাওয়া যায়নি।
+          </p>
         </div>
       </div>
     </section>
@@ -627,12 +703,9 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Waypoints JS -->
-    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
-
     <!-- Main JS (সঠিক পাথ সহ) -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+    <!-- Book List Page Specific JS -->
+    <script src="book-list.js"></script>
   </body>
 </html>

@@ -1,0 +1,245 @@
+/* Variable Definitions (মূল style.css থেকে নেওয়া) */
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #81c784;
+  --primary-dark: #1b5e20;
+  --secondary-color: #f5f5f5;
+  --accent-color: #4caf50;
+  --text-color: #333;
+  --light-bg: #ffffff;
+  --dark-text: #212121;
+  --border-color: #e0e0e0;
+}
+
+/* Hero Section - Standardized */
+.page-hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/about-hero-bg.jpg"); /* একটি সাধারণ ব্যাকগ্রাউন্ড ইমেজ ব্যবহার করা হয়েছে */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.page-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Breadcrumb - Standardized */
+.breadcrumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+}
+
+.breadcrumb a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-light);
+}
+
+.breadcrumb i {
+  margin: 0 10px;
+  font-size: 0.8rem;
+}
+
+.breadcrumb span {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Results Section */
+.results-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Search Form Card */
+.result-search-form-card {
+  background: var(--light-bg);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid var(--border-color);
+}
+
+.result-search-form-card .form-label {
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+}
+
+.result-search-form-card .form-control,
+.result-search-form-card .form-select {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.result-search-form-card .form-control:focus,
+.result-search-form-card .form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+}
+
+.result-search-form-card .btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  height: 48px;
+  border-radius: 8px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.result-search-form-card .btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Result Display */
+.result-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-light);
+    display: inline-block;
+}
+
+#resultDisplayArea, #institutionResultArea {
+    text-align: center; /* Center the title */
+}
+
+.result-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    max-width: 800px;
+    margin: 0 auto; /* Center the card */
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background: linear-gradient(to right, var(--primary-dark), var(--primary-color));
+    color: white;
+}
+
+.student-info p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.gpa-info {
+    text-align: center;
+}
+.gpa-info p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+.gpa-info span {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.result-body {
+    padding: 30px;
+}
+
+.result-body .table {
+    margin-bottom: 0;
+}
+
+.result-body .table thead {
+    background-color: var(--primary-dark);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 767.98px) {
+  .page-hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .result-search-form-card {
+    padding: 20px;
+  }
+  
+  .result-search-form-card .btn-primary {
+      margin-top: 10px;
+  }
+
+  .result-header {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .gpa-info {
+      margin-top: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-hero-section {
+    padding: 60px 0;
+  }
+
+  .page-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    flex-direction: column;
+  }
+
+  .breadcrumb i {
+    margin: 8px 0;
+    transform: rotate(90deg);
+  }
+}

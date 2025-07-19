@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="keywords"
-      content="XYZ School, Internal Results, Exam Results, Student Results"
+      content="XYZ School, Buildings, Facilities, Campus, Infrastructure"
     />
     <meta
       name="description"
-      content="Check your internal examination results for XYZ School & College. Enter your details to view your marksheet."
+      content="Explore the modern infrastructure and building facilities at XYZ School & College, including academic buildings, labs, and the library."
     />
     <meta
       name="viewport"
@@ -24,7 +24,7 @@
     <meta http-equiv="Expires" content="0" />
 
     <!-- Site Title -->
-    <title>অভ্যন্তরীণ ফলাফল - XYZ School & College</title>
+    <title>ভবন - XYZ School & College</title>
 
     <!-- Fav Icon -->
     <link rel="icon" href="../images/favicon.svg" />
@@ -44,6 +44,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
+    <!-- Owl Carousel CSS for sliders -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <!-- FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <!-- Icofont -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/icofont@1.0.1/icofont.min.css"
+    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -53,22 +68,28 @@
 
     <!-- Main CSS (সঠিক পাথ সহ) -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Internal Results Page Specific CSS -->
-    <link rel="stylesheet" href="internal-results.css" />
+    <!-- Buildings Page Specific CSS -->
+    <link rel="stylesheet" href="buildings.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
-          padding: 8px 7px; /* Reduced horizontal padding */
-          font-size: 0.82rem; /* Slightly smaller font */
-          white-space: nowrap; /* Prevent text wrapping */
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
         }
         .header-menu-list > li {
-          margin: 0 1px; /* Reduced margin between items */
+          margin: 0 1px;
         }
       }
     </style>
+
+    <!-- IE Support -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
     <!-- Preloader -->
@@ -145,9 +166,7 @@
                 <li>
                   <a href="../about/about.html">পরিচিতি</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
-                    </li>
+                    <li><a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a></li>
                     <li>
                       <a href="../school information/school-information.html"
                         >বিদ্যালয়ের তথ্যাদি</a
@@ -294,7 +313,7 @@
                       <a href="../exams/class-routine.html">ক্লাস রুটিন</a>
                     </li>
                     <li><a href="#">ক্লাস কক্ষ</a></li>
-                    <li><a href="../class-fees/class-fees.html">ফি তথ্য</a></li>
+                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
                     <li><a href="../academic/syllabus.html">পাঠ্যসূচি</a></li>
                     <li>
                       <a href="../approved-positions/approved-positions.html"
@@ -304,45 +323,39 @@
                     <li>
                       <a href="../academic/book-list.html">বইয়ের তালিকা</a>
                     </li>
-                    <li><a href="../academic/dress.html">পোশাকের বিবরণ</a></li>
-                    <li><a href="../academic/pathdan-onumuti.html">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
+                    <li><a href="#">পোশাকের বিবরণ</a></li>
+                    <li><a href="#">পাঠদানের অনুমতি ও স্বীকৃতি</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="#" class="active">পরীক্ষা ও ফলাফল</a>
+                  <a href="#">পরীক্ষা ও ফলাফল</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="internal-results.html" class="active"
+                      <a href="../exams/internal-results.html"
                         >অভ্যন্তরীণ ফলাফল</a
                       >
                     </li>
                     <li>
-                      <a href="public-results.html">পাবলিক পরীক্ষার ফল</a>
+                      <a href="../exams/public-results.html"
+                        >পাবলিক পরীক্ষার ফল</a
+                      >
                     </li>
-                    <li><a href="schedule.html">পরীক্ষার রুটিন</a></li>
+                    <li><a href="../exams/schedule.html">পরীক্ষার রুটিন</a></li>
                   </ul>
                 </li>
 
                 <li>
-                  <a href="../facilities/buildings.html">সুবিধাদি</a>
+                  <a href="buildings.html" class="active">সুবিধাদি</a>
                   <ul class="sub-menu">
-                    <li><a href="../facilities/buildings.html">ভবন</a></li>
                     <li>
-                      <a href="../facilities/computer-lab.html"
-                        >কম্পিউটার ল্যাব</a
-                      >
+                      <a href="buildings.html" class="active">ভবন</a>
                     </li>
+                    <li><a href="computer-lab.html">কম্পিউটার ল্যাব</a></li>
+                    <li><a href="playground.html">খেলার মাঠ</a></li>
+                    <li><a href="cultural.html">ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a></li>
                     <li>
-                      <a href="../facilities/playground.html">খেলার মাঠ</a>
-                    </li>
-                    <li>
-                      <a href="../facilities/cultural.html"
-                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../facilities/Cleanliness.html"
+                      <a href="Cleanliness.html"
                         >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
                       >
                     </li>
@@ -369,104 +382,230 @@
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
-    <!-- Hero Section -->
-    <section class="page-hero-section">
+    <!-- Building Page Hero Section -->
+    <section class="about-hero-section">
       <div class="container">
-        <div class="page-hero-content">
-          <h1 class="page-hero-title animate__animated animate__fadeInDown">
-            অভ্যন্তরীণ ফলাফল
+        <div class="about-hero-content">
+          <h1 class="about-hero-title animate__animated animate__fadeInDown">
+            আমাদের ভবনসমূহ
           </h1>
           <div
             class="breadcrumb animate__animated animate__fadeIn animate__delay-1s"
           >
             <a href="../index.html">মূলপাতা</a>
             <i class="fas fa-angle-double-right"></i>
-            <a href="#">পরীক্ষা ও ফলাফল</a>
+            <a href="#">সুবিধাদি</a>
             <i class="fas fa-angle-double-right"></i>
-            <span>অভ্যন্তরীণ ফলাফল</span>
+            <span>ভবন</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results Search Section -->
-    <section class="results-search-section">
+    <!-- Building Details Section -->
+    <section class="building-details-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">আপনার ফলাফল অনুসন্ধান করুন</h2>
-          <p class="section-subtitle">
-            অনুগ্রহ করে পরীক্ষার বছর, আপনার শ্রেণি এবং রোল নম্বর দিয়ে ফলাফল
-            অনুসন্ধান করুন।
-          </p>
-        </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="search-form-wrapper">
-              <form id="results-search-form">
-                <div class="row g-3">
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examYear" class="form-label">বছর</label>
-                    <select class="form-select" id="examYear" required>
-                      <option value="2025" selected>২০২৫</option>
-                      <option value="2024">২০২৪</option>
-                      <option value="2023">২০২৩</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="examName" class="form-label">পরীক্ষা</label>
-                    <select class="form-select" id="examName" required>
-                      <option value="annual" selected>বার্ষিক পরীক্ষা</option>
-                      <option value="half-yearly">অর্ধবার্ষিক পরীক্ষা</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="className" class="form-label">শ্রেণি</label>
-                    <select class="form-select" id="className" required>
-                      <option value="6">ষষ্ঠ শ্রেণি</option>
-                      <option value="7">সপ্তম শ্রেণি</option>
-                      <option value="8" selected>অষ্টম শ্রেণি</option>
-                      <option value="9">নবম শ্রেণি</option>
-                    </select>
-                  </div>
-                  <div class="col-md-6 col-lg-3">
-                    <label for="studentRoll" class="form-label"
-                      >রোল নম্বর</label
-                    >
-                    <input
-                      type="number"
-                      class="form-control"
-                      id="studentRoll"
-                      placeholder="আপনার রোল লিখুন"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="row mt-4">
-                  <div class="col-md-4 mx-auto">
-                    <button type="submit" class="btn btn-brand">
-                      <i class="fas fa-search me-2"></i>ফলাফল দেখুন
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results Display Section -->
-    <section class="results-display-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <!-- Results will be loaded here by JavaScript -->
-            <div id="results-display-area">
-              <div class="alert alert-secondary text-center" role="alert">
-                আপনার ফলাফল দেখতে উপরের ফরমটি পূরণ করুন।
+        <!-- Academic Building -->
+        <div class="building-item animate-on-scroll">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="building-image">
+                <img
+                  src="../images/building-academic.jpg"
+                  alt="একাডেমিক ভবন"
+                />
               </div>
             </div>
+            <div class="col-lg-6">
+              <div class="building-content">
+                <h3 class="building-title">প্রধান একাডেমিক ভবন</h3>
+                <p>
+                  এটি আমাদের প্রতিষ্ঠানের প্রধান শিক্ষা কেন্দ্র। এই চারতলা
+                  বিশিষ্ট ভবনে মোট ৩০টি মাল্টিমিডিয়া-সমৃদ্ধ ক্লাসরুম, শিক্ষকদের
+                  জন্য পৃথক কক্ষ এবং ছাত্র-ছাত্রীদের জন্য কমনরুম রয়েছে। প্রতিটি
+                  ফ্লোরে আধুনিক স্যানিটেশন ব্যবস্থা এবং বিশুদ্ধ পানির সরবরাহ
+                  নিশ্চিত করা হয়েছে। ভবনের স্থাপত্যশৈলী খোলামেলা এবং প্রচুর
+                  আলো-বাতাস প্রবেশের উপযোগী করে ডিজাইন করা হয়েছে।
+                </p>
+                <ul class="building-features">
+                  <li>
+                    <i class="fas fa-check-circle"></i>৩০টি আধুনিক ক্লাসরুম
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>প্রতিটি ক্লাসে
+                    মাল্টিমিডিয়া প্রজেক্টর
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>শিক্ষকদের জন্য সুসজ্জিত
+                    কক্ষ
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>পর্যাপ্ত আলো-বাতাস ব্যবস্থা
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Science & Library Building -->
+        <div class="building-item animate-on-scroll">
+          <div class="row align-items-center g-5 flex-row-reverse">
+            <div class="col-lg-6">
+              <div class="building-image">
+                <img
+                  src="../images/building-science.jpg"
+                  alt="বিজ্ঞান ও গ্রন্থাগার ভবন"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="building-content">
+                <h3 class="building-title">বিজ্ঞান ও গ্রন্থাগার ভবন</h3>
+                <p>
+                  শিক্ষার্থীদের বিজ্ঞানমনস্ক করে গড়ে তুলতে এবং গবেষণার সুযোগ
+                  সৃষ্টি করতে এই ভবনটি বিশেষভাবে নির্মিত। এখানে পদার্থবিজ্ঞান,
+                  রসায়ন ও জীববিজ্ঞানের জন্য তিনটি আন্তর্জাতিক মানের ল্যাবরেটরি
+                  রয়েছে। এছাড়াও, ভবনের দ্বিতীয় তলায় আমাদের সমৃদ্ধ লাইব্রেরি
+                  অবস্থিত, যেখানে ১০,০০০-এরও বেশি বই, জার্নাল এবং ডিজিটাল
+                  রিসোর্সের বিশাল সংগ্রহ রয়েছে।
+                </p>
+                <ul class="building-features">
+                  <li>
+                    <i class="fas fa-check-circle"></i>৩টি পূর্ণাঙ্গ বিজ্ঞান
+                    ল্যাব
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>সমৃদ্ধ লাইব্রেরি ও পাঠ কক্ষ
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>ডিজিটাল কন্টেন্ট ও ইন্টারনেট
+                    সুবিধা
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>গবেষণার জন্য প্রয়োজনীয়
+                    উপকরণ
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Administrative Building -->
+        <div class="building-item animate-on-scroll">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="building-image">
+                <img
+                  src="../images/building-admin.jpg"
+                  alt="প্রশাসনিক ভবন"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="building-content">
+                <h3 class="building-title">প্রশাসনিক ভবন</h3>
+                <p>
+                  প্রতিষ্ঠানের যাবতীয় দাপ্তরিক কার্যক্রম এই ভবন থেকে পরিচালিত
+                  হয়। এখানে অধ্যক্ষের কার্যালয়, উপাধ্যক্ষের কার্যালয়, হিসাবরক্ষণ
+                  শাখা, ভর্তি শাখা এবং একটি আধুনিক কনফারেন্স রুম রয়েছে।
+                  অভিভাবকদের জন্য একটি অভ্যর্থনা ও বসার সুব্যবস্থাও এখানে করা
+                  হয়েছে। সকল প্রকার তথ্য ও সহযোগিতার জন্য এটিই মূল কেন্দ্র।
+                </p>
+                <ul class="building-features">
+                  <li>
+                    <i class="fas fa-check-circle"></i>অধ্যক্ষ ও উপাধ্যক্ষের
+                    কার্যালয়
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>হিসাব ও ভর্তি শাখা
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>অভিভাবকদের জন্য অভ্যর্থনা
+                    কক্ষ
+                  </li>
+                  <li>
+                    <i class="fas fa-check-circle"></i>১০০ আসন বিশিষ্ট কনফারেন্স
+                    রুম
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Building Gallery Section -->
+    <section class="building-gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">ভবন গ্যালারি</h2>
+          <p class="section-subtitle">
+            আমাদের ক্যাম্পাসের কিছু মনোরম দৃশ্য
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-1.jpg"
+              data-fancybox="building-gallery"
+              data-caption="প্রধান একাডেমিক ভবনের সম্মুখভাগ"
+            >
+              <img src="../images/gallery/building-1.jpg" alt="ভবন চিত্র ১" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-2.jpg"
+              data-fancybox="building-gallery"
+              data-caption="লাইব্রেরির অভ্যন্তর"
+            >
+              <img src="../images/gallery/building-2.jpg" alt="ভবন চিত্র ২" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-3.jpg"
+              data-fancybox="building-gallery"
+              data-caption="আধুনিক কম্পিউটার ল্যাব"
+            >
+              <img src="../images/gallery/building-3.jpg" alt="ভবন চিত্র ৩" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-4.jpg"
+              data-fancybox="building-gallery"
+              data-caption="রসায়ন ল্যাবরেটরি"
+            >
+              <img src="../images/gallery/building-4.jpg" alt="ভবন চিত্র ৪" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-5.jpg"
+              data-fancybox="building-gallery"
+              data-caption="ক্যাম্পাসের সবুজ চত্বর"
+            >
+              <img src="../images/gallery/building-5.jpg" alt="ভবন চিত্র ৫" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a
+              href="../images/gallery/building-6.jpg"
+              data-fancybox="building-gallery"
+              data-caption="কনফারেন্স রুম"
+            >
+              <img src="../images/gallery/building-6.jpg" alt="ভবন চিত্র ৬" />
+              <div class="overlay"><i class="fas fa-plus"></i></div>
+            </a>
           </div>
         </div>
       </div>
@@ -627,12 +766,16 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl Carousel JS for sliders -->
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+    <!-- FancyBox JS -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
     <!-- Main JS (সঠিক পাথ সহ) -->
     <script src="../script.js"></script>
-    <!-- Download Form JS -->
-    <script src="internal-results.js"></script>
+    <!-- Buildings Page Specific JS -->
+    <script src="buildings.js"></script>
   </body>
 </html>
