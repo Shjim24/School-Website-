@@ -726,6 +726,7 @@ img {
 .notice-item {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 12px;
   margin-bottom: 12px;
   background: #f8f9fa;
@@ -739,16 +740,31 @@ img {
   transform: translateX(5px);
 }
 
+.notice-info {
+  display: flex;
+  align-items: center;
+}
+
 .notice-icon {
   color: var(--primary-color);
   margin-right: 12px;
   font-size: 1.1rem;
 }
 
+.notice-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .notice-text {
-  flex: 1;
   font-size: 0.95rem;
   color: #333;
+}
+
+.notice-date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 4px;
 }
 
 .notice-footer {
