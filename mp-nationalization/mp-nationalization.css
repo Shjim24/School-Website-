@@ -6,8 +6,9 @@
   --text-color: #333;
   --light-bg: #ffffff;
   --border-color: #e0e0e0;
-  --mpo-color: #1976d2; /* Blue for MPO */
-  --national-color: #880e4f; /* Deep Pink/Purple for Nationalization */
+  /* UPDATED: Both header colors are now a uniform, visible green */
+  --mpo-color: #2e7d32;
+  --national-color: #2e7d32;
 }
 
 /* Page Hero Section */

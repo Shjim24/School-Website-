@@ -86,6 +86,13 @@
           margin: 0 1px; /* Reduced margin between items */
         }
       }
+
+      /* Styles for the download button */
+      .routine-download {
+        text-align: center; /* Center the button */
+        margin-top: 20px; /* Add space above the button */
+        margin-bottom: 20px; /* Add space below the button */
+      }
     </style>
 
     <!-- IE Support -->
@@ -165,7 +172,7 @@
             </div>
           </div>
 
-          <!-- Desktop Navigation (Active link highlighted with corrected paths) -->
+          <!-- Desktop Navigation (Full Navigation) -->
           <div class="col-lg-10 col-md-9 d-none d-md-block">
             <nav class="navigation">
               <ul class="header-menu-list">
@@ -402,117 +409,81 @@
 
     <!-- Main Content: Class Routine -->
     <main>
+      <!-- Breadcrumb Section -->
+      <section class="breadcrumb-section">
+        <div class="container">
+          <h1 class="breadcrumb-title">ক্লাস রুটিন</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">মূলপাতা</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                ক্লাস রুটিন
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
       <section class="routine-section">
         <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">ক্লাস রুটিন</h2>
-          </div>
-
           <!-- Filter Section -->
           <div class="routine-filter">
-            <div class="row g-3 align-items-center">
-              <div class="col-md-4">
+            <div class="row g-3 align-items-end">
+              <div class="col-md-3">
                 <label for="class-select" class="form-label"
                   >শ্রেণি নির্বাচন করুন:</label
                 >
                 <select id="class-select" class="form-select">
-                  <option selected>সকল শ্রেণি</option>
-                  <option value="10">দশম শ্রেণি</option>
-                  <option value="9">নবম শ্রেণি</option>
-                  <option value="8">অষ্টম শ্রেণি</option>
-                  <option value="7">সপ্তম শ্রেণি</option>
+                  <option value="">-- শ্রেণি --</option>
                   <option value="6">ষষ্ঠ শ্রেণি</option>
+                  <option value="7">সপ্তম শ্রেণি</option>
+                  <option value="8">অষ্টম শ্রেণি</option>
+                  <option value="9">নবম শ্রেণি</option>
+                  <option value="10">দশম শ্রেণি</option>
                 </select>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-3">
+                <label for="shift-select" class="form-label"
+                  >শিফট নির্বাচন করুন:</label
+                >
+                <select id="shift-select" class="form-select">
+                  <option value="">-- শিফট --</option>
+                  <option value="Morning">প্রভাতি</option>
+                  <option value="Day">দিবা</option>
+                </select>
+              </div>
+              <div class="col-md-3">
                 <label for="section-select" class="form-label"
                   >শাখা নির্বাচন করুন:</label
                 >
                 <select id="section-select" class="form-select">
-                  <option selected>সকল শাখা</option>
+                  <option value="">-- শাখা --</option>
                   <option value="A">ক শাখা</option>
                   <option value="B">খ শাখা</option>
                 </select>
               </div>
-              <div class="col-md-4 d-flex align-items-end">
-                <button class="btn btn-primary w-100">রুটিন দেখুন</button>
+              <div class="col-md-3">
+                <button id="view-routine-btn" class="btn btn-primary w-100">
+                  রুটিন দেখুন
+                </button>
               </div>
             </div>
           </div>
 
-          <!-- Routine Table -->
-          <div class="routine-table-container">
-            <h3 class="text-center mb-4">দশম শ্রেণির ক্লাস রুটিন (ক শাখা)</h3>
-            <table class="table table-bordered routine-table">
-              <thead>
-                <tr>
-                  <th>সময়</th>
-                  <th>শনিবার</th>
-                  <th>রবিবার</th>
-                  <th>সোমবার</th>
-                  <th>মঙ্গলবার</th>
-                  <th>বুধবার</th>
-                  <th>বৃহস্পতিবার</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="time-slot">১০:০০ - ১০:৪৫</td>
-                  <td>বাংলা ১ম পত্র</td>
-                  <td>গণিত</td>
-                  <td>ইংরেজি ১ম পত্র</td>
-                  <td>পদার্থবিজ্ঞান</td>
-                  <td>রসায়ন</td>
-                  <td>জীববিজ্ঞান</td>
-                </tr>
-                <tr>
-                  <td class="time-slot">১০:৪৫ - ১১:৩০</td>
-                  <td>বাংলা ২য় পত্র</td>
-                  <td>গণিত</td>
-                  <td>ইংরেজি ২য় পত্র</td>
-                  <td>পদার্থবিজ্ঞান</td>
-                  <td>রসায়ন</td>
-                  <td>জীববিজ্ঞান</td>
-                </tr>
-                <tr>
-                  <td class="time-slot">১১:৩০ - ১২:১৫</td>
-                  <td>বাংলাদেশ ও বিশ্বপরিচয়</td>
-                  <td>তথ্য ও যোগাযোগ প্রযুক্তি</td>
-                  <td>ইসলাম ও নৈতিক শিক্ষা</td>
-                  <td>বাংলাদেশ ও বিশ্বপরিচয়</td>
-                  <td>তথ্য ও যোগাযোগ প্রযুক্তি</td>
-                  <td>ইসলাম ও নৈতিক শিক্ষা</td>
-                </tr>
-                <tr>
-                  <td colspan="7" class="text-center table-secondary">
-                    <strong>বিরতি (১২:১৫ - ০১:০০)</strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="time-slot">০১:০০ - ০১:৪৫</td>
-                  <td>উচ্চতর গণিত</td>
-                  <td>কৃষি শিক্ষা</td>
-                  <td>শারীরিক শিক্ষা</td>
-                  <td>উচ্চতর গণিত</td>
-                  <td>কৃষি শিক্ষা</td>
-                  <td>শারীরিক শিক্ষা</td>
-                </tr>
-                <tr>
-                  <td class="time-slot">০১:৪৫ - ০২:৩০</td>
-                  <td>উচ্চতর গণিত</td>
-                  <td>কৃষি শিক্ষা</td>
-                  <td>চারু ও কারুকলা</td>
-                  <td>উচ্চতর গণিত</td>
-                  <td>কৃষি শিক্ষা</td>
-                  <td>চারু ও কারুকলা</td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- Routine Table Container -->
+          <div id="routine-container" class="routine-table-container">
+            <!-- Dynamic Routine will be loaded here by JavaScript -->
+            <div class="initial-message">
+              <p>
+                অনুগ্রহ করে শ্রেণি, শিফট এবং শাখা নির্বাচন করে "রুটিন দেখুন"
+                বাটনে ক্লিক করুন।
+              </p>
+            </div>
           </div>
 
           <!-- Download Button -->
           <div class="routine-download">
-            <a href="#" class="btn download-btn"
+            <a href="#" class="btn btn-success"
               ><i class="fas fa-download"></i> সম্পূর্ণ রুটিন ডাউনলোড করুন
               (PDF)</a
             >
@@ -521,7 +492,7 @@
       </section>
     </main>
 
-    <!-- Footer Area -->
+    <!-- Footer Area (Full Footer) -->
     <footer class="footer-section">
       <div class="container">
         <div class="footer-grid">

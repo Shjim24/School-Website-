@@ -44,11 +44,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"
     />
-    <!-- FancyBox CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    />
 
     <!-- Google Fonts - Anek Bangla -->
     <link
@@ -61,7 +56,7 @@
     <!-- Memorial Page Specific CSS -->
     <link rel="stylesheet" href="memorial.css" />
 
-    <!-- Custom CSS for one-line navbar -->
+    <!-- Custom CSS for one-line navbar & Memorial Page -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
@@ -72,6 +67,71 @@
         .header-menu-list > li {
           margin: 0 1px;
         }
+      }
+
+      /* Memorial Card Specific Styles */
+      .memorial-card {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      .memorial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      }
+      .memorial-image {
+        position: relative;
+      }
+      .memorial-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .memorial-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(46, 125, 50, 0.65); /* Primary color with opacity */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        font-size: 3rem;
+        color: white;
+      }
+      .memorial-image a:hover .memorial-overlay {
+        opacity: 1;
+      }
+      .memorial-info {
+        padding: 20px;
+        text-align: center;
+      }
+      .memorial-info h3 {
+        margin-bottom: 10px;
+        color: #1b5e20; /* Primary Dark from your CSS */
+      }
+      .memorial-info p {
+        color: #555;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+      }
+      .btn-download {
+        background-color: #2e7d32; /* Primary Color */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      .btn-download:hover {
+        background-color: #1b5e20; /* Primary Dark */
+        color: white;
       }
     </style>
 
@@ -157,243 +217,66 @@
             <nav class="navigation">
               <ul class="header-menu-list">
                 <li><a href="../index.html">মূলপাতা</a></li>
-
                 <li class="active">
-                  <a href="../about/about.html">পরিচিতি</a>
+                  <a href="#">পরিচিতি</a>
                   <ul class="sub-menu">
                     <li>
                       <a href="../about/about.html">প্রতিষ্ঠানের পরিচিতি</a>
                     </li>
-                    <li>
-                      <a href="../school information/school-information.html"
-                        >বিদ্যালয়ের তথ্যাদি</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../corner-message/corner-message.html"
-                        >স্কুল পরিচালকদের বাণী</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../land-schedule/land-schedule.html"
-                        >ভূমির তপসিল</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../land-ownership/land-ownership.html"
-                        >ভূমি মালিকানা তথ্য</a
-                      >
-                    </li>
-                    <li>
-                      <a href="memorial.html" class="active">স্মরণিকা</a>
-                    </li>
+                    <li><a href="#">বিদ্যালয়ের তথ্যাদি</a></li>
+                    <li><a href="#">স্কুল পরিচালকদের বাণী</a></li>
+                    <li><a href="#">ভূমির তপসিল</a></li>
+                    <li><a href="#">ভূমি মালিকানা তথ্য</a></li>
+                    <li><a href="memorial.html" class="active">স্মরণিকা</a></li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="../administration/management-committee.html"
-                    >প্রশাসন</a
-                  >
+                  <a href="#">প্রশাসন</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../administration/management-committee.html"
-                        >ব্যবস্থাপনা কমিটি</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../mp-nationalization/mp-nationalization.html"
-                        >এমপি ও জাতীয়করণ তথ্য</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../approved-positions/approved-positions.html"
-                        >অনুমোদিত পদ সংখ্যা</a
-                      >
-                    </li>
+                    <li><a href="#">ব্যবস্থাপনা কমিটি</a></li>
+                    <li><a href="#">এমপি ও জাতীয়করণ তথ্য</a></li>
+                    <li><a href="#">অনুমোদিত পদ সংখ্যা</a></li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="../teachers-info/teachers-info.html"
-                    >শিক্ষক/কর্মচারী</a
-                  >
+                  <a href="#">শিক্ষক/কর্মচারী</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../teachers-info/teachers-info.html"
-                        >শিক্ষকদের তথ্য</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../teacher-details/teacher-details.html"
-                        >শিক্ষকদের বিবরণী</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../teacher-attendance/teacher-attendance.html"
-                        >শিক্ষক উপস্থিতি</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../staff-info/staff-info.html"
-                        >কর্মকর্তা/কর্মচারী তথ্য</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../staff-attendance/staff-attendance.html"
-                        >কর্মচারী উপস্থিতি</a
-                      >
-                    </li>
+                    <li><a href="#">শিক্ষকদের তথ্য</a></li>
+                    <li><a href="#">শিক্ষকদের বিবরণী</a></li>
+                    <li><a href="#">কর্মকর্তা/কর্মচারী তথ্য</a></li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="../students/current-students.html">শিক্ষার্থী</a>
+                  <a href="#">শিক্ষার্থী</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../students/gender-data.html"
-                        >লিঙ্গ ভিত্তিক তথ্য</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../students/current-students.html"
-                        >অধ্যয়নরত শিক্ষার্থীর তালিকা</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../student-attendance/student-attendance.html"
-                        >শিক্ষার্থী উপস্থিতি</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../students/merit-list.html">মেধা তালিকা</a>
-                    </li>
-                    <li>
-                      <a href="../students/pass-lists.html">পাস তালিকা</a>
-                    </li>
-                    <li>
-                      <a href="../students/fail-lists.html">ফেল তালিকা</a>
-                    </li>
+                    <li><a href="#">লিঙ্গ ভিত্তিক তথ্য</a></li>
+                    <li><a href="#">অধ্যয়নরত শিক্ষার্থীর তালিকা</a></li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="../admission/info.html">ভর্তি</a>
+                  <a href="#">ভর্তি</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../admission/application.html">ভর্তি আবেদন</a>
-                    </li>
-                    <li><a href="../admission/info.html">ভর্তি তথ্য</a></li>
-                    <li><a href="../admission/fees.html">ভর্তি ফি</a></li>
-                    <li>
-                      <a href="../admission/results.html">ভর্তি ফলাফল</a>
-                    </li>
-                    <li>
-                      <a href="../download-form/download-form.html"
-                        >অনলাইন ফরম ডাউনলোড</a
-                      >
-                    </li>
+                    <li><a href="#">ভর্তি আবেদন</a></li>
+                    <li><a href="#">ভর্তি তথ্য</a></li>
+                    <li><a href="#">ভর্তি ফলাফল</a></li>
                   </ul>
                 </li>
-
                 <li>
                   <a href="#">একাডেমিক</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../academic/multimedia-classes.html"
-                        >মাল্টিমিডিয়া ক্লাস</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../academic/laboratory.html">গবেষণাগার</a>
-                    </li>
-                    <li>
-                      <a href="../index.html#academic-calendar"
-                        >শিক্ষা বর্ষপঞ্জি</a
-                      >
-                    </li>
+                    <li><a href="#">মাল্টিমিডিয়া ক্লাস</a></li>
+                    <li><a href="#">গবেষণাগার</a></li>
+                    <li><a href="#">শিক্ষা বর্ষপঞ্জি</a></li>
                   </ul>
                 </li>
-
                 <li>
-                  <a href="#">পাঠদান ও স্বীকৃতি</a>
+                  <a href="#">ফলাফল</a>
                   <ul class="sub-menu">
-                    <li>
-                      <a href="../class-routine/class-routine.html"
-                        >ক্লাস রুটিন</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../class-fees/class-fees.html">ক্লাস কক্ষ</a>
-                    </li>
-                    <li><a href="../admission/fees.html">ফি তথ্য</a></li>
-                    <li>
-                      <a href="../academic/syllabus.html">পাঠ্যসূচি</a>
-                    </li>
-                    <li>
-                      <a href="../approved-positions/approved-positions.html"
-                        >আসন সংখ্যা</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../book-list/book-list.html">বইয়ের তালিকা</a>
-                    </li>
-                    <li><a href="../dress/dress.html">পোশাকের বিবরণ</a></li>
-                    <li>
-                      <a href="../pathdan-onumuti/pathdan-onumuti.html"
-                        >পাঠদানের অনুমতি ও স্বীকৃতি</a
-                      >
-                    </li>
+                    <li><a href="#">অভ্যন্তরীণ ফলাফল</a></li>
+                    <li><a href="#">পাবলিক পরীক্ষার ফল</a></li>
                   </ul>
                 </li>
-
-                <li>
-                  <a href="#">পরীক্ষা ও ফলাফল</a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="../internal-results/internal-results.html"
-                        >অভ্যন্তরীণ ফলাফল</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../public-results/public-results.html"
-                        >পাবলিক পরীক্ষার ফল</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../schedule/schedule.html">পরীক্ষার রুটিন</a>
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="../facilities/buildings.html">সুবিধাদি</a>
-                  <ul class="sub-menu">
-                    <li>
-                      <a href="../facilities/buildings.html">ভবন</a>
-                    </li>
-                    <li>
-                      <a href="../facilities/computer-lab.html"
-                        >কম্পিউটার ল্যাব</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../facilities/playground.html">খেলার মাঠ</a>
-                    </li>
-                    <li>
-                      <a href="../facilities/cultural.html"
-                        >ক্রীড়া ও সাংস্কৃতিক কার্যক্রম</a
-                      >
-                    </li>
-                    <li>
-                      <a href="../Cleanliness/Cleanliness.html"
-                        >পরিষ্ছন্নতা, শারীরচর্চা এবং স্যানিটেশন</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
                 <li><a href="../gallery/gallery.html">গ্যালারি</a></li>
-
                 <li><a href="../contact/contact.html">যোগাযোগ</a></li>
               </ul>
             </nav>
@@ -433,9 +316,9 @@
     </section>
 
     <!-- Main Content Section -->
-    <section class="page-content-section">
+    <section class="page-content-section py-5">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header text-center mb-5">
           <h2 class="section-title">আমাদের বার্ষিক স্মরণিকার সংগ্রহ</h2>
           <p class="section-subtitle">
             প্রতিটি স্মরণিকা আমাদের প্রতিষ্ঠানের একটি বছরের প্রতিচ্ছবি, যা
@@ -444,24 +327,23 @@
         </div>
 
         <div class="row gy-5">
-          <!-- Memorial Card 1 -->
+          <!-- Memorial Card 1: 2025 -->
           <div class="col-lg-4 col-md-6">
             <div class="memorial-card">
               <div class="memorial-image">
-                <img
-                  src="https://placehold.co/400x300/6E85B7/F7F7F7?text=স্মরণিকা+২০২৫"
-                  alt="স্মরণিকা ২০২৫"
-                />
-                <div class="memorial-overlay">
-                  <a
-                    href="https://placehold.co/800x600/6E85B7/F7F7F7?text=স্মরণিকা+২০২৫"
-                    class="zoom-icon"
-                    data-fancybox="memorial-gallery"
-                    data-caption="স্মরণিকা ২০২৫"
-                  >
-                    <i class="fas fa-search-plus"></i>
-                  </a>
-                </div>
+                <a
+                  href="../path/to/your/soronika_2025.pdf"
+                  target="_blank"
+                  title="স্মরণিকা ২০২৫ পিডিএফ দেখুন"
+                >
+                  <img
+                    src="https://placehold.co/400x550/6E85B7/FFFFFF?text=স্মরণিকা+২০২৫"
+                    alt="স্মরণিকা ২০২৫"
+                  />
+                  <div class="memorial-overlay">
+                    <i class="fas fa-file-pdf"></i>
+                  </div>
+                </a>
               </div>
               <div class="memorial-info">
                 <h3>স্মরণিকা ২০২৫</h3>
@@ -469,31 +351,34 @@
                   প্রতিষ্ঠানের সাম্প্রতিক কার্যক্রম, অর্জন এবং শিক্ষার্থীদের
                   সৃজনশীল লেখা নিয়ে প্রকাশিত নতুন স্মরণিকা।
                 </p>
-                <a href="#" class="btn btn-download"
-                  ><i class="fas fa-download"></i> পিডিএফ ডাউনলোড</a
+                <a
+                  href="../path/to/your/soronika_2025.pdf"
+                  class="btn btn-download"
+                  download="স্মরণিকা_২০২৫.pdf"
                 >
+                  <i class="fas fa-download me-2"></i>পিডিএফ ডাউনলোড
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Memorial Card 2 -->
+          <!-- Memorial Card 2: 2024 -->
           <div class="col-lg-4 col-md-6">
             <div class="memorial-card">
               <div class="memorial-image">
-                <img
-                  src="https://placehold.co/400x300/B2C8DF/4C4C4C?text=স্মরণিকা+২০২৪"
-                  alt="স্মরণিকা ২০২৪"
-                />
-                <div class="memorial-overlay">
-                  <a
-                    href="https://placehold.co/800x600/B2C8DF/4C4C4C?text=স্মরণিকা+২০২৪"
-                    class="zoom-icon"
-                    data-fancybox="memorial-gallery"
-                    data-caption="স্মরণিকা ২০২৪"
-                  >
-                    <i class="fas fa-search-plus"></i>
-                  </a>
-                </div>
+                <a
+                  href="../path/to/your/soronika_2024.pdf"
+                  target="_blank"
+                  title="স্মরণিকা ২০২৪ পিডিএফ দেখুন"
+                >
+                  <img
+                    src="https://placehold.co/400x550/B2C8DF/4C4C4C?text=স্মরণিকা+২০২৪"
+                    alt="স্মরণিকা ২০২৪"
+                  />
+                  <div class="memorial-overlay">
+                    <i class="fas fa-file-pdf"></i>
+                  </div>
+                </a>
               </div>
               <div class="memorial-info">
                 <h3>স্মরণিকা ২০২৪</h3>
@@ -501,31 +386,34 @@
                   গত বছরের গৌরবময় মুহূর্ত এবং শিক্ষার্থীদের সাফল্যের গল্প নিয়ে
                   সাজানো আমাদের বার্ষিকী।
                 </p>
-                <a href="#" class="btn btn-download"
-                  ><i class="fas fa-download"></i> পিডিএফ ডাউনলোড</a
+                <a
+                  href="../path/to/your/soronika_2024.pdf"
+                  class="btn btn-download"
+                  download="স্মরণিকা_২০২৪.pdf"
                 >
+                  <i class="fas fa-download me-2"></i>পিডিএফ ডাউনলোড
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Memorial Card 3 -->
+          <!-- Memorial Card 3: 2023 -->
           <div class="col-lg-4 col-md-6">
             <div class="memorial-card">
               <div class="memorial-image">
-                <img
-                  src="https://placehold.co/400x300/D0B8A8/7D6E83?text=স্মরণিকা+২০২৩"
-                  alt="স্মরণিকা ২০২৩"
-                />
-                <div class="memorial-overlay">
-                  <a
-                    href="https://placehold.co/800x600/D0B8A8/7D6E83?text=স্মরণিকা+২০২৩"
-                    class="zoom-icon"
-                    data-fancybox="memorial-gallery"
-                    data-caption="স্মরণিকা ২০২৩"
-                  >
-                    <i class="fas fa-search-plus"></i>
-                  </a>
-                </div>
+                <a
+                  href="../path/to/your/soronika_2023.pdf"
+                  target="_blank"
+                  title="স্মরণিকা ২০২৩ পিডিএফ দেখুন"
+                >
+                  <img
+                    src="https://placehold.co/400x550/D0B8A8/7D6E83?text=স্মরণিকা+২০২৩"
+                    alt="স্মরণিকা ২০২৩"
+                  />
+                  <div class="memorial-overlay">
+                    <i class="fas fa-file-pdf"></i>
+                  </div>
+                </a>
               </div>
               <div class="memorial-info">
                 <h3>স্মরণিকা ২০২৩</h3>
@@ -533,9 +421,13 @@
                   কোভিড-পরবর্তী সময়ের চ্যালেঞ্জ ও সাফল্য এবং নব উদ্যমের নানা কথা
                   নিয়ে প্রকাশিত স্মরণিকা।
                 </p>
-                <a href="#" class="btn btn-download"
-                  ><i class="fas fa-download"></i> পিডিএফ ডাউনলোড</a
+                <a
+                  href="../path/to/your/soronika_2023.pdf"
+                  class="btn btn-download"
+                  download="স্মরণিকা_২০২৩.pdf"
                 >
+                  <i class="fas fa-download me-2"></i>পিডিএফ ডাউনলোড
+                </a>
               </div>
             </div>
           </div>
@@ -549,73 +441,67 @@
         <div class="footer-grid">
           <!-- Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title">অফিসিয়াল লিংক সমূহ</h4>
+            <h4 class="footer-title">অফিসিয়াল লিংক</h4>
             <ul class="footer-links">
               <li>
-                <a href="https://nctb.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>জাতীয় শিক্ষাক্রম ও
-                  পাঠ্যপুস্তক বোর্ড (NCTB)
-                </a>
+                <a href="https://nctb.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> NCTB</a
+                >
               </li>
               <li>
-                <a href="https://dshe.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>শিক্ষা মন্ত্রণালয় –
-                  মাধ্যমিক ও উচ্চ শিক্ষা অধিদপ্তর (DSHE)
-                </a>
+                <a href="https://dshe.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> DSHE</a
+                >
               </li>
               <li>
-                <a href="https://www.teachers.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>শিক্ষক বাতায়ন
-                  (Teachers' Portal)
-                </a>
+                <a href="https://www.teachers.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> শিক্ষক বাতায়ন</a
+                >
               </li>
               <li>
-                <a href="https://banbeis.portal.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>বাংলাদেশ শিক্ষাতথ্য ও
-                  পরিসংখ্যান ব্যুরো (BANBEIS)
-                </a>
+                <a href="https://banbeis.portal.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> BANBEIS</a
+                >
               </li>
               <li>
-                <a href="https://bteb.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>বাংলাদেশ কারিগরি
-                  শিক্ষা বোর্ড (BTEB)
-                </a>
+                <a href="https://bteb.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> BTEB</a
+                >
               </li>
             </ul>
           </div>
 
           <!-- More Official Links -->
           <div class="footer-column">
-            <h4 class="footer-title"></h4>
+            <h4 class="footer-title" style="visibility: hidden">More Links</h4>
             <ul class="footer-links">
               <li>
-                <a href="https://bangladesh.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>জাতীয় তথ্য বাতায়ন
-                  (Bangladesh National Portal)
-                </a>
+                <a href="https://bangladesh.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> জাতীয় তথ্য বাতায়ন</a
+                >
               </li>
               <li>
-                <a href="https://www.barisalboard.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>বরিশাল শিক্ষা বোর্ড
-                </a>
+                <a href="https://www.barisalboard.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> বরিশাল শিক্ষা
+                  বোর্ড</a
+                >
               </li>
               <li>
-                <a href="https://shed.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>প্রাথমিক শিক্ষা
-                  অধিদপ্তর
-                </a>
+                <a href="https://shed.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> প্রাথমিক শিক্ষা
+                  অধিদপ্তর</a
+                >
               </li>
               <li>
-                <a href="https://www.nu.ac.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>জাতীয় বিশ্ববিদ্যালয়
-                  (National University)
-                </a>
+                <a href="https://www.nu.ac.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> জাতীয়
+                  বিশ্ববিদ্যালয়</a
+                >
               </li>
               <li>
-                <a href="https://muktopaath.gov.bd/" target="_blank">
-                  <i class="fas fa-external-link-alt"></i>মুক্তপাঠ (Open
-                  Educational Resources)
-                </a>
+                <a href="https://muktopaath.gov.bd/" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i> মুক্তপাঠ</a
+                >
               </li>
             </ul>
           </div>
@@ -632,22 +518,12 @@
                 <i class="fas fa-phone-alt"></i>
                 <div class="phone-numbers">
                   <a href="tel:+8801234567890">+880 1234 567890</a>
-                  <a href="tel:+8801234567891">+880 1234 567891</a>
                 </div>
               </div>
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <div class="emails">
                   <a href="mailto:info@xyzschool.com">info@xyzschool.com</a>
-                  <a href="mailto:hello@xyzschool.com">hello@xyzschool.com</a>
-                </div>
-              </div>
-              <div class="contact-item">
-                <i class="fas fa-info-circle"></i>
-                <div class="school-info">
-                  <p>EIIN no: <span>121314</span></p>
-                  <p>School code: <span>12345678</span></p>
-                  <p>Reg. no: <span>123456789012</span></p>
                 </div>
               </div>
             </div>
@@ -662,20 +538,6 @@
               ></a>
               <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
               <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="social-icon"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="newsletter">
-              <h5>নিউজলেটার সাবস্ক্রাইব করুন</h5>
-              <form class="newsletter-form">
-                <input type="email" placeholder="আপনার ইমেইল ঠিকানা" />
-                <button type="submit">
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -696,12 +558,8 @@
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
     <!-- Main JS -->
     <script src="../script.js"></script>
-    <!-- Memorial Page Specific JS -->
-    <script src="memorial.js"></script>
   </body>
 </html>

@@ -23,12 +23,12 @@ body {
   background-color: var(--light-bg);
   line-height: 1.6;
   scroll-behavior: smooth;
-  /* --- পৃষ্ঠা পরিবর্তনের জন্য অ্যানিমেশন --- */
+  /* --- Page transition animation --- */
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-/* --- পৃষ্ঠা লোড হওয়ার পর ফেইড-ইন করার জন্য ক্লাস --- */
+/* --- Class to fade-in after page load --- */
 body.fade-in {
   opacity: 1;
 }
@@ -102,6 +102,32 @@ img {
   to {
     transform: translateY(-20px);
   }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 80px; /* Positioned above the back-to-top button */
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  color: #fff;
+  background-color: #128c7e;
+  transform: translateY(-3px) scale(1.1);
 }
 
 /* Back to Top */
@@ -190,7 +216,8 @@ img {
   padding: 0;
   margin: 0;
   justify-content: flex-end;
-  flex-wrap: wrap;
+  /* MODIFICATION: Prevent wrapping */
+  flex-wrap: nowrap;
 }
 
 .header-menu-list li {
@@ -206,7 +233,7 @@ img {
   display: block;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 0.85rem;
+  font-size: 0.9rem; /* Slightly larger base font size */
   white-space: nowrap;
 }
 
@@ -279,7 +306,25 @@ img {
   display: none;
 }
 
+/* START: MODIFIED SECTION - CSS for one-line navbar on large screens */
+@media (min-width: 1200px) {
+  .header-menu-list {
+    justify-content: space-between; /* Evenly space out menu items */
+  }
+  .header-menu-list > li > a {
+    padding: 8px 7px; /* Reduced horizontal padding */
+    font-size: 0.82rem; /* Slightly smaller font to fit all items */
+  }
+  .header-menu-list > li {
+    margin: 0 1px; /* Reduced margin between items */
+  }
+}
+/* END: MODIFIED SECTION */
+
 @media (max-width: 1199.98px) {
+  .header-menu-list {
+    flex-wrap: wrap; /* Allow wrapping on medium-sized screens */
+  }
   .header-menu-list li a {
     font-size: 0.8rem;
     padding: 8px 8px;
@@ -1774,21 +1819,6 @@ img {
 }
 
 /* Responsive Styles */
-@media (max-width: 1199.98px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .header-menu-list li {
-    margin: 0 2px;
-  }
-
-  .header-menu-list li a {
-    padding: 8px 8px;
-    font-size: 0.8rem;
-  }
-}
-
 @media (max-width: 991.98px) {
   .hero-notice-container {
     flex-direction: column;

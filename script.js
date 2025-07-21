@@ -8,13 +8,13 @@ $(document).ready(function () {
       });
   });
 
-  // --- পৃষ্ঠা লোড হওয়ার সময় ফেইড-ইন করার জন্য ---
+  // --- Smooth fade-in on page load ---
   $("body").addClass("fade-in");
 
-  // --- মসৃণ পৃষ্ঠা পরিবর্তনের জন্য ---
+  // --- Smooth page transition for internal links ---
   $("a").on("click", function (e) {
     var href = $(this).attr("href");
-    // লিঙ্কটি অ্যাঙ্কর, নতুন ট্যাব, বা বিশেষ কোনো লিঙ্ক (যেমন fancybox) কি না তা চেক করা হচ্ছে
+    // Check if the link is not an anchor, new tab, or special link (like fancybox)
     if (
       href &&
       href !== "#" &&
@@ -24,13 +24,13 @@ $(document).ready(function () {
       $(this).attr("target") !== "_blank" &&
       !$(this).data("fancybox")
     ) {
-      e.preventDefault(); // লিঙ্কটিকে তাৎক্ষণিক লোড হওয়া থেকে আটকানো
-      $("body").removeClass("fade-in"); // ফেইড-আউট অ্যানিমেশন শুরু
+      e.preventDefault(); // Prevent the link from loading immediately
+      $("body").removeClass("fade-in"); // Start fade-out animation
 
-      // অ্যানিমেশন শেষ হওয়ার জন্য অপেক্ষা এবং তারপর নতুন পৃষ্ঠায় নেভিগেট করা
+      // Wait for the animation to finish, then navigate to the new page
       setTimeout(function () {
         window.location.href = href;
-      }, 500); // এই সময়টি CSS ট্রানজিশনের সময়ের (0.5s) সাথে মিলতে হবে
+      }, 500); // This time should match the CSS transition duration (0.5s)
     }
   });
 

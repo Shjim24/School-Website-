@@ -74,26 +74,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Custom CSS for one-line navbar -->
-    <style>
-      @media (min-width: 1200px) {
-        .header-menu-list > li > a {
-          padding: 8px 7px; /* Reduced horizontal padding */
-          font-size: 0.82rem; /* Slightly smaller font */
-          white-space: nowrap; /* Prevent text wrapping */
-        }
-        .header-menu-list > li {
-          margin: 0 1px; /* Reduced margin between items */
-        }
-      }
-    </style>
-
     <!-- IE Support -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
   <body>
     <!-- Preloader -->
     <div id="preloader">
@@ -104,6 +91,19 @@
         <div></div>
       </div>
     </div>
+
+    <!-- START: MODIFIED SECTION -->
+    <!-- Floating WhatsApp Button -->
+    <!-- IMPORTANT: Replace YOUR_PHONE_NUMBER with your actual number (e.g., 8801712345678) -->
+    <a
+      href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello!%20I%20have%20a%20question."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- END: MODIFIED SECTION -->
 
     <!-- Back to Top -->
     <div class="progress-wrap">

@@ -63,22 +63,25 @@
       rel="stylesheet"
     />
 
-    <!-- Main CSS (সঠিক পাথ সহ) -->
+    <!-- Main CSS (Correct path) -->
     <link rel="stylesheet" href="../style.css" />
     <!-- Application Page Specific CSS -->
     <link rel="stylesheet" href="application.css" />
 
-    <!-- Custom CSS for one-line navbar (এই অংশটি যুক্ত করা হয়েছে) -->
+    <!-- Custom CSS for one-line navbar -->
     <style>
       @media (min-width: 1200px) {
         .header-menu-list > li > a {
-          padding: 8px 7px; /* Reduced horizontal padding */
-          font-size: 0.82rem; /* Slightly smaller font */
-          white-space: nowrap; /* Prevent text wrapping */
+          padding: 8px 7px;
+          font-size: 0.82rem;
+          white-space: nowrap;
         }
         .header-menu-list > li {
-          margin: 0 1px; /* Reduced margin between items */
+          margin: 0 1px;
         }
+      }
+      body {
+        font-family: "Anek Bangla", sans-serif;
       }
     </style>
 
@@ -442,24 +445,22 @@
           <form id="admissionForm" class="admission-form" novalidate>
             <!-- Personal Information -->
             <div class="form-section">
-              <h3 class="section-heading">ব্যক্তিগত তথ্য</h3>
+              <h3 class="section-heading">
+                ব্যক্তিগত তথ্য (Personal Information)
+              </h3>
               <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="studentName" class="form-label"
-                    >শিক্ষার্থীর নাম (বাংলায়)<span class="required"
-                      >*</span
-                    ></label
-                  >
+                <div class="col-md-4 mb-3">
+                  <label for="studentId" class="form-label">Student ID</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="studentName"
-                    required
+                    id="studentId"
+                    placeholder="শিক্ষার্থী আইডি"
                   />
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-4 mb-3">
                   <label for="studentNameEn" class="form-label"
-                    >শিক্ষার্থীর নাম (ইংরেজিতে)<span class="required"
+                    >Student's Name (In English)<span class="required"
                       >*</span
                     ></label
                   >
@@ -470,32 +471,93 @@
                     required
                   />
                 </div>
-                <div class="col-md-6 mb-3">
-                  <label for="dob" class="form-label"
-                    >জন্ম তারিখ<span class="required">*</span></label
+                <div class="col-md-4 mb-3">
+                  <label for="studentNameBn" class="form-label"
+                    >Name in Bangla (বাংলায় নাম লিখুন)<span class="required"
+                      >*</span
+                    ></label
                   >
-                  <input type="date" class="form-control" id="dob" required />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="studentNameBn"
+                    required
+                  />
                 </div>
-                <div class="col-md-6 mb-3">
+                <div class="col-md-4 mb-3">
+                  <label for="birthCertificate" class="form-label"
+                    >Birth Certificate No.<span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="birthCertificate"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="dob" class="form-label"
+                    >Date of Birth<span class="required">*</span></label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="dob"
+                    value="2025-07-21"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
                   <label for="gender" class="form-label"
-                    >লিঙ্গ<span class="required">*</span></label
+                    >Gender<span class="required">*</span></label
                   >
                   <select class="form-select" id="gender" required>
-                    <option value="">নির্বাচন করুন</option>
-                    <option value="male">ছাত্র</option>
-                    <option value="female">ছাত্রী</option>
+                    <option value="">--Select--</option>
+                    <option value="male" selected>Male</option>
+                    <option value="female">Female</option>
                   </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="bloodGroup" class="form-label">Blood Group</label>
+                  <select class="form-select" id="bloodGroup">
+                    <option value="">--select--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="religion" class="form-label">Religion</label>
+                  <select class="form-select" id="religion">
+                    <option value="">--Select--</option>
+                    <option value="islam" selected>Islam</option>
+                    <option value="hinduism">Hinduism</option>
+                    <option value="buddhism">Buddhism</option>
+                    <option value="christianity">Christianity</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" />
                 </div>
               </div>
             </div>
 
             <!-- Guardian Information -->
             <div class="form-section">
-              <h3 class="section-heading">অভিভাবকের তথ্য</h3>
+              <h3 class="section-heading">
+                অভিভাবকের তথ্য (Guardian Information)
+              </h3>
               <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-12 mb-3">
                   <label for="fatherName" class="form-label"
-                    >পিতার নাম<span class="required">*</span></label
+                    >Father's Name<span class="required">*</span></label
                   >
                   <input
                     type="text"
@@ -505,8 +567,18 @@
                   />
                 </div>
                 <div class="col-md-6 mb-3">
+                  <label for="fatherNid" class="form-label">Father's NID</label>
+                  <input type="text" class="form-control" id="fatherNid" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="fatherMobile" class="form-label"
+                    >Father's Mobile No.</label
+                  >
+                  <input type="tel" class="form-control" id="fatherMobile" />
+                </div>
+                <div class="col-md-12 mb-3">
                   <label for="motherName" class="form-label"
-                    >মাতার নাম<span class="required">*</span></label
+                    >Mother's Name<span class="required">*</span></label
                   >
                   <input
                     type="text"
@@ -516,96 +588,190 @@
                   />
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="guardianPhone" class="form-label"
-                    >অভিভাবকের মোবাইল নম্বর<span class="required"
-                      >*</span
-                    ></label
+                  <label for="motherNid" class="form-label">Mother's NID</label>
+                  <input type="text" class="form-control" id="motherNid" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="motherMobile" class="form-label"
+                    >Mother's Mobile No.</label
                   >
-                  <input
-                    type="tel"
+                  <input type="tel" class="form-control" id="motherMobile" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="guardianName" class="form-label"
+                    >Guardian (In Absent of F/M)</label
+                  >
+                  <input type="text" class="form-control" id="guardianName" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="guardianMobile" class="form-label"
+                    >Guardian Mobile</label
+                  >
+                  <input type="tel" class="form-control" id="guardianMobile" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Address Information -->
+            <div class="form-section">
+              <h3 class="section-heading">ঠিকানা (Address)</h3>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="presentAdd" class="form-label"
+                    >Present Address<span class="required">*</span></label
+                  >
+                  <textarea
                     class="form-control"
-                    id="guardianPhone"
+                    id="presentAdd"
+                    rows="3"
                     required
-                  />
+                  ></textarea>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="permanentAdd" class="form-label"
+                    >Permanent Address<span class="required">*</span></label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="permanentAdd"
+                    rows="3"
+                    required
+                  ></textarea>
                 </div>
               </div>
             </div>
 
             <!-- Academic Information -->
             <div class="form-section">
-              <h3 class="section-heading">একাডেমিক তথ্য</h3>
+              <h3 class="section-heading">
+                একাডেমিক তথ্য (Academic Information)
+              </h3>
               <div class="row">
-                <div class="col-md-6 mb-3">
+                <div class="col-md-4 mb-3">
                   <label for="admissionClass" class="form-label"
-                    >ভর্তিচ্ছু শ্রেণি<span class="required">*</span></label
+                    >Class Name<span class="required">*</span></label
                   >
                   <select class="form-select" id="admissionClass" required>
-                    <option value="">নির্বাচন করুন</option>
-                    <option value="6">৬ষ্ঠ শ্রেণি</option>
-                    <option value="7">৭ম শ্রেণি</option>
-                    <option value="8">৮ম শ্রেণি</option>
-                    <option value="9">৯ম শ্রেণি</option>
-                    <option value="11">একাদশ শ্রেণি</option>
+                    <option value="">--select--</option>
+                    <option value="6">6th</option>
+                    <option value="7">7th</option>
+                    <option value="8">8th</option>
+                    <option value="9">9th</option>
+                    <option value="11">11th</option>
                   </select>
                 </div>
-                <div class="col-md-6 mb-3">
-                  <label for="previousSchool" class="form-label"
-                    >পূর্ববর্তী প্রতিষ্ঠানের নাম</label
+                <div class="col-md-4 mb-3">
+                  <label for="sectionName" class="form-label"
+                    >Section Name</label
                   >
-                  <input type="text" class="form-control" id="previousSchool" />
+                  <select class="form-select" id="sectionName">
+                    <option value="">--Select--</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="shiftName" class="form-label">Shift Name</label>
+                  <select class="form-select" id="shiftName">
+                    <option value="">--Select--</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Day">Day</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="groupName" class="form-label"
+                    >Group Name<span class="required">*</span></label
+                  >
+                  <select class="form-select" id="groupName" required>
+                    <option value="">--select--</option>
+                    <option value="science">Science</option>
+                    <option value="arts">Arts</option>
+                    <option value="commerce">Commerce</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="category" class="form-label">Category</label>
+                  <select class="form-select" id="category">
+                    <option value="">--Select--</option>
+                    <option value="general">General</option>
+                    <option value="freedom_fighter">
+                      Freedom Fighter Quota
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="roll" class="form-label">Roll</label>
+                  <input type="text" class="form-control" id="roll" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="yearSession" class="form-label"
+                    >Year/Session<span class="required">*</span></label
+                  >
+                  <select class="form-select" id="yearSession" required>
+                    <option value="">--select--</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="mobileSms" class="form-label">Mobile(SMS)</label>
+                  <input type="tel" class="form-control" id="mobileSms" />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="regDate" class="form-label">Reg: Date</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="regDate"
+                    value="2025-07-21"
+                  />
                 </div>
               </div>
             </div>
 
-            <!-- File Uploads -->
+            <!-- Other Information -->
             <div class="form-section">
-              <h3 class="section-heading">প্রয়োজনীয় সংযুক্তি</h3>
+              <h3 class="section-heading">অন্যান্য তথ্য (Other Information)</h3>
               <div class="row">
                 <div class="col-md-6 mb-3">
-                  <label for="studentPhoto" class="form-label"
-                    >শিক্ষার্থীর ছবি (পাসপোর্ট সাইজ)<span class="required"
-                      >*</span
-                    ></label
-                  >
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="studentPhoto"
-                    accept="image/*"
-                    required
-                  />
+                  <label for="refName" class="form-label">Ref. Name</label>
+                  <input type="text" class="form-control" id="refName" />
                 </div>
                 <div class="col-md-6 mb-3">
-                  <label for="birthCertificate" class="form-label"
-                    >জন্ম নিবন্ধন সনদ<span class="required">*</span></label
-                  >
-                  <input
-                    type="file"
-                    class="form-control"
-                    id="birthCertificate"
-                    accept=".pdf,image/*"
-                    required
-                  />
+                  <label for="refMobile" class="form-label">Ref. Mobile</label>
+                  <input type="tel" class="form-control" id="refMobile" />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="smsStatus" class="form-label">SMS Status</label>
+                  <select class="form-select" id="smsStatus">
+                    <option value="yes" selected>Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="status" class="form-label">Status</label>
+                  <select class="form-select" id="status">
+                    <option value="active" selected>Active</option>
+                    <option value="inactive">Inactive</option>
+                  </select>
                 </div>
               </div>
             </div>
 
             <div class="form-footer">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value=""
-                  id="agreement"
-                  required
-                />
-                <label class="form-check-label" for="agreement">
-                  আমি এই মর্মে অঙ্গীকার করছি যে, উপরে বর্ণিত সকল তথ্য সঠিক ও
-                  নির্ভুল।
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary submit-btn">
-                আবেদন জমা দিন
+              <button
+                type="button"
+                class="btn btn-danger submit-btn"
+                style="background-color: red; margin-right: 15px"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary submit-btn"
+                style="background-color: #2e7d32"
+              >
+                Create
               </button>
             </div>
           </form>
@@ -775,7 +941,7 @@
     <!-- Waypoints JS -->
     <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/jquery.waypoints.min.js"></script>
 
-    <!-- Main JS (সঠিক পাথ সহ) -->
+    <!-- Main JS (Correct path) -->
     <script src="../script.js"></script>
     <!-- Application Page Specific JS -->
     <script src="application.js"></script>
