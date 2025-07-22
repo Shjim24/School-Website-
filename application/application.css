@@ -12,60 +12,49 @@
   --required-star: #dc3545;
 }
 
-/* Application Hero Section */
-.application-hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/about-hero-bg.jpg"); /* Reusing the same background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 0;
+/* MODIFIED: Breadcrumb Wrapper */
+.breadcrumb-wrapper {
+  padding: 20px 0;
+  background-color: #f8f9fa;
   text-align: center;
-  color: white;
-  position: relative;
 }
 
-.application-hero-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
+/* MODIFIED: Standardized breadcrumb style for light background */
 .breadcrumb {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
   padding: 8px 20px;
   border-radius: 50px;
+  border: 1px solid var(--border-color);
 }
 
 .breadcrumb a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: var(--primary-light);
+  color: var(--primary-color);
 }
 
 .breadcrumb i {
   margin: 0 10px;
   font-size: 0.8rem;
+  color: #aaa;
 }
 
 .breadcrumb span {
-  color: var(--primary-light);
+  color: var(--primary-color);
   font-weight: 500;
 }
 
-/* Admission Application Section */
+/* MODIFIED: Reduced padding for the section */
 .admission-application-section {
-  padding: 80px 0;
+  padding: 50px 0;
   background: var(--light-bg);
 }
 
@@ -138,7 +127,7 @@
   box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
 }
 
-/* === IMAGE UPLOAD STYLES (NEW) === */
+/* === IMAGE UPLOAD STYLES === */
 .image-preview {
   width: 150px;
   height: 150px;
@@ -155,7 +144,6 @@
   margin-top: 5px;
 }
 
-/* Style the file input button */
 .form-control[type="file"] {
   padding: 10px;
 }
@@ -173,7 +161,6 @@
 .form-control[type="file"]::-webkit-file-upload-button:hover {
   background: var(--primary-dark);
 }
-
 /* === END IMAGE UPLOAD STYLES === */
 
 .form-footer {
@@ -211,9 +198,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .application-hero-title {
-    font-size: 2.2rem;
-  }
   .form-title {
     font-size: 1.8rem;
   }
@@ -228,18 +212,12 @@
 }
 
 @media (max-width: 575.98px) {
-  .application-hero-section {
-    padding: 60px 0;
-  }
-
-  .application-hero-title {
-    font-size: 1.8rem;
-  }
-
   .application-form-wrapper {
     padding: 20px;
   }
-
+  .breadcrumb-wrapper {
+    padding: 15px 0;
+  }
   .breadcrumb {
     flex-direction: column;
   }

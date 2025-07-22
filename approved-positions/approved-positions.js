@@ -1,4 +1,4 @@
-$(document).ready(function () {
+ $(document).ready(function () {
   // Animate table container on scroll
   function animateOnScroll() {
     $(".animate-on-scroll").each(function () {

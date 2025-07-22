@@ -10,57 +10,51 @@
   --border-color: #e0e0e0;
 }
 
-/* Hero Section - Standardized */
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../images/about-hero-bg.jpg"); /* Using the same background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 0;
+/* Page Title Section */
+.page-title-section {
+  background-color: #f8f9fa; /* Light grey background */
+  padding: 25px 0;
   text-align: center;
-  color: white;
-  position: relative;
+  border-bottom: 1px solid var(--border-color);
 }
 
-.hero-title {
-  font-size: 2.8rem;
+.page-title {
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--primary-dark);
+  margin-bottom: 15px;
 }
 
-/* Breadcrumb Style - Standardized */
+/* Breadcrumb Style */
 .breadcrumb {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 8px 20px;
-  border-radius: 50px;
 }
 
 .breadcrumb a {
-  color: white;
+  color: var(--primary-color);
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .breadcrumb a:hover {
-  color: var(--primary-light);
+  color: var(--primary-dark);
+  text-decoration: underline;
 }
 
 .breadcrumb i {
   margin: 0 10px;
   font-size: 0.8rem;
+  color: #6c757d;
 }
 
 .breadcrumb span {
-  color: var(--primary-light);
+  color: var(--text-color);
   font-weight: 500;
 }
+
 
 /* Recognition Content Section */
 .recognition-section {
@@ -124,57 +118,33 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Document Download Links */
-.document-links .links-title {
-  font-size: 1.5rem;
-  color: var(--primary-dark);
-  margin-bottom: 25px;
-  text-align: center;
-  border-bottom: 2px solid var(--primary-light);
-  display: inline-block;
-  padding-bottom: 5px;
+/* PDF Download Button Style in Table */
+.pdf-download-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.doc-link {
-  display: flex;
-  align-items: center;
-  background: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
-  text-decoration: none;
-  color: var(--dark-text);
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+.pdf-download-btn:hover {
+    background-color: var(--primary-dark);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
-.doc-link:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(46, 125, 50, 0.15);
-  border-color: var(--primary-color);
-  color: var(--primary-color);
-}
-
-.doc-link i {
-  font-size: 1.8rem;
-  color: var(--primary-color);
-  margin-right: 15px;
-  transition: transform 0.3s;
-}
-
-.doc-link:hover i {
-    transform: scale(1.2);
-}
-
-.doc-link span {
-  font-weight: 600;
-  font-size: 1rem;
+.pdf-download-btn i {
+    margin-right: 5px;
 }
 
 /* Responsive Styles */
 @media (max-width: 767.98px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .page-title {
+    font-size: 1.8rem;
   }
   .section-title {
     font-size: 1.8rem;
@@ -185,20 +155,17 @@
 }
 
 @media (max-width: 575.98px) {
-  .hero-section {
-    padding: 60px 0;
+  .page-title-section {
+    padding: 20px 0;
   }
-  .hero-title {
-    font-size: 1.8rem;
+  .page-title {
+    font-size: 1.6rem;
   }
   .breadcrumb {
-    flex-direction: column;
+    flex-direction: row; /* Keep it in a row */
+    font-size: 0.9rem;
   }
   .breadcrumb i {
-    margin: 8px 0;
-    transform: rotate(90deg);
-  }
-  .doc-link span {
-    font-size: 0.9rem;
+    margin: 0 8px; /* Adjust margin for smaller screens */
   }
 }

@@ -1,13 +1,13 @@
 /*
  * Custom JS for Pathdan Onumuti Page
  * Author: Your Name
- * Version: 1.0
+ * Version: 1.1
  */
 
 $(document).ready(function () {
-  // Animate content on scroll (Example for future use)
+  // Animate content on scroll
   function animateOnScroll() {
-    $(".recognition-table, .document-links").each(function () {
+    $(".recognition-table").each(function () {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   // Add a 'visible' class for CSS animations
   $(
-    "<style>.recognition-table, .document-links { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .recognition-table.visible, .document-links.visible { opacity: 1; transform: translateY(0); }</style>"
+    "<style>.recognition-table { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; } .recognition-table.visible { opacity: 1; transform: translateY(0); }</style>"
   ).appendTo("head");
 
   $(window).on("scroll", animateOnScroll);
