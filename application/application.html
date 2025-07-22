@@ -448,6 +448,38 @@
               <h3 class="section-heading">
                 ব্যক্তিগত তথ্য (Personal Information)
               </h3>
+
+              <!-- === IMAGE UPLOAD SECTION (NEW) === -->
+              <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                  <label for="studentPhoto" class="form-label"
+                    >শিক্ষার্থীর ছবি (Student's Photo)<span class="required"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="studentPhoto"
+                    accept="image/png, image/jpeg"
+                    required
+                  />
+                  <div class="form-text image-upload-instructions">
+                    অনুগ্রহ করে একটি সাম্প্রতিক পাসপোর্ট সাইজের ছবি আপলোড করুন।
+                    (JPG, PNG format only, Max size: 2MB)
+                  </div>
+                </div>
+                <div class="col-md-4 text-center">
+                  <img
+                    id="imagePreview"
+                    src="../images/default-avatar.png"
+                    alt="Image Preview"
+                    class="image-preview"
+                  />
+                </div>
+              </div>
+              <!-- === END IMAGE UPLOAD SECTION === -->
+
               <div class="row">
                 <div class="col-md-4 mb-3">
                   <label for="studentId" class="form-label">Student ID</label>

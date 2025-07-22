@@ -13,8 +13,35 @@ $(document).ready(function () {
     }, false);
   }
 
+  // === IMAGE PREVIEW SCRIPT (NEW) === //
+  const studentPhotoInput = document.getElementById('studentPhoto');
+  const imagePreview = document.getElementById('imagePreview');
+
+  if (studentPhotoInput && imagePreview) {
+    studentPhotoInput.addEventListener('change', function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        // Check if the file is an image
+        if (file.type.startsWith('image/')) {
+          const reader = new FileReader();
+          
+          reader.onload = function(e) {
+            imagePreview.src = e.target.result;
+          }
+          
+          reader.readAsDataURL(file);
+        } else {
+          // Reset if the file is not an image
+          imagePreview.src = '../images/default-avatar.png'; // Or your default image path
+          alert("Please select a valid image file (JPG, PNG).");
+        }
+      }
+    });
+  }
+  // === END IMAGE PREVIEW SCRIPT === //
+
   // Animate form on load
-  $('.application-form-wrapper').addClass('animate__animated animate__fadeInUp');
+  $('.application-form-wrapper').addClass('animate__animated animate__ fadeInUp');
 
   // Smooth scroll for internal links
   $('a[href*="#"]').on("click", function (e) {

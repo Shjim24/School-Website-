@@ -119,22 +119,62 @@
 }
 
 .required {
-    color: var(--required-star);
-    font-weight: bold;
-    margin-left: 4px;
+  color: var(--required-star);
+  font-weight: bold;
+  margin-left: 4px;
 }
 
-.form-control, .form-select {
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s;
+.form-control,
+.form-select {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s;
 }
 
-.form-control:focus, .form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(46, 125, 50, 0.25);
 }
+
+/* === IMAGE UPLOAD STYLES (NEW) === */
+.image-preview {
+  width: 150px;
+  height: 150px;
+  border: 3px solid var(--border-color);
+  border-radius: 10px;
+  object-fit: cover;
+  background-color: #f8f9fa;
+  padding: 5px;
+}
+
+.image-upload-instructions {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+}
+
+/* Style the file input button */
+.form-control[type="file"] {
+  padding: 10px;
+}
+
+.form-control[type="file"]::-webkit-file-upload-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-control[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--primary-dark);
+}
+
+/* === END IMAGE UPLOAD STYLES === */
 
 .form-footer {
   text-align: center;
@@ -142,8 +182,8 @@
 }
 
 .form-check-label {
-    color: #555;
-    font-size: 0.95rem;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .submit-btn {
@@ -165,9 +205,9 @@
 
 /* Responsive Styles */
 @media (max-width: 991.98px) {
-    .application-form-wrapper {
-        padding: 30px;
-    }
+  .application-form-wrapper {
+    padding: 30px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -175,10 +215,15 @@
     font-size: 2.2rem;
   }
   .form-title {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   .section-heading {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
+  }
+  .image-preview {
+    width: 120px;
+    height: 120px;
+    margin-top: 15px;
   }
 }
 
@@ -190,10 +235,10 @@
   .application-hero-title {
     font-size: 1.8rem;
   }
-  
+
   .application-form-wrapper {
-        padding: 20px;
-    }
+    padding: 20px;
+  }
 
   .breadcrumb {
     flex-direction: column;
